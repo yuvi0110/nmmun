@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<AnimatePresence mode="wait">
 			<motion.div
-				className="w-full h-full bg-blue-600 absolute top-0 left-0 z-50 flex justify-center items-center"
+				className="w-full h-full bg-blue-600 fixed top-0 left-0 z-50 flex justify-center items-center"
 				initial={{
 					x: 0,
 				}}

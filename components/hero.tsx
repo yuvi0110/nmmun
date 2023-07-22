@@ -16,7 +16,7 @@ const enterVariants = {
 const Hero = () => {
 	return (
 		<motion.section
-			className="bg-blue-700 text-white rounded-2xl flex flex-col justify-center items-center py-12 md:py-20 mt-6"
+			className="bg-blue-700 text-white rounded-2xl flex flex-col justify-center items-center py-28 md:py-20 mt-6"
 			variants={enterVariants}
 			initial="hidden"
 			animate="visible"
