@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 const Navbar = () => {
 	return (
 		<motion.nav
-			className="flex items-center justify-between border-b border-gray-300 p-h py-2 md:py-3 lg:py-4 sticky"
+			className="flex items-center justify-between border-b border-gray-300 p-h py-2 md:py-3 lg:py-4 w-full"
 			initial={{
 				y: -25,
 				opacity: 0,
 			}}
 			animate={{ y: 0, opacity: 1 }}
-			transition={{ duration: 0.4, delay: 1.6}}
+			transition={{ duration: 0.4, delay: 1.6 }}
 		>
 			{/* LOGO */}
 			<div>
