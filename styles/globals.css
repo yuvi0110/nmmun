@@ -1,10 +1,88 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic);
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.link {
+		@apply text-base font-medium cursor-pointer hover:opacity-80 transition-all duration-200;
+	}
+	.p-h {
+		@apply px-4 md:px-6 lg:px-10;
+	}
+
+	/* Texts */
+	.title {
+		@apply text-6xl md:text-8xl font-bold;
+	}
+
+	/* HERO */
+	.hero-btn {
+		@apply font-semibold bg-white px-6 py-2 text-black rounded-md;
+	}
+	.timer-container {
+		@apply flex flex-col p-2 bg-blue-900 rounded-xl;
+	}
+	.number-span {
+		@apply font-mono text-4xl md:text-5xl font-medium;
+	}
+	.detail-span {
+		@apply text-sm uppercase opacity-80 font-medium;
+	}
+}
+
+html,
 body {
-  background: gray;
-  overflow-x: hidden;
+	overflow-x: hidden;
+}
+
+body {
+	background: whitesmoke;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+
+/* HAMBURGER - Mobile */
+.hamburger {
+	cursor: pointer;
+}
+
+.hamburger input {
+	display: none;
+}
+
+.hamburger svg {
+	/* The size of the SVG defines the overall size */
+	height: 2.5em;
+	/* Define the transition for transforming the SVG */
+	transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+	fill: none;
+	stroke: black;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 3;
+	/* Define the transition for transforming the Stroke */
+	transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+		stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+	stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+	transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+	stroke-dasharray: 20 300;
+	stroke-dashoffset: -32.42;
 }
