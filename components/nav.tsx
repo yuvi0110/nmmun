@@ -1,10 +1,20 @@
 import React from "react";
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
 	return (
-		<nav className="flex items-center justify-between border-b border-gray-300 p-h py-2 md:py-3 lg:py-4 sticky">
+		<motion.nav
+			className="flex items-center justify-between border-b border-gray-300 p-h py-2 md:py-3 lg:py-4 sticky"
+			initial={{
+				y: -25,
+				opacity: 0,
+			}}
+			animate={{ y: 0, opacity: 1 }}
+			transition={{ duration: 0.4, delay: 1.6}}
+		>
 			{/* LOGO */}
 			<div>
 				<Image src="/logo.svg" alt="nmmun logo" width={36} height={36} />
@@ -63,7 +73,7 @@ const Navbar = () => {
 					</label>
 				</button>
 			</div>
-		</nav>
+		</motion.nav>
 	);
 };
 

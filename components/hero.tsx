@@ -1,16 +1,69 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+
+const enterVariants = {
+	hidden: {
+		y: 25,
+		opacity: 0,
+	},
+	visible: {
+		y: 0,
+		opacity: 1,
+	},
+};
+
 const Hero = () => {
 	return (
-		<section className="bg-blue-700 text-white rounded-2xl flex flex-col justify-center items-center py-12 md:py-20 mt-6">
+		<motion.section
+			className="bg-blue-700 text-white rounded-2xl flex flex-col justify-center items-center py-12 md:py-20 mt-6"
+			variants={enterVariants}
+			initial="hidden"
+			animate="visible"
+			transition={{
+				duration: 0.4,
+				delay: 2,
+			}}
+		>
 			{/* TITLE */}
-			<h1 className="title">NMMUN</h1>
+			<motion.h1
+				className="title"
+				variants={enterVariants}
+				initial="hidden"
+				animate="visible"
+				transition={{
+					duration: 0.4,
+					delay: 2.4,
+				}}
+			>
+				NMMUN
+			</motion.h1>
 
 			{/* YEAR */}
-			<span className="text-lg font-medium opacity-80">2023-24</span>
+			<motion.span
+				className="text-lg font-medium opacity-80"
+				variants={enterVariants}
+				initial="hidden"
+				animate="visible"
+				transition={{
+					duration: 0.4,
+					delay: 2.6,
+				}}
+			>
+				2023-24
+			</motion.span>
 
 			{/* COUNTDOWN + DATE */}
-			<div className="grid grid-flow-col gap-2 md:gap-4 text-center auto-cols-max my-4 md:my-6">
+			<motion.div
+				className="grid grid-flow-col gap-2 md:gap-4 text-center auto-cols-max my-4 md:my-6"
+				variants={enterVariants}
+				initial="hidden"
+				animate="visible"
+				transition={{
+					duration: 0.4,
+					delay: 2.8,
+				}}
+			>
 				<div className="timer-container">
 					<span className="number-span">
 						<span>10</span>
@@ -35,14 +88,23 @@ const Hero = () => {
 					</span>
 					<span className="detail-span">sec</span>
 				</div>
-			</div>
+			</motion.div>
 
 			{/* CTA */}
-			<div className="flex gap-2 md:gap-4 mt-4 md:mt-6">
+			<motion.div
+				className="flex gap-2 md:gap-4 mt-4 md:mt-6"
+				variants={enterVariants}
+				initial="hidden"
+				animate="visible"
+				transition={{
+					duration: 0.4,
+					delay: 3,
+				}}
+			>
 				<button className="hero-btn">Contact Us</button>
 				<button className="hero-btn">Apply</button>
-			</div>
-		</section>
+			</motion.div>
+		</motion.section>
 	);
 };
 
