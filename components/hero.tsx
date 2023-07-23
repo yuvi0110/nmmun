@@ -1,6 +1,7 @@
 import React from "react";
 
 import { motion } from "framer-motion";
+import Timer from "./timer";
 
 const enterVariants = {
 	hidden: {
@@ -16,7 +17,7 @@ const enterVariants = {
 const Hero = () => {
 	return (
 		<motion.section
-			className="bg-blue-700 text-white rounded-2xl flex flex-col justify-center items-center py-28 md:py-20 mt-6"
+			className="bg-black text-white rounded-2xl flex flex-col justify-center items-center py-28 md:py-20 mt-6 relative shadow-md"
 			variants={enterVariants}
 			initial="hidden"
 			animate="visible"
@@ -25,9 +26,15 @@ const Hero = () => {
 				delay: 2,
 			}}
 		>
+			<img
+				src="/dummy.png"
+				alt="dummy hero"
+				className="w-full h-full absolute top-0 left-0 cover opacity-50 rounded-2xl"
+			/>
+
 			{/* TITLE */}
 			<motion.h1
-				className="title"
+				className="title relative z-10"
 				variants={enterVariants}
 				initial="hidden"
 				animate="visible"
@@ -41,7 +48,7 @@ const Hero = () => {
 
 			{/* YEAR */}
 			<motion.span
-				className="text-lg font-medium opacity-80"
+				className="text-lg font-medium opacity-80 relative z-10"
 				variants={enterVariants}
 				initial="hidden"
 				animate="visible"
@@ -54,45 +61,11 @@ const Hero = () => {
 			</motion.span>
 
 			{/* COUNTDOWN + DATE */}
-			<motion.div
-				className="grid grid-flow-col gap-2 md:gap-4 text-center auto-cols-max my-4 md:my-6"
-				variants={enterVariants}
-				initial="hidden"
-				animate="visible"
-				transition={{
-					duration: 0.4,
-					delay: 2.8,
-				}}
-			>
-				<div className="timer-container">
-					<span className="number-span">
-						<span>10</span>
-					</span>
-					<span className="detail-span">days</span>
-				</div>
-				<div className="timer-container">
-					<span className="number-span">
-						<span>10</span>
-					</span>
-					<span className="detail-span">hours</span>
-				</div>
-				<div className="timer-container">
-					<span className="number-span">
-						<span>10</span>
-					</span>
-					<span className="detail-span">min</span>
-				</div>
-				<div className="timer-container">
-					<span className="number-span">
-						<span>10</span>
-					</span>
-					<span className="detail-span">sec</span>
-				</div>
-			</motion.div>
+			<Timer delay={2.8} />
 
 			{/* CTA */}
 			<motion.div
-				className="flex gap-2 md:gap-4 mt-4 md:mt-6"
+				className="flex gap-2 md:gap-4 mt-4 md:mt-6 relative z-10"
 				variants={enterVariants}
 				initial="hidden"
 				animate="visible"
@@ -101,8 +74,8 @@ const Hero = () => {
 					delay: 3,
 				}}
 			>
+				<button className="hero-btn bg-primary text-white">Apply</button>
 				<button className="hero-btn">Contact Us</button>
-				<button className="hero-btn">Apply</button>
 			</motion.div>
 		</motion.section>
 	);

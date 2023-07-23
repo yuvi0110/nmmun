@@ -23,7 +23,7 @@
 		@apply font-semibold bg-white px-6 py-2 text-black rounded-md;
 	}
 	.timer-container {
-		@apply flex flex-col p-2 bg-blue-900 rounded-xl;
+		@apply flex flex-col p-2 bg-black bg-opacity-50 rounded-xl;
 	}
 	.number-span {
 		@apply font-mono text-4xl md:text-5xl font-medium;

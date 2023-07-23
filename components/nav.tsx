@@ -1,13 +1,25 @@
-import React from "react";
-
+import React, { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const Navbar = () => {
+import Timer from "./timer";
+
+const Navbar = ({
+	openSidebar,
+	setOpenSidebar,
+}: {
+	openSidebar: boolean;
+	setOpenSidebar: Dispatch<SetStateAction<boolean>>;
+}) => {
+	const toggleSidebar = () => {
+		console.log("Hi")
+		setOpenSidebar((prev) => !prev);
+	};
+
 	return (
 		<motion.nav
-			className="flex items-center justify-between border-b border-gray-300 p-h py-2 md:py-3 lg:py-4 w-full"
+			className="flex items-center justify-between border-b border-gray-300 p-h py-2 md:py-3 lg:py-4 w-full shadow-sm xl:rounded-lg"
 			initial={{
 				y: -25,
 				opacity: 0,
@@ -15,9 +27,12 @@ const Navbar = () => {
 			animate={{ y: 0, opacity: 1 }}
 			transition={{ duration: 0.4, delay: 1.6 }}
 		>
-			{/* LOGO */}
-			<div>
-				<Image src="/logo.svg" alt="nmmun logo" width={36} height={36} />
+			{/* LOGO + COUNTDOWN */}
+			<div className="flex gap-4 lg:gap-8 items-center">
+				<Link href="/">
+					<Image src="/logo.svg" alt="nmmun logo" width={36} height={36} />
+				</Link>
+				<Timer delay={0} mini />
 			</div>
 
 			{/* LINKS - Desktop */}
@@ -59,10 +74,10 @@ const Navbar = () => {
 			</div>
 
 			{/* LINKS - Mobile */}
-			<div className="md:hidden">
+			<div className="">
 				<button>
 					<label className="hamburger">
-						<input type="checkbox" />
+						<input type="checkbox" onClick={toggleSidebar} />
 						<svg viewBox="0 0 32 32">
 							<path
 								className="line line-top-bottom"

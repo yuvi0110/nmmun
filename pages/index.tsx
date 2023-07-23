@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
 
-import Hero from "@/components/hero";
 import ImageWithDetails from "@/layouts/img-details";
+import Hero from "@/components/hero";
 import Heading from "@/components/heading";
 import Details from "@/components/details";
 import SubHeading from "@/components/sub-heading";

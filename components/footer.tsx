@@ -27,7 +27,7 @@ function Footer() {
 						</span>
 					</Link>
 
-					<ul className="flex gap-4 lg:gap-8 items-center">
+					<ul className="flex flex-col md:flex-row gap-4 lg:gap-8 items-start md:items-center my-8 md:m-0">
 						<li>
 							<Link
 								href="/councils"
@@ -69,7 +69,7 @@ function Footer() {
 					</ul>
 				</div>
 
-				<hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+				<hr className="my-6 border-gray-500 sm:mx-auto lg:my-8" />
 
 				<div className="sm:flex sm:items-center sm:justify-between">
 					<span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
@@ -85,7 +85,7 @@ function Footer() {
 							<span className="sr-only">Instagram Page</span>
 						</a>
 						<a
-							href="mailto:clupaio4@gmail.com"
+							href="mailto:nmmun2023cs@gmail.com"
 							className="text-gray-300 hover:text-white"
 						>
 							<MdEmail className="w-6 h-6" />
