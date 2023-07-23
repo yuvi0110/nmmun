@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
 	return (
 		<AnimatePresence mode="wait">
-			<motion.div
+			{/* <motion.div
 				className="w-full h-full bg-blue-600 fixed top-0 left-0 z-50 flex justify-center items-center"
 				initial={{
 					x: 0,
@@ -55,7 +55,7 @@ export default function App({ Component, pageProps }: AppProps) {
 						fill="#fff"
 					/>
 				</motion.svg>
-			</motion.div>
+			</motion.div> */}
 
 			<div
 				className={`max-w-7xl relative transition-all duration-300 ${
