@@ -2,6 +2,7 @@ import React from "react";
 
 import { motion } from "framer-motion";
 import Timer from "./timer";
+import Link from "next/link";
 
 const enterVariants = {
 	hidden: {
@@ -107,8 +108,12 @@ const Hero = ({
 							delay: 3,
 						}}
 					>
-						<button className="hero-btn bg-primary text-white">Apply</button>
-						<button className="hero-btn">Contact Us</button>
+						<Link href="/register">
+							<button className="hero-btn bg-primary text-white">Apply</button>
+						</Link>
+						<Link href="/contact">
+							<button className="hero-btn">Contact Us</button>
+						</Link>
 					</motion.div>
 				)}
 			</div>

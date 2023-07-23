@@ -13,7 +13,7 @@ const Navbar = ({
 	setOpenSidebar: Dispatch<SetStateAction<boolean>>;
 }) => {
 	const toggleSidebar = () => {
-		console.log("Hi")
+		console.log("Hi");
 		setOpenSidebar((prev) => !prev);
 	};
 
@@ -40,6 +40,11 @@ const Navbar = ({
 				<div className="hidden md:flex">
 					<ul className="flex gap-4 lg:gap-8 items-center">
 						<li>
+							<Link href="/" className="link" title="Home">
+								Home
+							</Link>
+						</li>
+						<li>
 							<Link href="/councils" className="link" title="Councils">
 								Councils
 							</Link>
@@ -50,8 +55,13 @@ const Navbar = ({
 							</Link>
 						</li>
 						<li>
-							<Link href="/info" className="link" title="Info">
-								Info
+							<Link href="/info" className="link" title="Information">
+								Information
+							</Link>
+						</li>
+						<li>
+							<Link href="/allocations" className="link" title="Allocations">
+								Allocations
 							</Link>
 						</li>
 						<li>
@@ -65,9 +75,9 @@ const Navbar = ({
 							</Link>
 						</li>
 						<li>
-							<Link href="/apply" className="link" title="Apply">
+							<Link href="/register" className="link" title="Register">
 								<button className="px-6 py-2 bg-primary rounded-md text-white cursor-pointer hover:opacity-60 transition-all duration-200">
-									Apply
+									Register
 								</button>
 							</Link>
 						</li>

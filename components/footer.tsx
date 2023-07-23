@@ -29,6 +29,11 @@ function Footer({ classNames }: { classNames?: string }) {
 
 					<ul className="flex flex-col md:flex-row gap-4 lg:gap-8 items-start md:items-center my-8 md:m-0">
 						<li>
+							<Link href="/" className="link text-white" title="Home">
+								Home
+							</Link>
+						</li>
+						<li>
 							<Link
 								href="/councils"
 								className="link text-white"
@@ -43,8 +48,21 @@ function Footer({ classNames }: { classNames?: string }) {
 							</Link>
 						</li>
 						<li>
-							<Link href="/info" className="link text-white" title="Info">
-								Info
+							<Link
+								href="/info"
+								className="link text-white"
+								title="Information"
+							>
+								Information
+							</Link>
+						</li>
+						<li>
+							<Link
+								href="/allocations"
+								className="link text-white"
+								title="Allocations"
+							>
+								Allocations
 							</Link>
 						</li>
 						<li>
@@ -62,8 +80,12 @@ function Footer({ classNames }: { classNames?: string }) {
 							</Link>
 						</li>
 						<li>
-							<Link href="/apply" className="link text-white" title="Apply">
-								Apply
+							<Link
+								href="/register"
+								className="link text-white"
+								title="Register"
+							>
+								Register
 							</Link>
 						</li>
 					</ul>

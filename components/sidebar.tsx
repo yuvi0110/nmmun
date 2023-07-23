@@ -32,6 +32,11 @@ function Sidebar({ openSidebar }: { openSidebar: boolean }) {
 			{/* LINKS */}
 			<ul className="flex flex-col gap-4 lg:gap-8 justify-center p-6">
 				<li>
+					<Link href="/" className="link uppercase text-xl" title="Home">
+						Home
+					</Link>
+				</li>
+				<li>
 					<Link
 						href="/councils"
 						className="uppercase link text-xl"
@@ -50,8 +55,21 @@ function Sidebar({ openSidebar }: { openSidebar: boolean }) {
 					</Link>
 				</li>
 				<li>
-					<Link href="/info" className="uppercase link text-xl" title="Info">
-						Info
+					<Link
+						href="/info"
+						className="uppercase link text-xl"
+						title="Information"
+					>
+						Information
+					</Link>
+				</li>
+				<li>
+					<Link
+						href="/allocations"
+						className="link uppercase text-xl"
+						title="Allocations"
+					>
+						Allocations
 					</Link>
 				</li>
 				<li>
@@ -69,8 +87,12 @@ function Sidebar({ openSidebar }: { openSidebar: boolean }) {
 					</Link>
 				</li>
 				<li>
-					<Link href="/apply" className="uppercase link text-xl" title="Apply">
-						Apply
+					<Link
+						href="/register"
+						className="uppercase link text-xl"
+						title="Register"
+					>
+						Register
 					</Link>
 				</li>
 			</ul>
