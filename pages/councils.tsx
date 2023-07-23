@@ -1,8 +1,13 @@
+import Head from 'next/head'
 import React from 'react'
 
 function Councils() {
   return (
-    <div>Councils</div>
+    <main>
+      <Head>
+        
+      </Head>
+    </main>
   )
 }
 

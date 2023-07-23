@@ -9,7 +9,7 @@ const Details = ({
 }: {
 	children: React.ReactNode;
 	reverse?: boolean;
-	delay: number;
+	delay?: number;
 }) => {
 	return (
 		<motion.p

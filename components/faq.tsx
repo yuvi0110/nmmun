@@ -16,7 +16,7 @@ const FAQ = ({
 }: {
 	title: string;
 	info: string;
-	delay: number;
+	delay?: number;
 }) => {
 	return (
 		<motion.div

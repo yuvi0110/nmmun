@@ -8,11 +8,15 @@ import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "@/components/nav";
 import Footer from "@/components/footer";
 import Sidebar from "@/components/sidebar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
 	const pathname = usePathname();
 	const [openSidebar, setOpenSidebar] = useState(false);
+
+	useEffect(() => {
+		setOpenSidebar(false);
+	}, [pathname]);
 
 	return (
 		<AnimatePresence mode="wait">
@@ -22,10 +26,11 @@ export default function App({ Component, pageProps }: AppProps) {
 					x: 0,
 				}}
 				animate={{
-					x: "100%",
+					x: "-100%",
 					transition: {
 						delay: 1,
 						duration: 0.4,
+						ease: "easeOut",
 					},
 				}}
 				exit={{

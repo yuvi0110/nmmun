@@ -9,7 +9,7 @@ const SubHeading = ({
 }: {
 	children: React.ReactNode;
 	reverse?: boolean;
-	delay: number;
+	delay?: number;
 }) => {
 	return (
 		<motion.h2

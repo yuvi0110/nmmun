@@ -1,15 +1,10 @@
-import React, { Dispatch, SetStateAction, useEffect } from "react";
+import React from "react";
 import { MdEmail } from "react-icons/md";
 import { AiFillInstagram } from "react-icons/ai";
 
 import Link from "next/link";
-import Image from "next/image";
 
 function Sidebar({ openSidebar }: { openSidebar: boolean }) {
-	useEffect(() => {
-		console.log(openSidebar);
-	}, [openSidebar]);
-
 	return (
 		<div
 			className={`top-0 transition-all duration-300 fixed bg-blue-800 text-white w-3/4 max-h-screen h-full ${

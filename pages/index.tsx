@@ -32,14 +32,14 @@ export default function Home() {
 				bgImg="/dummy.png"
 				bgOpacity="opacity-40"
 			>
-				<Heading delay={0}>Title</Heading>
-				<Details delay={0.2}>
+				<Heading>Title</Heading>
+				<Details>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque
 					temporibus nobis voluptatem id quae. Delectus enim voluptas blanditiis
 					libero, nemo ipsa quasi expedita, incidunt doloremque sit quia quaerat
 					quae.
 				</Details>
-				<Details delay={0.4}>
+				<Details>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
@@ -48,25 +48,25 @@ export default function Home() {
 			</ImageWithDetails>
 
 			<ImageWithDetails reverse bg="#00ff00">
-				<Heading reverse delay={0}>
+				<Heading reverse>
 					Title
 				</Heading>
-				<Details reverse delay={0.2}>
+				<Details reverse>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque
 					temporibus nobis voluptatem id quae. Delectus enim voluptas blanditiis
 					libero, nemo ipsa quasi expedita, incidunt doloremque sit quia quaerat
 					quae.
 				</Details>
-				<Details reverse delay={0.4}>
+				<Details reverse>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-				<SubHeading reverse delay={0.6}>
+				<SubHeading reverse>
 					Subheadding
 				</SubHeading>
-				<Details reverse delay={0.8}>
+				<Details reverse >
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
@@ -75,43 +75,43 @@ export default function Home() {
 			</ImageWithDetails>
 
 			<DetailsOnly bg="#0000ff" whiteText>
-				<Heading delay={0}>Title</Heading>
-				<Details delay={0.2}>
+				<Heading>Title</Heading>
+				<Details>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quis ex
 					pariatur rerum necessitatibus beatae fuga commodi debitis
 					exercitationem vitae, doloremque, omnis suscipit nostrum ipsa harum
 					dicta quisquam facere aut!
 				</Details>
-				<Details delay={0.4}>
+				<Details>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quis ex
 					pariatur rerum necessitatibus beatae fuga commodi debitis
 					exercitationem vitae, doloremque, omnis suscipit nostrum ipsa harum
 					dicta quisquam facere aut! Lorem ipsum dolor sit amet consectetur
 					adipisicing elit. Praesentium fugit beatae voluptatibus cum fugiat
 					maiores perspiciatis libero, repudiandae voluptate error nesciunt
-					similique vitae voluptas unde ipsa labore culpa harum? Inventore!
+					similiquereversevitae voluptas unde ipsa labore culpa harum? Inventore!
 				</Details>
-				<SubHeading delay={0.6}>Subheadding</SubHeading>
-				<Details delay={0.8}>
+				<SubHeading>Subheadding</SubHeading>
+				<Details >
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-				<Details delay={1}>
+				<Details>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-				<Details delay={1.2}>
+				<Details >
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-				<SubHeading delay={1.4}>Subheadding</SubHeading>
-				<Details delay={1.6}>
+				<SubHeading >Subheadding</SubHeading>
+				<Details>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
@@ -120,43 +120,43 @@ export default function Home() {
 			</DetailsOnly>
 
 			<DetailsOnly bgImg="/dummy.png" whiteText bgOpacity="opacity-50" bg="#131313">
-				<Heading delay={0}>Title</Heading>
-				<Details delay={0.2}>
+				<Heading>Title</Heading>
+				<Details>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quis ex
 					pariatur rerum necessitatibus beatae fuga commodi debitis
 					exercitationem vitae, doloremque, omnis suscipit nostrum ipsa harum
 					dicta quisquam facere aut!
 				</Details>
-				<Details delay={0.4}>
+				<Details>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quis ex
 					pariatur rerum necessitatibus beatae fuga commodi debitis
 					exercitationem vitae, doloremque, omnis suscipit nostrum ipsa harum
 					dicta quisquam facere aut! Lorem ipsum dolor sit amet consectetur
 					adipisicing elit. Praesentium fugit beatae voluptatibus cum fugiat
 					maiores perspiciatis libero, repudiandae voluptate error nesciunt
-					similique vitae voluptas unde ipsa labore culpa harum? Inventore!
+					similiquereversevitae voluptas unde ipsa labore culpa harum? Inventore!
 				</Details>
-				<SubHeading delay={0.6}>Subheadding</SubHeading>
-				<Details delay={0.8}>
+				<SubHeading>Subheadding</SubHeading>
+				<Details >
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-				<Details delay={1}>
+				<Details>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-				<Details delay={1.2}>
+				<Details >
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-				<SubHeading delay={1.4}>Subheadding</SubHeading>
-				<Details delay={1.6}>
+				<SubHeading >Subheadding</SubHeading>
+				<Details>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
@@ -165,7 +165,7 @@ export default function Home() {
 			</DetailsOnly>
 
 			<DetailsOnly>
-				<Heading delay={0}>FAQs</Heading>
+				<Heading>FAQs</Heading>
 
 				<FAQsContainer>
 					<FAQ
@@ -174,7 +174,7 @@ export default function Home() {
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum."
-						delay={0}
+					
 					/>
 					<FAQ
 						title="Title"
@@ -182,7 +182,7 @@ export default function Home() {
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum."
-						delay={0.2}
+					
 					/>
 					<FAQ
 						title="Title"
@@ -190,7 +190,7 @@ export default function Home() {
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum."
-						delay={0.4}
+					
 					/>
 					<FAQ
 						title="Title"
@@ -198,7 +198,7 @@ export default function Home() {
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum."
-						delay={0.6}
+					
 					/>
 				</FAQsContainer>
 			</DetailsOnly>
