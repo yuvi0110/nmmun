@@ -74,7 +74,7 @@ const Navbar = ({
 			</div>
 
 			{/* LINKS - Mobile */}
-			<div className="">
+			<div className="md:hidden">
 				<button>
 					<label className="hamburger">
 						<input type="checkbox" onClick={toggleSidebar} />
