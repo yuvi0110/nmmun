@@ -58,9 +58,9 @@ export default function App({ Component, pageProps }: AppProps) {
 			</motion.div> */}
 
 			<div
-				className={`max-w-7xl relative transition-all duration-300 ${
+				className={`relative transition-all duration-300 ${
 					openSidebar ? "-translate-x-3/4" : "translate-x-0"
-				}`}
+				} flex flex-col items-center w-full`}
 				style={{
 					width: "100vw",
 				}}

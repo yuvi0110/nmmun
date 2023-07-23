@@ -5,12 +5,24 @@
 @tailwind components;
 @tailwind utilities;
 
+.test {
+	background-image: url(/dummy.png);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 500px;
+}
+
 @layer components {
 	.link {
 		@apply text-base font-medium cursor-pointer hover:opacity-80 transition-all duration-200;
 	}
 	.p-h {
 		@apply px-4 md:px-6 lg:px-10;
+	}
+	.m-h {
+		@apply mx-4 md:mx-6 lg:mx-10;
 	}
 
 	/* Texts */

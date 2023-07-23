@@ -14,7 +14,7 @@ import FAQ from "@/components/faq";
 
 export default function Home() {
 	return (
-		<main className="p-h">
+		<main className="flex flex-col items-center relative">
 			<Head>
 				<meta
 					name="viewport"
@@ -27,7 +27,7 @@ export default function Home() {
 			<Hero />
 
 			{/* CONTENT */}
-			<ImageWithDetails bg="#ff0000">
+			<ImageWithDetails bg="#131313" whiteText classNames="mt-24" bgImg="/dummy.png" bgOpacity="opacity-40">
 				<Heading delay={0}>Title</Heading>
 				<Details delay={0.2}>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque
@@ -43,7 +43,7 @@ export default function Home() {
 				</Details>
 			</ImageWithDetails>
 
-			<ImageWithDetails reverse>
+			<ImageWithDetails reverse bg="#00ff00">
 				<Heading reverse delay={0}>
 					Title
 				</Heading>
