@@ -1,7 +1,9 @@
+import ContentLink from "@/components/content-link";
 import Details from "@/components/details";
 import Heading from "@/components/heading";
 import Hero from "@/components/hero";
 import ImageWithDetails from "@/layouts/img-details";
+import TableOfContent from "@/layouts/table-of-content";
 import Head from "next/head";
 import React from "react";
 
@@ -25,6 +27,17 @@ function Councils() {
 			/>
 
 			{/* TABLE OF CONTENT */}
+			<TableOfContent>
+				{[1, 2, 3, 4, 5, 6, 7, 8].map((content, i) => (
+					<ContentLink
+						src="/dummy.png"
+						alt="some dummy image"
+						title="Title"
+						url="#Title"
+						delay={3 + i * 0.2}
+					/>
+				))}
+			</TableOfContent>
 
 			{/* CONTENT */}
 			<ImageWithDetails classNames="py-12">
@@ -99,6 +112,9 @@ function Councils() {
 					saepe adipisci vitae?
 				</Details>
 			</ImageWithDetails>
+
+			{/* MARGIN BETWEEN */}
+			<div className="my-12" />
 		</main>
 	);
 }

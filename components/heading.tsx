@@ -6,14 +6,16 @@ const Heading = ({
 	children,
 	reverse,
 	delay,
+	classNames
 }: {
 	children: React.ReactNode;
 	reverse?: boolean;
 	delay?: number;
+	classNames?: string
 }) => {
 	return (
 		<motion.h1
-			className="text-6xl font-semibold capitalize"
+			className={`text-6xl font-semibold capitalize ${classNames}`}
 			variants={inViewVariants}
 			initial={`hidden${reverse ? "R" : ""}`}
 			whileInView="visible"
