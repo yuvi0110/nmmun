@@ -30,7 +30,7 @@ const Hero = () => {
 				<img
 					src="/dummy.png"
 					alt="dummy hero"
-					className="w-full h-full absolute top-0 left-0 cover opacity-50 rounded-2xl"
+					className="w-full h-full absolute top-0 left-0 object-cover opacity-50 rounded-2xl"
 				/>
 
 				{/* TITLE */}

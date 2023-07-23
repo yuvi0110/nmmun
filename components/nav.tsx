@@ -19,7 +19,7 @@ const Navbar = ({
 
 	return (
 		<motion.nav
-			className="border-b border-gray-300 p-h py-2 md:py-3 lg:py-4 w-full shadow-sm xl:rounded-lg flex justify-center"
+			className="border-b border-gray-300 p-h py-2 md:py-3 lg:py-2 w-full shadow-sm xl:rounded-lg flex justify-center"
 			initial={{
 				y: -25,
 				opacity: 0,

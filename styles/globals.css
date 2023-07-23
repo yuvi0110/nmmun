@@ -5,15 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.test {
-	background-image: url(/dummy.png);
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	height: 500px;
-}
-
 @layer components {
 	.link {
 		@apply text-base font-medium cursor-pointer hover:opacity-80 transition-all duration-200;

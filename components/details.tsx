@@ -13,7 +13,7 @@ const Details = ({
 }) => {
 	return (
 		<motion.p
-			className="text-base opacity-75 leading-tight mt-4"
+			className="text-base opacity-20 leading-tight mt-4"
 			variants={inViewVariants}
 			initial={`hidden${reverse ? "R" : ""}`}
 			whileInView="visible"
