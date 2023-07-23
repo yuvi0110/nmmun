@@ -9,6 +9,7 @@ import Navbar from "@/components/nav";
 import Footer from "@/components/footer";
 import Sidebar from "@/components/sidebar";
 import { useEffect, useState } from "react";
+import ScrollToTopButton from "@/components/scrollToTopBtn";
 
 export default function App({ Component, pageProps }: AppProps) {
 	const pathname = usePathname();
@@ -77,6 +78,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
 			{/* Side Mobile Nav */}
 			<Sidebar openSidebar={openSidebar} />
+			<ScrollToTopButton />
 		</AnimatePresence>
 	);
 }
