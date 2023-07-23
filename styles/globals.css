@@ -6,6 +6,10 @@
 @tailwind utilities;
 
 @layer components {
+	.main {
+		@apply flex flex-col items-center relative w-full;
+	}
+
 	.link {
 		@apply text-base font-medium cursor-pointer hover:opacity-80 transition-all duration-200;
 	}

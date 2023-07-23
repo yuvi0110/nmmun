@@ -21,7 +21,7 @@ function ImageWithDetails({
 }) {
 	return (
 		<section
-			className={`flex justify-center py-28 p-h w-full ${classNames} bg-fixed bg-center bg-no-repeat bg-cover relative`}
+			className={`flex justify-center p-h w-full ${classNames} bg-fixed bg-center bg-no-repeat bg-cover relative`}
 			style={{
 				backgroundColor: bg,
 			}}

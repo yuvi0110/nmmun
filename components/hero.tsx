@@ -14,7 +14,23 @@ const enterVariants = {
 	},
 };
 
-const Hero = () => {
+const Hero = ({
+	title,
+	showTimer,
+	showYear,
+	showCTA,
+	desc,
+	src,
+	alt,
+}: {
+	title: string;
+	showTimer?: boolean;
+	showCTA?: boolean;
+	showYear?: boolean;
+	desc?: string;
+	src: string;
+	alt: string;
+}) => {
 	return (
 		<motion.section
 			className="text-white mt-6 w-full flex justify-center p-h"
@@ -28,8 +44,8 @@ const Hero = () => {
 		>
 			<div className="max-w-7xl w-full flex flex-col justify-center items-center py-28 md:py-20 relative shadow-md rounded-2xl bg-black ">
 				<img
-					src="/dummy.png"
-					alt="dummy hero"
+					src={src}
+					alt={alt}
 					className="w-full h-full absolute top-0 left-0 object-cover opacity-50 rounded-2xl"
 				/>
 
@@ -44,12 +60,11 @@ const Hero = () => {
 						delay: 2.4,
 					}}
 				>
-					NMMUN
+					{title}
 				</motion.h1>
 
-				{/* YEAR */}
-				<motion.span
-					className="text-lg font-medium opacity-80 relative z-10"
+				<motion.p
+					className="text-center relative z-10 mt-4 px-4"
 					variants={enterVariants}
 					initial="hidden"
 					animate="visible"
@@ -58,26 +73,44 @@ const Hero = () => {
 						delay: 2.6,
 					}}
 				>
-					2023-24
-				</motion.span>
+					{desc}
+				</motion.p>
+
+				{/* YEAR */}
+				{showYear && (
+					<motion.span
+						className="text-lg font-medium opacity-80 relative z-10"
+						variants={enterVariants}
+						initial="hidden"
+						animate="visible"
+						transition={{
+							duration: 0.4,
+							delay: 2.6,
+						}}
+					>
+						2023-24
+					</motion.span>
+				)}
 
 				{/* COUNTDOWN + DATE */}
-				<Timer delay={2.8} />
+				{showTimer && <Timer delay={2.8} />}
 
 				{/* CTA */}
-				<motion.div
-					className="flex gap-2 md:gap-4 mt-4 md:mt-6 relative z-10"
-					variants={enterVariants}
-					initial="hidden"
-					animate="visible"
-					transition={{
-						duration: 0.4,
-						delay: 3,
-					}}
-				>
-					<button className="hero-btn bg-primary text-white">Apply</button>
-					<button className="hero-btn">Contact Us</button>
-				</motion.div>
+				{showCTA && (
+					<motion.div
+						className="flex gap-2 md:gap-4 mt-4 md:mt-6 relative z-10"
+						variants={enterVariants}
+						initial="hidden"
+						animate="visible"
+						transition={{
+							duration: 0.4,
+							delay: 3,
+						}}
+					>
+						<button className="hero-btn bg-primary text-white">Apply</button>
+						<button className="hero-btn">Contact Us</button>
+					</motion.div>
+				)}
 			</div>
 		</motion.section>
 	);

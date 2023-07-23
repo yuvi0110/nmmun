@@ -12,7 +12,7 @@ import FAQ from "@/components/faq";
 
 export default function Home() {
 	return (
-		<main className="flex flex-col items-center relative w-full">
+		<main className="main">
 			<Head>
 				<meta
 					name="viewport"
@@ -22,13 +22,20 @@ export default function Home() {
 			</Head>
 
 			{/* HERO */}
-			<Hero />
+			<Hero
+				src="/dummy.png"
+				alt="some dummy img"
+				title="NMMUN"
+				showCTA
+				showTimer
+				showYear
+			/>
 
 			{/* CONTENT */}
 			<ImageWithDetails
 				bg="#131313"
 				whiteText
-				classNames="mt-24"
+				classNames="mt-24 py-28"
 				bgImg="/dummy.png"
 				bgOpacity="opacity-40"
 			>
@@ -47,10 +54,8 @@ export default function Home() {
 				</Details>
 			</ImageWithDetails>
 
-			<ImageWithDetails reverse bg="#00ff00">
-				<Heading reverse>
-					Title
-				</Heading>
+			<ImageWithDetails classNames="py-28" reverse bg="#00ff00">
+				<Heading reverse>Title</Heading>
 				<Details reverse>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque
 					temporibus nobis voluptatem id quae. Delectus enim voluptas blanditiis
@@ -63,10 +68,8 @@ export default function Home() {
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-				<SubHeading reverse>
-					Subheadding
-				</SubHeading>
-				<Details reverse >
+				<SubHeading reverse>Subheadding</SubHeading>
+				<Details reverse>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
@@ -89,10 +92,11 @@ export default function Home() {
 					dicta quisquam facere aut! Lorem ipsum dolor sit amet consectetur
 					adipisicing elit. Praesentium fugit beatae voluptatibus cum fugiat
 					maiores perspiciatis libero, repudiandae voluptate error nesciunt
-					similiquereversevitae voluptas unde ipsa labore culpa harum? Inventore!
+					similiquereversevitae voluptas unde ipsa labore culpa harum?
+					Inventore!
 				</Details>
 				<SubHeading>Subheadding</SubHeading>
-				<Details >
+				<Details>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
@@ -104,13 +108,13 @@ export default function Home() {
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-				<Details >
+				<Details>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-				<SubHeading >Subheadding</SubHeading>
+				<SubHeading>Subheadding</SubHeading>
 				<Details>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
@@ -119,7 +123,12 @@ export default function Home() {
 				</Details>
 			</DetailsOnly>
 
-			<DetailsOnly bgImg="/dummy.png" whiteText bgOpacity="opacity-50" bg="#131313">
+			<DetailsOnly
+				bgImg="/dummy.png"
+				whiteText
+				bgOpacity="opacity-50"
+				bg="#131313"
+			>
 				<Heading>Title</Heading>
 				<Details>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quis ex
@@ -134,10 +143,11 @@ export default function Home() {
 					dicta quisquam facere aut! Lorem ipsum dolor sit amet consectetur
 					adipisicing elit. Praesentium fugit beatae voluptatibus cum fugiat
 					maiores perspiciatis libero, repudiandae voluptate error nesciunt
-					similiquereversevitae voluptas unde ipsa labore culpa harum? Inventore!
+					similiquereversevitae voluptas unde ipsa labore culpa harum?
+					Inventore!
 				</Details>
 				<SubHeading>Subheadding</SubHeading>
-				<Details >
+				<Details>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
@@ -149,13 +159,13 @@ export default function Home() {
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-				<Details >
+				<Details>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-				<SubHeading >Subheadding</SubHeading>
+				<SubHeading>Subheadding</SubHeading>
 				<Details>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
@@ -174,7 +184,6 @@ export default function Home() {
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum."
-					
 					/>
 					<FAQ
 						title="Title"
@@ -182,7 +191,6 @@ export default function Home() {
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum."
-					
 					/>
 					<FAQ
 						title="Title"
@@ -190,7 +198,6 @@ export default function Home() {
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum."
-					
 					/>
 					<FAQ
 						title="Title"
@@ -198,7 +205,6 @@ export default function Home() {
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum."
-					
 					/>
 				</FAQsContainer>
 			</DetailsOnly>
