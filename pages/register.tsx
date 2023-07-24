@@ -84,7 +84,7 @@ function Application() {
 					veritatis sapiente quisquam ab numquam. Voluptates, quam nisi.
 					Voluptate, voluptatibus illum?
 				</Details>
-				<CTA title="Apply For Delegate" url="#" />
+				<CTA title="Apply For Delegate" href="#" />
 			</DetailsOnly>
 		</main>
 	);
