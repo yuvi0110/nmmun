@@ -11,3 +11,5 @@
 - Switch some of the images with Image component
 - I don't like the table of contents design
 - Make the hero variants
+
+- Need meta and embeds

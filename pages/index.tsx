@@ -1,25 +1,10 @@
-import Head from "next/head";
-import { motion } from "framer-motion";
-
-import ImageWithDetails from "@/layouts/img-details";
-import Hero from "@/components/hero";
-import Heading from "@/components/heading";
-import Details from "@/components/details";
-import SubHeading from "@/components/sub-heading";
-import DetailsOnly from "@/layouts/details-only";
-import FAQsContainer from "@/layouts/faq-container";
-import FAQ from "@/components/faq";
+import { Details, FAQ, Head, Heading, Hero, SubHeading } from "@/components";
+import { DetailsOnly, FAQsContainer, ImageWithDetails } from "@/layouts";
 
 export default function Home() {
 	return (
 		<main className="main">
-			<Head>
-				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-				/>
-				<title>NMMUN</title>
-			</Head>
+			<Head title="NMMUN" />
 
 			{/* HERO */}
 			<Hero
