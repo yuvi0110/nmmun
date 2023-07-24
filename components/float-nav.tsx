@@ -27,16 +27,23 @@ const FloatingNav = ({
 	return (
 		showFloatingNav && (
 			<motion.nav
-				className={`p-h py-2 md:py-1 w-screen flex justify-center z-50 fixed top-4 ${
-					openSidebar ? "right-3/4 md:right-1/2" : "right-0"
-				} transition-all duration-300`}
+				// className={`p-h py-2 md:py-1 w-screen flex justify-center z-50 fixed top-4 ${
+				// 	openSidebar ? "right-3/4 md:right-1/2" : "right-0"
+				// } transition-all duration-300`}
+				className={`p-h py-2 md:py-1 w-screen flex justify-center z-50 fixed top-4`}
 				variants={inViewVariants}
 				initial="fromTop"
 				animate="visible"
 				exit="fromTop"
 				transition={{ duration: 0.4 }}
 			>
-				<div className="max-w-7xl flex items-center justify-between w-full shadow-md rounded-xl bg-slate-50 p-h">
+				<div
+					className={`max-w-7xl flex items-center justify-between w-full shadow-md rounded-2xl bg-slate-50 p-h ${
+						openSidebar
+							? "-translate-x-3/4 md:-translate-x-1/2"
+							: "translate-x-0"
+					} transition-all duration-300`}
+				>
 					{/* LOGO + COUNTDOWN */}
 					<div className="flex gap-4 lg:gap-8 items-center">
 						<Link href="/">

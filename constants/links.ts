@@ -31,7 +31,7 @@ export const navLinks = [
 	},
 	{
 		name: "Contact Us",
-		href: "/contact-us",
+		href: "/contact",
 		cta: false,
 	},
 	{
