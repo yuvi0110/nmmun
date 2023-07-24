@@ -74,15 +74,8 @@ const Timer = ({ delay, mini }: { delay: number; mini?: boolean }) => {
 	});
 
 	return mini ? (
-		<motion.div
+		<div
 			className="grid grid-flow-col gap-2 md:gap-4 text-center auto-cols-max my-4 relative z-10"
-			variants={enterVariants}
-			initial="hidden"
-			animate="visible"
-			transition={{
-				duration: 0.4,
-				delay,
-			}}
 		>
 			<div className="timer-container-mini">
 				<span className="number-span-mini">
@@ -108,7 +101,7 @@ const Timer = ({ delay, mini }: { delay: number; mini?: boolean }) => {
 				</span>
 				<span className="detail-span-mini">sec</span>
 			</div>
-		</motion.div>
+		</div>
 	) : (
 		<div className="flex flex-col items-center mb-2">
 			<motion.div

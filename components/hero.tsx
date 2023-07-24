@@ -40,7 +40,7 @@ const Hero = ({
 }) => {
 	return (
 		<motion.section
-			className={`text-white mt-32 lg:mt-[136px] w-full flex justify-center p-h ${className}`}
+			className={`text-white mt-8 w-full flex justify-center p-h ${className}`}
 			variants={enterVariants}
 			initial="hidden"
 			animate="visible"

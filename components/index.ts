@@ -13,6 +13,7 @@ import ScrollToTopButton from "./scrollToTopBtn";
 import Sidebar from "./sidebar";
 import SubHeading from "./sub-heading";
 import Timer from "./timer";
+import FloatingNav from "./float-nav";
 
 export {
 	ContentLink,
@@ -30,4 +31,5 @@ export {
 	Sidebar,
 	SubHeading,
 	Timer,
+	FloatingNav,
 };

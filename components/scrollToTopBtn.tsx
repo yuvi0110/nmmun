@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { motion } from 'framer-motion'
 import { FiArrowUp } from "react-icons/fi";
+import { inViewVariants } from "@/constants/animations";
 
-const ScrollToTopButton = () => {
+const ScrollToTopButton = ({ openSidebar }: { openSidebar: boolean }) => {
 	const [showBtn, setShowBtn] = useState(false);
 
 	useEffect(() => {
@@ -18,9 +20,14 @@ const ScrollToTopButton = () => {
 		});
 	};
 
-	// TODO: is there a way to transition this in smoothly
 	return (
-		<div className="relative">
+		<motion.div
+			className={`relative ${openSidebar && "hidden"}`}
+			variants={inViewVariants}
+			initial="fromBottom"
+			animate="visible"
+			transition={{ duration: 0.4 }}
+		>
 			{showBtn && (
 				<button
 					className="fixed bottom-6 right-6 bg-blue-400 text-white rounded-full p-4 flex items-center gap-2"
@@ -30,7 +37,7 @@ const ScrollToTopButton = () => {
 					<span className="hidden md:flex">Go Back To Top</span>
 				</button>
 			)}
-		</div>
+		</motion.div>
 	);
 };
 

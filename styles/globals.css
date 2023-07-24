@@ -11,7 +11,7 @@
 	}
 
 	.nav-link {
-		@apply text-base font-medium cursor-pointer opacity-75 hover:opacity-100;
+		@apply text-base font-medium cursor-pointer hover:opacity-80;
 	}
 	.p-h {
 		@apply px-4 md:px-6 lg:px-10;
