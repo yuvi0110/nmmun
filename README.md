@@ -10,3 +10,4 @@
 - Does the transition exit have any animations for assiting
 - Switch some of the images with Image component
 - I don't like the table of contents design
+- Make the hero variants
