@@ -1,5 +1,7 @@
 import React from "react";
 
+import { AiFillInstagram } from "react-icons/ai";
+import { MdEmail } from "react-icons/md";
 import { motion } from "framer-motion";
 import Timer from "./timer";
 import Link from "next/link";
@@ -18,23 +20,27 @@ const enterVariants = {
 const Hero = ({
 	title,
 	showTimer,
+	showContactCTA,
 	showYear,
 	showCTA,
 	desc,
 	src,
 	alt,
+	className
 }: {
 	title: string;
 	showTimer?: boolean;
+	showContactCTA?: boolean;
 	showCTA?: boolean;
 	showYear?: boolean;
 	desc?: string;
 	src: string;
 	alt: string;
+	className?: string
 }) => {
 	return (
 		<motion.section
-			className="text-white mt-6 w-full flex justify-center p-h"
+			className={`text-white mt-6 w-full flex justify-center p-h ${className}`}
 			variants={enterVariants}
 			initial="hidden"
 			animate="visible"
@@ -52,7 +58,7 @@ const Hero = ({
 
 				{/* TITLE */}
 				<motion.h1
-					className="title relative z-10"
+					className="title relative z-10 text-center"
 					variants={enterVariants}
 					initial="hidden"
 					animate="visible"
@@ -109,11 +115,38 @@ const Hero = ({
 						}}
 					>
 						<Link href="/register">
-							<button className="hero-btn bg-primary text-white">Register</button>
+							<button className="hero-btn bg-primary text-white">
+								Register
+							</button>
 						</Link>
 						<Link href="/contact">
 							<button className="hero-btn">Contact Us</button>
 						</Link>
+					</motion.div>
+				)}
+
+				{/* CONTACT CTA */}
+				{showContactCTA && (
+					<motion.div
+						className="flex gap-2 md:gap-4 mt-4 md:mt-6 relative z-10"
+						variants={enterVariants}
+						initial="hidden"
+						animate="visible"
+						transition={{
+							duration: 0.4,
+							delay: 3,
+						}}
+					>
+						<a href="https://www.instagram.com/nmmun_23/">
+							<button className="hero-btn flex items-center gap-2">
+								<AiFillInstagram className="w-6 h-6" /> Instagram
+							</button>
+						</a>
+						<a href="mailto:nmmun2023cs@gmail.com">
+							<button className="hero-btn flex items-center gap-2">
+								<MdEmail className="w-6 h-6" /> Email
+							</button>
+						</a>
 					</motion.div>
 				)}
 			</div>
