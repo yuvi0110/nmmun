@@ -7,7 +7,7 @@ import Link from "next/link";
 function Sidebar({ openSidebar }: { openSidebar: boolean }) {
 	return (
 		<div
-			className={`top-0 transition-all duration-300 fixed bg-blue-800 text-white w-3/4 max-h-screen h-full ${
+			className={`top-0 transition-all duration-300 fixed bg-blue-800 text-white w-3/4 md:w-1/2 max-h-screen h-full ${
 				openSidebar ? "right-0" : "-right-3/4"
 			} flex flex-col justify-between py-16`}
 		>
@@ -30,7 +30,7 @@ function Sidebar({ openSidebar }: { openSidebar: boolean }) {
 			</div>
 
 			{/* LINKS */}
-			<ul className="flex flex-col gap-4 lg:gap-8 justify-center p-6">
+			<ul className="flex flex-col gap-4 justify-center p-6">
 				<li>
 					<Link href="/" className="link uppercase text-xl" title="Home">
 						Home

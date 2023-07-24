@@ -1,19 +1,21 @@
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
+
 import { inViewVariants } from "@/constants/animations";
 
 const CTA = ({
 	title,
-	url,
+	href,
 	delay,
 }: {
 	title: string;
-	url: string;
+	href: string;
 	delay?: number;
 }) => {
 	return (
 		<motion.div
-			className="w-full flex justify-center py-8"
+			className="w-full flex justify-center"
 			variants={inViewVariants}
 			initial="hidden"
 			whileInView="visible"
@@ -23,11 +25,11 @@ const CTA = ({
 			}}
 			viewport={{ once: true, amount: 0.25 }}
 		>
-			<a href={url}>
-				<button className="bg-blue-600 text-white rounded-lg px-12 py-4">
-					{title}
+			<Link href={href}>
+				<button className="cta rounded-xl cursor-pointer bg-blue-500">
+					<span className="py-2 lg:py-3 px-6 lg:px-8">{title}</span>
 				</button>
-			</a>
+			</Link>
 		</motion.div>
 	);
 };

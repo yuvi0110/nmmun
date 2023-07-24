@@ -1,20 +1,15 @@
 import "@/styles/globals.css";
+
 import type { AppProps } from "next/app";
-import { usePathname } from "next/navigation";
-import { RecoilRoot } from "recoil";
-
-import { AnimatePresence, motion } from "framer-motion";
-
-import Navbar from "@/components/nav";
-import Footer from "@/components/footer";
-import Sidebar from "@/components/sidebar";
 import { useEffect, useState } from "react";
-import ScrollToTopButton from "@/components/scrollToTopBtn";
+import { usePathname } from "next/navigation";
+import { AnimatePresence, motion, cubicBezier } from "framer-motion";
+
+import { Footer, Navbar, ScrollToTopButton, Sidebar } from "@/components";
 
 export default function App({ Component, pageProps }: AppProps) {
 	const pathname = usePathname();
 	const [openSidebar, setOpenSidebar] = useState(false);
-
 	useEffect(() => {
 		setOpenSidebar(false);
 	}, [pathname]);
@@ -31,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
 					transition: {
 						delay: 1,
 						duration: 0.4,
-						ease: "easeOut",
+						ease: cubicBezier(0.77, 0, 0.18, 1),
 					},
 				}}
 				exit={{
@@ -65,13 +60,13 @@ export default function App({ Component, pageProps }: AppProps) {
 
 			<div
 				className={`relative transition-all duration-300 ${
-					openSidebar ? "-translate-x-3/4" : "translate-x-0"
+					openSidebar ? "-translate-x-3/4 md:-translate-x-1/2" : "translate-x-0"
 				} flex flex-col items-center w-full`}
 				style={{
 					width: "100vw",
 				}}
 			>
-				<Navbar setOpenSidebar={setOpenSidebar} openSidebar={openSidebar} />
+				<Navbar setOpenSidebar={setOpenSidebar} />
 				<Component {...pageProps} />
 				<Footer />
 			</div>

@@ -1,30 +1,25 @@
 import React, { Dispatch, SetStateAction } from "react";
+import { motion } from "framer-motion";
+import { v4 as generateKey } from "uuid";
+
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
-import Timer from "./timer";
+import { CTA, Timer } from ".";
+import { inViewVariants } from "@/constants/animations";
+import { navLinks } from "@/constants/links";
 
 const Navbar = ({
-	openSidebar,
 	setOpenSidebar,
 }: {
-	openSidebar: boolean;
 	setOpenSidebar: Dispatch<SetStateAction<boolean>>;
 }) => {
-	const toggleSidebar = () => {
-		console.log("Hi");
-		setOpenSidebar((prev) => !prev);
-	};
-
 	return (
 		<motion.nav
-			className="border-b border-gray-300 p-h py-2 md:py-3 lg:py-2 w-full shadow-sm xl:rounded-lg flex justify-center"
-			initial={{
-				y: -25,
-				opacity: 0,
-			}}
-			animate={{ y: 0, opacity: 1 }}
+			className="border-b border-gray-300 p-h py-2 md:py-1 w-full shadow-sm xl:rounded-lg flex justify-center fixed top-0 left-0 z-50"
+			variants={inViewVariants}
+			initial="fromTop"
+			animate="visible"
 			transition={{ duration: 0.4, delay: 1.6 }}
 		>
 			<div className="max-w-7xl flex items-center justify-between w-full">
@@ -37,58 +32,32 @@ const Navbar = ({
 				</div>
 
 				{/* LINKS - Desktop */}
-				<div className="hidden md:flex">
+				<div className="hidden xl:flex">
 					<ul className="flex gap-4 lg:gap-8 items-center">
-						<li>
-							<Link href="/" className="link" title="Home">
-								Home
-							</Link>
-						</li>
-						<li>
-							<Link href="/councils" className="link" title="Councils">
-								Councils
-							</Link>
-						</li>
-						<li>
-							<Link href="/gallery" className="link" title="Gallery">
-								Gallery
-							</Link>
-						</li>
-						<li>
-							<Link href="/info" className="link" title="Information">
-								Information
-							</Link>
-						</li>
-						<li>
-							<Link href="/allocations" className="link" title="Allocations">
-								Allocations
-							</Link>
-						</li>
-						<li>
-							<Link href="/team" className="link" title="Team">
-								Team
-							</Link>
-						</li>
-						<li>
-							<Link href="/contact" className="link" title="Contact Us">
-								Contact Us
-							</Link>
-						</li>
-						<li>
-							<Link href="/register" className="link" title="Register">
-								<button className="px-6 py-2 bg-primary rounded-md text-white cursor-pointer hover:opacity-60 transition-all duration-200">
-									Register
-								</button>
-							</Link>
-						</li>
+						{navLinks.map((link) =>
+							link.cta ? (
+								<li key={generateKey()}>
+									<CTA title={link.name} href={link.href} />
+								</li>
+							) : (
+								<li key={generateKey()}>
+									<Link href={link.href} className="nav-link nav-link-anim nav-link-ltr" title={link.name}>
+										{link.name}
+									</Link>
+								</li>
+							)
+						)}
 					</ul>
 				</div>
 
-				{/* LINKS - Mobile */}
-				<div className="md:hidden">
+				{/* LINKS - Mobile - SIDEBAR TOGGLE */}
+				<div className="xl:hidden">
 					<button>
 						<label className="hamburger">
-							<input type="checkbox" onClick={toggleSidebar} />
+							<input
+								type="checkbox"
+								onClick={() => setOpenSidebar((prev) => !prev)}
+							/>
 							<svg viewBox="0 0 32 32">
 								<path
 									className="line line-top-bottom"

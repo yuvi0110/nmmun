@@ -10,8 +10,8 @@
 		@apply flex flex-col items-center relative w-full;
 	}
 
-	.link {
-		@apply text-base font-medium cursor-pointer hover:opacity-80 transition-all duration-200;
+	.nav-link {
+		@apply text-base font-medium cursor-pointer opacity-75 hover:opacity-100;
 	}
 	.p-h {
 		@apply px-4 md:px-6 lg:px-10;
@@ -29,14 +29,25 @@
 	.hero-btn {
 		@apply font-semibold bg-white px-6 py-2 text-black rounded-md;
 	}
+
+	/* TIMER */
 	.timer-container {
 		@apply flex flex-col p-2 bg-black bg-opacity-50 rounded-xl;
+	}
+	.timer-container-mini {
+		@apply timer-container bg-opacity-5;
 	}
 	.number-span {
 		@apply font-mono text-4xl md:text-5xl font-medium;
 	}
+	.number-span-mini {
+		@apply number-span text-lg;
+	}
 	.detail-span {
-		@apply text-sm uppercase opacity-80 font-medium;
+		@apply text-sm uppercase opacity-60 font-medium;
+	}
+	.detail-span-mini {
+		@apply detail-span text-[10px];
 	}
 }
 
@@ -94,4 +105,72 @@ body {
 .hamburger input:checked + svg .line-top-bottom {
 	stroke-dasharray: 20 300;
 	stroke-dashoffset: -32.42;
+}
+
+.cta {
+	position: relative;
+	font-family: inherit;
+	font-weight: 500;
+	font-size: 16px;
+	letter-spacing: 0.05em;
+	border: none;
+	color: ghostwhite;
+	overflow: hidden;
+}
+
+.cta span {
+	position: relative;
+	z-index: 10;
+	transition: color 0.4s;
+	display: inline-flex;
+	align-items: center;
+}
+
+.cta::before,
+.cta::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+.cta::before {
+	content: "";
+	background: #000;
+	width: 120%;
+	left: -10%;
+	transform: skew(30deg);
+	transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.cta:hover::before {
+	transform: translate3d(100%, 0, 0);
+}
+
+.cta:active {
+	transform: scale(0.95);
+}
+
+.nav-link-anim {
+	padding: 20px 0px;
+	position: relative;
+}
+
+.nav-link-anim::before {
+	transition: 300ms;
+	height: 5px;
+	content: "";
+	position: absolute;
+	background-color: #031d44;
+}
+
+.nav-link-ltr::before {
+	width: 0%;
+	bottom: 10px;
+}
+
+.nav-link-ltr:hover::before {
+	width: 100%;
 }

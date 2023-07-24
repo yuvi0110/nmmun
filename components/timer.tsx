@@ -20,7 +20,15 @@ const Timer = ({ delay, mini }: { delay: number; mini?: boolean }) => {
 	const [seconds, setSeconds] = useState(99);
 
 	useEffect(() => {
-		const targetTime = new Date("2023-9-23 23:59:59");
+		const t = "2023-7-15 23:59:59".split(/[- : T]/);
+		const targetTime = new Date(
+			parseInt(t[0]),
+			parseInt(t[1]),
+			parseInt(t[2]),
+			parseInt(t[3]),
+			parseInt(t[4]),
+			parseInt(t[5])
+		); //! IOS SUPPORT FIX
 		const now = new Date();
 		const difference = targetTime.getTime() - now.getTime();
 
@@ -76,29 +84,29 @@ const Timer = ({ delay, mini }: { delay: number; mini?: boolean }) => {
 				delay,
 			}}
 		>
-			<div className="timer-container bg-opacity-10">
-				<span className="number-span text-lg">
+			<div className="timer-container-mini">
+				<span className="number-span-mini">
 					<span>{days < 10 ? `0${days}` : days}</span>
 				</span>
-				<span className="detail-span text-xs">days</span>
+				<span className="detail-span-mini">days</span>
 			</div>
-			<div className="timer-container bg-opacity-10">
-				<span className="number-span text-lg">
+			<div className="timer-container-mini">
+				<span className="number-span-mini">
 					<span>{hours < 10 ? `0${hours}` : hours}</span>
 				</span>
-				<span className="detail-span text-xs">hours</span>
+				<span className="detail-span-mini">hours</span>
 			</div>
-			<div className="timer-container bg-opacity-10">
-				<span className="number-span text-lg">
+			<div className="timer-container-mini">
+				<span className="number-span-mini">
 					<span>{minutes < 10 ? `0${minutes}` : minutes}</span>
 				</span>
-				<span className="detail-span text-xs">min</span>
+				<span className="detail-span-mini">min</span>
 			</div>
-			<div className="timer-container bg-opacity-10">
-				<span className="number-span text-lg">
+			<div className="timer-container-mini">
+				<span className="number-span-mini">
 					<span>{seconds < 10 ? `0${seconds}` : seconds}</span>
 				</span>
-				<span className="detail-span text-xs">sec</span>
+				<span className="detail-span-mini">sec</span>
 			</div>
 		</motion.div>
 	) : (

@@ -1,1 +1,9 @@
-{}
+{
+	"navLinks": [
+		{
+			"name": "Home",
+			"href": "/",
+			"cta": false
+		}
+	]
+}
