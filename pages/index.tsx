@@ -54,7 +54,7 @@ export default function Home() {
 				</Details>
 			</ImageWithDetails>
 
-			<ImageWithDetails classNames="py-28" reverse bg="#00ff00">
+			<ImageWithDetails classNames="py-28 bg-red-500" whiteText reverse>
 				<Heading reverse>Title</Heading>
 				<Details reverse>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque
@@ -77,7 +77,7 @@ export default function Home() {
 				</Details>
 			</ImageWithDetails>
 
-			<DetailsOnly bg="#0000ff" whiteText>
+			<DetailsOnly classNames="bg-blue-600" whiteText>
 				<Heading>Title</Heading>
 				<Details>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quis ex

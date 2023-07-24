@@ -109,7 +109,7 @@ const Hero = ({
 						}}
 					>
 						<Link href="/register">
-							<button className="hero-btn bg-primary text-white">Apply</button>
+							<button className="hero-btn bg-primary text-white">Register</button>
 						</Link>
 						<Link href="/contact">
 							<button className="hero-btn">Contact Us</button>
