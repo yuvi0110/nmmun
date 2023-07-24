@@ -55,7 +55,7 @@ function Application() {
 					veritatis sapiente quisquam ab numquam. Voluptates, quam nisi.
 					Voluptate, voluptatibus illum?
 				</Details>
-				<CTA title="Apply For Delegate" url="#" />
+				<CTA title="Apply For Delegate" href="#" />
 			</DetailsOnly>
 			<DetailsOnly classNames="bg-emerald-600" whiteText>
 				<Heading classNames="mb-8">Delegate Applications</Heading>
