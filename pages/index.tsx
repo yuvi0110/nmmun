@@ -4,7 +4,7 @@ import { DetailsOnly, FAQsContainer, ImageWithDetails } from "@/layouts";
 export default function Home() {
 	return (
 		<main className="main">
-			<Head title="NMMUN" />
+			<Head title="NMMUN" desc="The introductory landing page of NMMUN" />
 
 			{/* HERO */}
 			<Hero
@@ -202,7 +202,7 @@ export default function Home() {
 				showTimer
 				showYear
 				variant
-				className="mb-24"
+				className=""
 			/>
 		</main>
 	);

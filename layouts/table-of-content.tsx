@@ -1,10 +1,9 @@
 import Heading from "@/components/heading";
-import SubHeading from "@/components/sub-heading";
 import React from "react";
 
 function TableOfContent({ children }: { children: React.ReactNode }) {
 	return (
-		<div className="w-full p-h py-8 md:py-16 flex justify-center">
+		<div className="w-full p-h py-8 md:py-16 flex justify-center place-content-center">
 			<div className="max-w-7xl w-full flex flex-col gap-4 md:gap-8">
 				<Heading className="my-6" delay={2.8}>
 					Table Of Content

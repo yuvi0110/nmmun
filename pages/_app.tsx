@@ -58,6 +58,7 @@ export default function App({ Component, pageProps }: AppProps) {
 			>
 				<Navbar setOpenSidebar={setOpenSidebar} darkMode openSidebar={openSidebar} />
 				<Component {...pageProps} />
+				<ScrollToTopButton variant openSidebar={openSidebar} />
 				<Footer />
 			</div>
 

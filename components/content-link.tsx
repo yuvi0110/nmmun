@@ -19,9 +19,26 @@ const ContentLink = ({
 	return (
 		<Link href={url}>
 			<motion.div
-				className="flex items-center gap-4 rounded-xl hover:bg-gray-200 p-2 md:flex-col md:p-12"
+				className="flex items-center gap-4 rounded-xl hover:bg-gray-200 p-2 md:flex-col md:p-12 md:hidden"
 				variants={inViewVariants}
-				initial="hidden"
+				initial="fromLeft"
+				animate="visible"
+				transition={{
+					duration: 0.4,
+					delay,
+				}}
+			>
+				<img
+					src={src}
+					alt={alt}
+					className="rounded-full w-8 h-8 md:w-20 md:h-20"
+				/>
+				<p className="font-semibold underline md:text-xl">{title}</p>
+			</motion.div>
+			<motion.div
+				className="hidden md:flex items-center gap-4 rounded-xl hover:bg-gray-200 p-2 md:flex-col md:p-12"
+				variants={inViewVariants}
+				initial="fromDown"
 				animate="visible"
 				transition={{
 					duration: 0.4,
