@@ -14,7 +14,7 @@ function TimelineContainer({ children, className }: { children: React.ReactNode,
 						initial="fromDown"
 						whileInView="visible"
 						transition={{ duration: 0.4, delay: 1.6 }}
-						viewport={{ once: true, amount: 0.25 }}
+						viewport={{ once: true }}
 					>
 						<div className="absolute w-4 h-4 bg-gray-400 rounded-full -left-2 border border-white"></div>
 						<span className="mb-1 text-xl font-medium leading-none text-gray-800">

@@ -6,10 +6,12 @@ const Quote = ({
 	children,
 	reverse,
 	delay,
+  author
 }: {
 	children: React.ReactNode;
 	reverse?: boolean;
 	delay?: number;
+  author?: string
 }) => {
 	return (
 		<motion.q
@@ -24,6 +26,7 @@ const Quote = ({
 			viewport={{ once: true, amount: 0.25 }}
 		>
 			{children}
+      <span>{`--${author}`}</span>
 		</motion.q>
 	);
 };

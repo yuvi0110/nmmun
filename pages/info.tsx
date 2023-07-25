@@ -1,9 +1,25 @@
-import React from 'react'
+import { Head, Hero } from "@/components";
+import React from "react";
 
 function Info() {
-  return (
-    <div className="">Info</div>
-  )
+	return (
+		<main className="main">
+			<Head
+				title="NMMUN: Allocations"
+				desc="Get allocations information for all the council members and so on"
+			/>
+
+			{/* HERO */}
+			<Hero
+				title="INFORMATION"
+				src="/dummy.png"
+				alt="some dummy"
+				desc="The informations will be added soon, please be patient."
+				showTimer
+				showCTA
+			/>
+		</main>
+	);
 }
 
-export default Info
+export default Info;

@@ -62,9 +62,11 @@ export default function App({ Component, pageProps }: AppProps) {
 					openSidebar={openSidebar}
 				/>
 				<Component {...pageProps} />
-				{pathname !== "/contact" && (
-					<ScrollToTopButton variant openSidebar={openSidebar} />
-				)}
+				{pathname !== "/contact" &&
+					pathname !== "/allocations" &&
+					pathname !== "/info" && (
+						<ScrollToTopButton variant openSidebar={openSidebar} />
+					)}
 				<Footer />
 			</div>
 

@@ -35,13 +35,13 @@ const CTA = ({
 		>
 			<Link href={href} target={target}>
 				{!secondary ? (
-					<button className="cta rounded-xl cursor-pointer bg-blue-600 py-2 lg:py-3 px-6 lg:px-8">
+					<button className="cta rounded-lg cursor-pointer bg-blue-600 py-2 lg:py-3 px-6 lg:px-8">
 						<span className="flex items-center gap-2 whitespace-nowrap flex-nowrap">
 							{icon} {title}
 						</span>
 					</button>
 				) : (
-					<button className="cta cta-secondary rounded-xl cursor-pointer bg-blue-600 py-2 lg:py-3 px-6 lg:px-8">
+					<button className="cta cta-secondary rounded-lg cursor-pointer bg-blue-600 py-2 lg:py-3 px-6 lg:px-8">
 						<span className="whitespace-nowrap flex items-center gap-2 flex-nowrap">
 							{icon} {title}
 						</span>

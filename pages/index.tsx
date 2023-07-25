@@ -25,28 +25,6 @@ export default function Home() {
 			/>
 
 			{/* CONTENT */}
-			<ImageWithDetails
-				whiteText
-				className="py-28 bg-black"
-				bgImg="/dummy.png"
-				bgImgAlt="some dummy img"
-				bgOpacity="opacity-40"
-			>
-				<Heading>Title</Heading>
-				<Details>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque
-					temporibus nobis voluptatem id quae. Delectus enim voluptas blanditiis
-					libero, nemo ipsa quasi expedita, incidunt doloremque sit quia quaerat
-					quae.
-				</Details>
-				<Details>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
-					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
-					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
-					reprehenderit ullam? Illum.
-				</Details>
-			</ImageWithDetails>
-
 			<ImageWithDetails className="py-28 bg-red-500" whiteText reverse>
 				<Heading reverse>Title</Heading>
 				<Details reverse>
@@ -63,6 +41,28 @@ export default function Home() {
 				</Details>
 				<SubHeading reverse>Subheadding</SubHeading>
 				<Details reverse>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
+					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
+					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
+					reprehenderit ullam? Illum.
+				</Details>
+			</ImageWithDetails>
+
+			<ImageWithDetails
+				whiteText
+				className="py-28 bg-black"
+				bgImg="/dummy.png"
+				bgImgAlt="some dummy img"
+				bgOpacity="opacity-40"
+			>
+				<Heading>Title</Heading>
+				<Details>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque
+					temporibus nobis voluptatem id quae. Delectus enim voluptas blanditiis
+					libero, nemo ipsa quasi expedita, incidunt doloremque sit quia quaerat
+					quae.
+				</Details>
+				<Details>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci

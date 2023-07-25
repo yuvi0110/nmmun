@@ -1,6 +1,8 @@
-import { ContentLink, Details, Head, Heading, Hero, ScrollToTopButton } from "@/components";
-import { ImageWithDetails, TableOfContent } from "@/layouts";
 import React from "react";
+import { v4 as generateKey } from "uuid";
+
+import { ImageWithDetails, TableOfContent } from "@/layouts";
+import { ContentLink, Details, Head, Heading, Hero } from "@/components";
 
 function Councils() {
 	return (
@@ -24,6 +26,7 @@ function Councils() {
 						title="Title"
 						url="#Title"
 						delay={3 + i * 0.2}
+						key={generateKey()}
 					/>
 				))}
 			</TableOfContent>

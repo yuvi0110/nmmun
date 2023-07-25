@@ -1,21 +1,15 @@
-import ContentLink from "@/components/content-link";
-import Hero from "@/components/hero";
-import Profile from "@/components/profile";
-import ProfilesContainer from "@/layouts/profiles-container";
-import TableOfContent from "@/layouts/table-of-content";
-import Head from "next/head";
+import { ContentLink, Head, Hero, Profile } from "@/components";
+import { ProfilesContainer, TableOfContent } from "@/layouts";
 import React from "react";
+import { v4 as generateKey } from "uuid";
 
 function Team() {
 	return (
 		<main className="main">
-			<Head>
-				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-				/>
-				<title>NMMUN</title>
-			</Head>
+			<Head
+				title="NMMUN: Team"
+				desc="The team responsible for making this years NMMUN possible"
+			/>
 
 			{/* HERO */}
 			<Hero
@@ -34,6 +28,7 @@ function Team() {
 						title="Title"
 						url="#Title"
 						delay={3 + i * 0.2}
+						key={generateKey()}
 					/>
 				))}
 			</TableOfContent>
@@ -41,22 +36,40 @@ function Team() {
 			{/* CONTENT */}
 			<ProfilesContainer title="Organizers">
 				{[1, 2, 3, 4].map((profile, i) => (
-					<Profile />
+					<Profile
+						key={generateKey()}
+						src="/dummy.png"
+						alt="some dummy"
+						name="Someone"
+						position="Some Position"
+					/>
 				))}
 			</ProfilesContainer>
-			<ProfilesContainer title="Organizers">
+			<ProfilesContainer title="IT">
 				{[1, 2, 3, 4].map((profile, i) => (
-					<Profile />
-				))}
-			</ProfilesContainer>
-			<ProfilesContainer title="Organizers">
-				{[1, 2, 3, 4].map((profile, i) => (
-					<Profile />
+					<Profile
+						key={generateKey()}
+						src="/dummy.png"
+						alt="some dummy"
+						name="Someone"
+						position="Some Position"
+						rounded
+					/>
 				))}
 			</ProfilesContainer>
 
 			{/* MARGIN BETWEEN */}
 			<div className="my-12" />
+
+			<Hero
+				src="/dummy.png"
+				alt="some dummy img"
+				title="NMMUN"
+				showCTA
+				showTimer
+				showYear
+				variant
+			/>
 		</main>
 	);
 }

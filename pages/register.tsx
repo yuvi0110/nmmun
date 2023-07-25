@@ -1,28 +1,21 @@
-import CTA from "@/components/cta";
-import Details from "@/components/details";
-import Heading from "@/components/heading";
-import Hero from "@/components/hero";
-import SubHeading from "@/components/sub-heading";
-import DetailsOnly from "@/layouts/details-only";
-import Head from "next/head";
 import React from "react";
+
+import { CTA, Details, Head, Heading, Hero, SubHeading } from "@/components";
+import { DetailsOnly } from "@/layouts";
 
 function Application() {
 	return (
 		<main className="main">
-			<Head>
-				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-				/>
-				<title>NMMUN</title>
-			</Head>
+			<Head
+				title="NMMUN: Register"
+				desc="The delegate and members registration"
+			/>
 
 			{/* HERO */}
 			<Hero
 				src="/dummy.png"
 				alt="some dummy img"
-				title="NMMUN"
+				title="REGISTER"
 				showTimer
 				showYear
 			/>

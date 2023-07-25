@@ -34,7 +34,7 @@ const ScrollToTopButton = ({ openSidebar, variant }: { openSidebar: boolean, var
 		>
 			{showBtn && (
 				<button
-					className="fixed bottom-6 right-6 bg-blue-400 text-white rounded-full p-4 flex items-center gap-2 cursor-pointer duration-200 hover:scale-125 active:scale-100"
+					className="fixed bottom-6 right-6 lg:bottom-10 lg:right-10 bg-blue-600 text-white rounded-full p-4 flex items-center gap-2 cursor-pointer duration-200 hover:scale-125 active:scale-100"
 					onClick={goToTop}
 				>
 					<FiArrowUp className="w-6 h-6" />{" "}
