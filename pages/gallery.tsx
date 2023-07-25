@@ -19,7 +19,7 @@ function Gallery() {
 			<TimelineContainer className="mt-16">
 				<Timeline date="October, 2022">
 					<Masonry
-						title="NMMUN 2021-22"
+						title="NMMUN 2022"
 						dir="/21-22"
 						href="https://drive.google.com/drive/folders/1zcQiauT-H2_NVyGsMeabcbmCWRI6QTg4?usp=sharing"
 					/>
