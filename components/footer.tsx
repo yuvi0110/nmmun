@@ -34,7 +34,7 @@ function Footer({ className }: { className?: string }) {
 							<li key={generateKey()}>
 								<Link
 									href={link.href}
-									className="link text-white"
+									className="link text-white hover:opacity-80 cursor-pointer"
 									title={link.name}
 								>
 									{link.name}

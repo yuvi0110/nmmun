@@ -1,4 +1,12 @@
-import { Details, FAQ, Head, Heading, Hero, SubHeading } from "@/components";
+import {
+	Details,
+	FAQ,
+	Head,
+	Heading,
+	Hero,
+	Quote,
+	SubHeading,
+} from "@/components";
 import { DetailsOnly, FAQsContainer, ImageWithDetails } from "@/layouts";
 
 export default function Home() {
@@ -115,6 +123,10 @@ export default function Home() {
 				className="bg-black"
 			>
 				<Heading>Title</Heading>
+				<Quote>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas ex
+					eius, nihil, adipisci dolor temporibus, totam dolore laboriosam nulla
+				</Quote>
 				<Details>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quis ex
 					pariatur rerum necessitatibus beatae fuga commodi debitis

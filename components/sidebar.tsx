@@ -1,8 +1,10 @@
 import React from "react";
+import Link from "next/link";
 import { MdEmail } from "react-icons/md";
 import { AiFillInstagram } from "react-icons/ai";
+import { v4 as generateKey } from "uuid";
 
-import Link from "next/link";
+import { navLinks } from "@/constants/links";
 
 function Sidebar({ openSidebar }: { openSidebar: boolean }) {
 	return (
@@ -31,70 +33,17 @@ function Sidebar({ openSidebar }: { openSidebar: boolean }) {
 
 			{/* LINKS */}
 			<ul className="flex flex-col gap-4 justify-center p-6">
-				<li>
-					<Link href="/" className="link uppercase text-xl" title="Home">
-						Home
-					</Link>
-				</li>
-				<li>
-					<Link
-						href="/councils"
-						className="uppercase link text-xl"
-						title="Councils"
-					>
-						Councils
-					</Link>
-				</li>
-				<li>
-					<Link
-						href="/gallery"
-						className="uppercase link text-xl"
-						title="Gallery"
-					>
-						Gallery
-					</Link>
-				</li>
-				<li>
-					<Link
-						href="/info"
-						className="uppercase link text-xl"
-						title="Information"
-					>
-						Information
-					</Link>
-				</li>
-				<li>
-					<Link
-						href="/allocations"
-						className="link uppercase text-xl"
-						title="Allocations"
-					>
-						Allocations
-					</Link>
-				</li>
-				<li>
-					<Link href="/team" className="uppercase link text-xl" title="Team">
-						Team
-					</Link>
-				</li>
-				<li>
-					<Link
-						href="/contact"
-						className="uppercase link text-xl"
-						title="Contact Us"
-					>
-						Contact Us
-					</Link>
-				</li>
-				<li>
-					<Link
-						href="/register"
-						className="uppercase link text-xl"
-						title="Register"
-					>
-						Register
-					</Link>
-				</li>
+				{navLinks.map((link) => (
+					<li key={generateKey()}>
+						<Link
+							href={link.href}
+							className="link uppercase text-xl"
+							title={link.name}
+						>
+							{link.name}
+						</Link>
+					</li>
+				))}
 			</ul>
 
 			{/* SOCIALS */}
