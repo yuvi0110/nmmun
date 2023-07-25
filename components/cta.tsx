@@ -10,20 +10,22 @@ const CTA = ({
 	delay,
 	secondary,
 	icon,
-	className
+	className,
+	target
 }: {
 	title: string;
 	href: string;
 	delay?: number;
 	secondary?: boolean;
 	icon?: React.ReactNode;
-	className?: string
+	className?: string;
+	target?: string
 }) => {
 	return (
 		<motion.div
 			className={`w-full flex justify-center ${className}`}
 			variants={inViewVariants}
-			initial="hidden"
+			initial="fromDown"
 			whileInView="visible"
 			transition={{
 				duration: 0.4,
@@ -31,7 +33,7 @@ const CTA = ({
 			}}
 			viewport={{ once: true, amount: 0.25 }}
 		>
-			<Link href={href}>
+			<Link href={href} target={target}>
 				{!secondary ? (
 					<button className="cta rounded-xl cursor-pointer bg-blue-600 py-2 lg:py-3 px-6 lg:px-8">
 						<span className="flex items-center gap-2 whitespace-nowrap flex-nowrap">

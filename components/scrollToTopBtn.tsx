@@ -43,7 +43,7 @@ const ScrollToTopButton = ({ openSidebar, variant }: { openSidebar: boolean, var
 			)}
 		</motion.div>
 	) : (
-		<div className="w-full flex justify-center py-8">
+		<div className="w-full flex justify-center py-8 p-h">
 			<div className="max-w-7xl w-full flex justify-end">
 				<button className="stt" onClick={goToTop}>
 					<div className="text">

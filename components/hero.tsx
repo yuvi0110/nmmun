@@ -140,6 +140,7 @@ const Hero = ({
 			variants={inViewVariants}
 			initial="fromDown"
 			whileInView="visible"
+			viewport={{ once: true, amount: 0.25 }}
 			transition={{
 				duration: 0.4,
 				
@@ -158,6 +159,7 @@ const Hero = ({
 						variants={inViewVariants}
 						initial="fromDown"
 						whileInView="visible"
+						viewport={{ once: true, amount: 0.25 }}
 						transition={{
 							duration: 0.4,
 						}}
@@ -170,6 +172,7 @@ const Hero = ({
 						variants={inViewVariants}
 						initial="fromDown"
 						whileInView="visible"
+						viewport={{ once: true, amount: 0.25 }}
 						transition={{
 							duration: 0.4,
 						}}
@@ -184,6 +187,7 @@ const Hero = ({
 							variants={inViewVariants}
 							initial="fromDown"
 							whileInView="visible"
+							viewport={{ once: true, amount: 0.25 }}
 							transition={{
 								duration: 0.4,
 								delay: 2.6,
@@ -203,6 +207,7 @@ const Hero = ({
 							variants={inViewVariants}
 							initial="fromDown"
 							whileInView="visible"
+							viewport={{ once: true, amount: 0.25 }}
 							transition={{
 								duration: 0.4,
 							}}
@@ -219,6 +224,7 @@ const Hero = ({
 							variants={inViewVariants}
 							initial="fromDown"
 							whileInView="visible"
+							viewport={{ once: true, amount: 0.25 }}
 							transition={{
 								duration: 0.4,
 							}}

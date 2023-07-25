@@ -13,3 +13,4 @@
 - Make the hero variants
 
 - Need meta and embeds
+- Quote Component

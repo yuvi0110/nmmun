@@ -56,9 +56,15 @@ export default function App({ Component, pageProps }: AppProps) {
 					width: "100vw",
 				}}
 			>
-				<Navbar setOpenSidebar={setOpenSidebar} darkMode openSidebar={openSidebar} />
+				<Navbar
+					setOpenSidebar={setOpenSidebar}
+					darkMode
+					openSidebar={openSidebar}
+				/>
 				<Component {...pageProps} />
-				<ScrollToTopButton variant openSidebar={openSidebar} />
+				{pathname !== "/contact" && (
+					<ScrollToTopButton variant openSidebar={openSidebar} />
+				)}
 				<Footer />
 			</div>
 

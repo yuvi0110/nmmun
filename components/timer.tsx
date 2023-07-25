@@ -167,6 +167,7 @@ const Timer = ({
 				initial="fromDown"
 				animate={!whileInView ? "visible" : ""}
 				whileInView={whileInView ? "visible" : ""}
+				viewport={{ once: true, amount: 0.25 }}
 				transition={{
 					duration: 0.6,
 					delay,

@@ -1,113 +1,52 @@
 import React from "react";
-import Heading from "./heading";
+import Image from "next/image";
+import ReactMasonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { motion } from "framer-motion";
+import { v4 as generateKey } from "uuid";
 
-// todo: make these pics animated and dynamic
-const Masonry = ({ title }: { title: string }) => {
+import { CTA, Heading } from ".";
+import { inViewVariants } from "@/constants/animations";
+
+const Masonry = ({
+	title,
+	dir,
+	href,
+}: {
+	title: string;
+	dir: string;
+	href: string;
+}) => {
 	return (
-		<div className="w-full flex justify-center p-h mt-12">
-			<div className="max-w-7xl w-full">
-				<Heading className="mb-8">{title}</Heading>
-				<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-					<div className="grid gap-4">
-						<div>
-							<img
-								className="h-auto max-w-full rounded-lg"
-								src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
-								alt=""
+		<div className="w-full mt-6">
+			<Heading className="mb-8">{title}</Heading>
+			<ResponsiveMasonry
+				columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 1280: 4 }}
+			>
+				<ReactMasonry gutter="16px">
+					{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((n) => (
+						<motion.div
+							className="relative h-64 max-h-64 w-full rounded-lg"
+							variants={inViewVariants}
+							initial="fromDown"
+							whileInView="visible"
+							transition={{ duration: 0.4, delay: 1.6 }}
+							viewport={{ once: true, amount: 0.25 }}
+							key={generateKey()}
+						>
+							<Image
+								fill
+								className="h-auto max-w-full rounded-lg object-cover object-center"
+								src={`${dir}/${n}.jpg`}
+								placeholder="blur"
+								blurDataURL="https://via.placeholder.com/500x500"
+								alt="gallery"
 							/>
-						</div>
-						<div>
-							<img
-								className="h-auto max-w-full rounded-lg"
-								src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
-								alt=""
-							/>
-						</div>
-						<div>
-							<img
-								className="h-auto max-w-full rounded-lg"
-								src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
-								alt=""
-							/>
-						</div>
-					</div>
-					<div className="grid gap-4">
-						<div>
-							<img
-								className="h-auto max-w-full rounded-lg"
-								src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
-								alt=""
-							/>
-						</div>
-						<div>
-							<img
-								className="h-auto max-w-full rounded-lg"
-								src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
-								alt=""
-							/>
-						</div>
-						<div>
-							<img
-								className="h-auto max-w-full rounded-lg"
-								src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
-								alt=""
-							/>
-						</div>
-					</div>
-					<div className="grid gap-4">
-						<div>
-							<img
-								className="h-auto max-w-full rounded-lg"
-								src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
-								alt=""
-							/>
-						</div>
-						<div>
-							<img
-								className="h-auto max-w-full rounded-lg"
-								src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
-								alt=""
-							/>
-						</div>
-						<div>
-							<img
-								className="h-auto max-w-full rounded-lg"
-								src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
-								alt=""
-							/>
-						</div>
-					</div>
-					<div className="grid gap-4">
-						<div>
-							<img
-								className="h-auto max-w-full rounded-lg"
-								src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
-								alt=""
-							/>
-						</div>
-						<div>
-							<img
-								className="h-auto max-w-full rounded-lg"
-								src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
-								alt=""
-							/>
-						</div>
-						<div>
-							<img
-								className="h-auto max-w-full rounded-lg"
-								src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
-								alt=""
-							/>
-						</div>
-					</div>
-				</div>
-				<div className="w-full flex justify-center py-8">
-					<a href="#" target="_blank">
-						<button className="bg-blue-500 text-white px-12 py-4 rounded-lg">
-							View All
-						</button>
-					</a>
-				</div>
+						</motion.div>
+					))}
+				</ReactMasonry>
+			</ResponsiveMasonry>
+			<div className="w-full flex justify-center py-8">
+				<CTA title="View All" href={href} target="_blank" />
 			</div>
 		</div>
 	);

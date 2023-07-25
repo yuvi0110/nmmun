@@ -21,7 +21,7 @@ const Navbar = ({
 		<motion.nav
 			className={`border-b ${
 				darkMode ? "border-gray-500" : "border-gray-300"
-			} p-h py-2 md:py-1 w-full flex justify-center absolute top-0 left-0 z-[100]`}
+			} p-h py-2 md:py-1 w-full flex justify-center absolute top-0 left-0 z-[100] backdrop-blur-lg`}
 			variants={inViewVariants}
 			initial="fromTop"
 			animate="visible"
