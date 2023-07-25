@@ -56,7 +56,7 @@ export default function App({ Component, pageProps }: AppProps) {
 					width: "100vw",
 				}}
 			>
-				<Navbar setOpenSidebar={setOpenSidebar} />
+				<Navbar setOpenSidebar={setOpenSidebar} darkMode openSidebar={openSidebar} />
 				<Component {...pageProps} />
 				<Footer />
 			</div>

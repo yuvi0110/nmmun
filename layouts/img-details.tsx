@@ -5,31 +5,28 @@ import { inViewVariants } from "@/constants/animations";
 function ImageWithDetails({
 	children,
 	reverse,
-	bg,
 	whiteText,
-	classNames,
+	className,
 	bgImg,
+	bgImgAlt,
 	bgOpacity,
 }: {
 	children: React.ReactNode;
 	reverse?: boolean;
-	bg?: string;
 	whiteText?: boolean;
-	classNames?: string;
+	className?: string;
 	bgImg?: string;
+	bgImgAlt?: string;
 	bgOpacity?: string;
 }) {
 	return (
 		<section
-			className={`flex justify-center p-h w-full ${classNames} bg-fixed bg-center bg-no-repeat bg-cover relative`}
-			style={{
-				backgroundColor: bg,
-			}}
+			className={`flex justify-center p-h w-full ${className} bg-fixed bg-center bg-no-repeat bg-cover relative`}
 		>
 			{bgImg ? (
 				<img
 					src={bgImg}
-					alt="some alt text"
+					alt={bgImgAlt}
 					className={`w-full h-full absolute top-0 left-0 object-cover ${bgOpacity}`}
 				/>
 			) : (
@@ -49,7 +46,7 @@ function ImageWithDetails({
 						alt="some alt text"
 						className="rounded-2xl"
 						variants={inViewVariants}
-						initial={`hidden${!reverse ? "R" : ""}`}
+						initial={!reverse ? "fromLeft" : "fromRight"}
 						whileInView="visible"
 						transition={{
 							duration: 0.4,

@@ -40,7 +40,7 @@ function Councils() {
 			</TableOfContent>
 
 			{/* CONTENT */}
-			<ImageWithDetails classNames="py-12">
+			<ImageWithDetails className="py-12">
 				<Heading>Title</Heading>
 				<Details>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
@@ -49,7 +49,7 @@ function Councils() {
 					saepe adipisci vitae?
 				</Details>
 			</ImageWithDetails>
-			<ImageWithDetails classNames="py-12" reverse>
+			<ImageWithDetails className="py-12" reverse>
 				<Heading>Title</Heading>
 				<Details>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
@@ -58,7 +58,7 @@ function Councils() {
 					saepe adipisci vitae?
 				</Details>
 			</ImageWithDetails>
-			<ImageWithDetails classNames="py-12">
+			<ImageWithDetails className="py-12">
 				<Heading>Title</Heading>
 				<Details>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
@@ -67,7 +67,7 @@ function Councils() {
 					saepe adipisci vitae?
 				</Details>
 			</ImageWithDetails>
-			<ImageWithDetails classNames="py-12" reverse>
+			<ImageWithDetails className="py-12" reverse>
 				<Heading>Title</Heading>
 				<Details>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
@@ -76,7 +76,7 @@ function Councils() {
 					saepe adipisci vitae?
 				</Details>
 			</ImageWithDetails>
-			<ImageWithDetails classNames="py-12">
+			<ImageWithDetails className="py-12">
 				<Heading>Title</Heading>
 				<Details>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
@@ -85,7 +85,7 @@ function Councils() {
 					saepe adipisci vitae?
 				</Details>
 			</ImageWithDetails>
-			<ImageWithDetails classNames="py-12" reverse>
+			<ImageWithDetails className="py-12" reverse>
 				<Heading>Title</Heading>
 				<Details>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
@@ -94,7 +94,7 @@ function Councils() {
 					saepe adipisci vitae?
 				</Details>
 			</ImageWithDetails>
-			<ImageWithDetails classNames="py-12">
+			<ImageWithDetails className="py-12">
 				<Heading>Title</Heading>
 				<Details>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
@@ -103,7 +103,7 @@ function Councils() {
 					saepe adipisci vitae?
 				</Details>
 			</ImageWithDetails>
-			<ImageWithDetails classNames="py-12" reverse>
+			<ImageWithDetails className="py-12" reverse>
 				<Heading>Title</Heading>
 				<Details>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident

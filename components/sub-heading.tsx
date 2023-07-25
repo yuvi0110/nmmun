@@ -6,18 +6,18 @@ const SubHeading = ({
 	children,
 	reverse,
 	delay,
-	classNames,
+	className,
 }: {
 	children: React.ReactNode;
 	reverse?: boolean;
 	delay?: number;
-	classNames?: string;
+	className?: string;
 }) => {
 	return (
 		<motion.h2
-			className={`text-3xl font-semibold opacity-80 mt-4 ${classNames}`}
+			className={`text-3xl font-semibold opacity-80 mt-4 ${className}`}
 			variants={inViewVariants}
-			initial={`hidden${reverse ? "R" : ""}`}
+			initial={reverse ? "fromLeft" : "fromRight"}
 			whileInView="visible"
 			transition={{
 				duration: 0.4,

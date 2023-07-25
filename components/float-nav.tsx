@@ -82,6 +82,7 @@ const FloatingNav = ({
 								<input
 									type="checkbox"
 									onClick={() => setOpenSidebar((prev) => !prev)}
+									checked={openSidebar}
 								/>
 								<svg viewBox="0 0 32 32">
 									<path

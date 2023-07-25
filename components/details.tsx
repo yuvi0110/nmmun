@@ -15,7 +15,7 @@ const Details = ({
 		<motion.p
 			className="text-base opacity-75 leading-tight mt-4"
 			variants={inViewVariants}
-			initial={`hidden${reverse ? "R" : ""}`}
+			initial={reverse ? "fromLeft" : "fromRight"}
 			whileInView="visible"
 			transition={{
 				duration: 0.4,

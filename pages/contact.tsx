@@ -20,7 +20,6 @@ function Contact() {
 				title="CONTACT US"
 				showContactCTA
 				showTimer
-        className="mb-12"
 			/>
 		</main>
 	);

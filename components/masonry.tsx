@@ -6,7 +6,7 @@ const Masonry = ({ title }: { title: string }) => {
 	return (
 		<div className="w-full flex justify-center p-h mt-12">
 			<div className="max-w-7xl w-full">
-				<Heading classNames="mb-8">{title}</Heading>
+				<Heading className="mb-8">{title}</Heading>
 				<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 					<div className="grid gap-4">
 						<div>

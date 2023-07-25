@@ -18,10 +18,10 @@ export default function Home() {
 
 			{/* CONTENT */}
 			<ImageWithDetails
-				bg="#131313"
 				whiteText
-				classNames="mt-24 py-28"
+				className="py-28 bg-black"
 				bgImg="/dummy.png"
+				bgImgAlt="some dummy img"
 				bgOpacity="opacity-40"
 			>
 				<Heading>Title</Heading>
@@ -39,7 +39,7 @@ export default function Home() {
 				</Details>
 			</ImageWithDetails>
 
-			<ImageWithDetails classNames="py-28 bg-red-500" whiteText reverse>
+			<ImageWithDetails className="py-28 bg-red-500" whiteText reverse>
 				<Heading reverse>Title</Heading>
 				<Details reverse>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque
@@ -62,7 +62,7 @@ export default function Home() {
 				</Details>
 			</ImageWithDetails>
 
-			<DetailsOnly classNames="bg-blue-600" whiteText>
+			<DetailsOnly className="bg-blue-600" whiteText>
 				<Heading>Title</Heading>
 				<Details>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quis ex
@@ -112,7 +112,7 @@ export default function Home() {
 				bgImg="/dummy.png"
 				whiteText
 				bgOpacity="opacity-50"
-				bg="#131313"
+				className="bg-black"
 			>
 				<Heading>Title</Heading>
 				<Details>
@@ -193,6 +193,17 @@ export default function Home() {
 					/>
 				</FAQsContainer>
 			</DetailsOnly>
+
+			<Hero
+				src="/dummy.png"
+				alt="some dummy img"
+				title="NMMUN"
+				showCTA
+				showTimer
+				showYear
+				variant
+				className="mb-24"
+			/>
 		</main>
 	);
 }

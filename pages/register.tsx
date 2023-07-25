@@ -28,8 +28,8 @@ function Application() {
 			/>
 
 			{/* APPLICATIONS */}
-			<DetailsOnly classNames="bg-red-600 mt-16" whiteText>
-				<Heading classNames="mb-8">Delegate Applications</Heading>
+			<DetailsOnly className="bg-red-600" whiteText>
+				<Heading className="mb-8">Delegate Applications</Heading>
 				<SubHeading>SubHeading</SubHeading>
 				<Details>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet
@@ -55,10 +55,11 @@ function Application() {
 					veritatis sapiente quisquam ab numquam. Voluptates, quam nisi.
 					Voluptate, voluptatibus illum?
 				</Details>
-				<CTA title="Apply For Delegate" href="#" />
+				<CTA title="Apply For Delegate" href="#" className="mt-12" />
 			</DetailsOnly>
-			<DetailsOnly classNames="bg-emerald-600" whiteText>
-				<Heading classNames="mb-8">Delegate Applications</Heading>
+
+			<DetailsOnly className="bg-emerald-600" whiteText>
+				<Heading className="mb-8">Delegate Applications</Heading>
 				<SubHeading>SubHeading</SubHeading>
 				<Details>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet
@@ -84,7 +85,7 @@ function Application() {
 					veritatis sapiente quisquam ab numquam. Voluptates, quam nisi.
 					Voluptate, voluptatibus illum?
 				</Details>
-				<CTA title="Apply For Delegate" href="#" />
+				<CTA title="Apply For Delegate" href="#" className="mt-12" />
 			</DetailsOnly>
 		</main>
 	);

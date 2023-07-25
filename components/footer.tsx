@@ -2,10 +2,12 @@ import React from "react";
 import Link from "next/link";
 import { AiFillInstagram } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
+import { navLinks } from "@/constants/links";
+import { v4 as generateKey } from "uuid";
 
-function Footer({ classNames }: { classNames?: string }) {
+function Footer({ className }: { className?: string }) {
 	return (
-		<footer className={`bg-blue-900 py-12 md:py-18 w-full p-h ${classNames}`}>
+		<footer className={`bg-blue-900 py-12 md:py-18 w-full p-h ${className}`}>
 			<div className="w-full max-w-screen-xl mx-auto">
 				<div className="sm:flex sm:items-center sm:justify-between">
 					<Link href="/" className="flex items-center mb-4 sm:mb-0">
@@ -28,66 +30,17 @@ function Footer({ classNames }: { classNames?: string }) {
 					</Link>
 
 					<ul className="flex flex-col md:flex-row gap-4 lg:gap-8 items-start md:items-center my-8 md:m-0">
-						<li>
-							<Link href="/" className="link text-white" title="Home">
-								Home
-							</Link>
-						</li>
-						<li>
-							<Link
-								href="/councils"
-								className="link text-white"
-								title="Councils"
-							>
-								Councils
-							</Link>
-						</li>
-						<li>
-							<Link href="/gallery" className="link text-white" title="Gallery">
-								Gallery
-							</Link>
-						</li>
-						<li>
-							<Link
-								href="/info"
-								className="link text-white"
-								title="Information"
-							>
-								Information
-							</Link>
-						</li>
-						<li>
-							<Link
-								href="/allocations"
-								className="link text-white"
-								title="Allocations"
-							>
-								Allocations
-							</Link>
-						</li>
-						<li>
-							<Link href="/team" className="link text-white" title="Team">
-								Team
-							</Link>
-						</li>
-						<li>
-							<Link
-								href="/contact"
-								className="link text-white"
-								title="Contact Us"
-							>
-								Contact Us
-							</Link>
-						</li>
-						<li>
-							<Link
-								href="/register"
-								className="link text-white"
-								title="Register"
-							>
-								Register
-							</Link>
-						</li>
+						{navLinks.map((link) => (
+							<li key={generateKey()}>
+								<Link
+									href={link.href}
+									className="link text-white"
+									title={link.name}
+								>
+									{link.name}
+								</Link>
+							</li>
+						))}
 					</ul>
 				</div>
 

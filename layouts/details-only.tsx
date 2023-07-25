@@ -2,32 +2,29 @@ import React from "react";
 
 function DetailsOnly({
 	children,
-	bg,
 	whiteText,
-	classNames,
+	className,
 	bgImg,
+	bgImgAlt,
 	bgOpacity,
 }: {
 	children: React.ReactNode;
-	bg?: string;
 	whiteText?: boolean;
-	classNames?: string;
+	className?: string;
 	bgImg?: string;
+	bgImgAlt?: string;
 	bgOpacity?: string;
 }) {
 	return (
 		<div
 			className={`${
 				whiteText ? "text-white" : "text-black"
-			} ${classNames} relative p-h w-full flex justify-center py-28`}
-			style={{
-				backgroundColor: bg,
-			}}
+			} ${className} relative p-h w-full flex justify-center py-28`}
 		>
 			{bgImg ? (
 				<img
 					src={bgImg}
-					alt="some alt text"
+					alt={bgImgAlt}
 					className={`w-full h-full absolute top-0 left-0 object-cover ${bgOpacity}`}
 				/>
 			) : (

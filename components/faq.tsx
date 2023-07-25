@@ -21,7 +21,7 @@ const FAQ = ({
 	return (
 		<motion.div
 			variants={inViewVariants}
-			initial={"hidden"}
+			initial="fromRight"
 			whileInView="visible"
 			transition={{
 				duration: 0.4,

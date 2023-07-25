@@ -1,19 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { inViewVariants } from "@/constants/animations";
 
-const enterVariants = {
-	hidden: {
-		y: 25,
-		opacity: 0,
-	},
-	visible: {
-		y: 0,
-		opacity: 1,
-	},
-};
-
-const Timer = ({ delay, mini }: { delay: number; mini?: boolean }) => {
+const Timer = ({
+	delay,
+	mini,
+	darkMode,
+	whileInView,
+}: {
+	delay?: number;
+	mini?: boolean;
+	darkMode?: boolean;
+	whileInView?: boolean;
+}) => {
 	const [days, setDays] = useState(99);
 	const [hours, setHours] = useState(99);
 	const [minutes, setMinutes] = useState(99);
@@ -74,40 +74,62 @@ const Timer = ({ delay, mini }: { delay: number; mini?: boolean }) => {
 	});
 
 	return mini ? (
-		<div
-			className="grid grid-flow-col gap-2 md:gap-4 text-center auto-cols-max my-4 relative z-10"
-		>
-			<div className="timer-container-mini">
-				<span className="number-span-mini">
+		<div className="grid grid-flow-col gap-2 md:gap-4 text-center auto-cols-max my-4 relative z-10">
+			<div
+				className={`timer-container-mini ${
+					darkMode && "bg-white bg-opacity-5"
+				}`}
+			>
+				<span className={`number-span-mini ${darkMode && "text-white"}`}>
 					<span>{days < 10 ? `0${days}` : days}</span>
 				</span>
-				<span className="detail-span-mini">days</span>
+				<span className={`detail-span-mini ${darkMode && "text-white"}`}>
+					days
+				</span>
 			</div>
-			<div className="timer-container-mini">
-				<span className="number-span-mini">
+			<div
+				className={`timer-container-mini ${
+					darkMode && "bg-white bg-opacity-5"
+				}`}
+			>
+				<span className={`number-span-mini ${darkMode && "text-white"}`}>
 					<span>{hours < 10 ? `0${hours}` : hours}</span>
 				</span>
-				<span className="detail-span-mini">hours</span>
+				<span className={`detail-span-mini ${darkMode && "text-white"}`}>
+					hours
+				</span>
 			</div>
-			<div className="timer-container-mini">
-				<span className="number-span-mini">
+			<div
+				className={`timer-container-mini ${
+					darkMode && "bg-white bg-opacity-5"
+				}`}
+			>
+				<span className={`number-span-mini ${darkMode && "text-white"}`}>
 					<span>{minutes < 10 ? `0${minutes}` : minutes}</span>
 				</span>
-				<span className="detail-span-mini">min</span>
+				<span className={`detail-span-mini ${darkMode && "text-white"}`}>
+					min
+				</span>
 			</div>
-			<div className="timer-container-mini">
-				<span className="number-span-mini">
+			<div
+				className={`timer-container-mini ${
+					darkMode && "bg-white bg-opacity-5"
+				}`}
+			>
+				<span className={`number-span-mini ${darkMode && "text-white"}`}>
 					<span>{seconds < 10 ? `0${seconds}` : seconds}</span>
 				</span>
-				<span className="detail-span-mini">sec</span>
+				<span className={`detail-span-mini ${darkMode && "text-white"}`}>
+					sec
+				</span>
 			</div>
 		</div>
 	) : (
 		<div className="flex flex-col items-center mb-2">
 			<motion.div
 				className="grid grid-flow-col gap-2 md:gap-4 text-center auto-cols-max my-4 md:my-6 relative z-10"
-				variants={enterVariants}
-				initial="hidden"
+				variants={inViewVariants}
+				initial="fromDown"
 				animate="visible"
 				transition={{
 					duration: 0.4,
@@ -140,10 +162,11 @@ const Timer = ({ delay, mini }: { delay: number; mini?: boolean }) => {
 				</div>
 			</motion.div>
 			<motion.span
-				className="text-white font-medium relative z-10 opacity-60"
-				variants={enterVariants}
-				initial="hidden"
-				animate="visible"
+				className="text-white font-medium relative z-10"
+				variants={inViewVariants}
+				initial="fromDown"
+				animate={!whileInView ? "visible" : ""}
+				whileInView={whileInView ? "visible" : ""}
 				transition={{
 					duration: 0.6,
 					delay,
