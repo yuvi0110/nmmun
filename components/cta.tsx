@@ -8,10 +8,12 @@ const CTA = ({
 	title,
 	href,
 	delay,
+	secondary,
 }: {
 	title: string;
 	href: string;
 	delay?: number;
+	secondary?: boolean;
 }) => {
 	return (
 		<motion.div
@@ -26,9 +28,15 @@ const CTA = ({
 			viewport={{ once: true, amount: 0.25 }}
 		>
 			<Link href={href}>
-				<button className="cta rounded-xl cursor-pointer bg-blue-500">
-					<span className="py-2 lg:py-3 px-6 lg:px-8">{title}</span>
-				</button>
+				{!secondary ? (
+					<button className="cta rounded-xl cursor-pointer bg-blue-600 py-2 lg:py-3 px-6 lg:px-8">
+						<span>{title}</span>
+					</button>
+				) : (
+					<button className="cta cta-secondary rounded-xl cursor-pointer bg-blue-600 py-2 lg:py-3 px-6 lg:px-8">
+						<span className="whitespace-nowrap">{title}</span>
+					</button>
+				)}
 			</Link>
 		</motion.div>
 	);

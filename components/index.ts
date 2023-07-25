@@ -15,6 +15,7 @@ import SubHeading from "./sub-heading";
 import Timer from "./timer";
 import FloatingNav from "./float-nav";
 import Head from "./head";
+import Loader from "./loader";
 
 export {
 	ContentLink,
@@ -34,4 +35,5 @@ export {
 	Timer,
 	FloatingNav,
 	Head,
+	Loader
 };

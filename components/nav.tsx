@@ -16,7 +16,7 @@ const Navbar = ({
 }) => {
 	return (
 		<motion.nav
-			className="border-b border-gray-300 p-h py-2 md:py-1 w-full flex justify-center  z-50"
+			className="border-b border-gray-300 p-h py-2 md:py-1 w-full flex justify-center absolute top-0 left-0 z-50"
 			variants={inViewVariants}
 			initial="fromTop"
 			animate="visible"
