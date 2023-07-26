@@ -5,6 +5,7 @@ import ProfilesContainer from "./profiles-container";
 import TableOfContent from "./table-of-content";
 import TimelineContainer from "./timeline-container";
 import Timeline from "./timeline";
+import TwoColumnsLayout from "./2-col";
 
 export {
 	DetailsOnly,
@@ -13,5 +14,6 @@ export {
 	ProfilesContainer,
 	TableOfContent,
 	TimelineContainer,
-	Timeline
+	Timeline,
+	TwoColumnsLayout
 };

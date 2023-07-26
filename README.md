@@ -13,4 +13,5 @@
 - Make the hero variants
 
 - Need meta and embeds
-- Quote Component
+- Competoanize at an even deeper level cuz y not 
+- Reorganize data to be available for change and update from a single location
