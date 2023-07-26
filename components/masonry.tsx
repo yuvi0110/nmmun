@@ -24,13 +24,13 @@ const Masonry = ({
 			>
 				<ReactMasonry gutter="16px">
 					{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((n) => (
-						<motion.div
+						<div
 							className="relative h-64 max-h-64 w-full rounded-lg"
-							variants={inViewVariants}
-							initial="fromDown"
-							whileInView="visible"
-							transition={{ duration: 0.4, delay: 1.6 }}
-							viewport={{ once: true, amount: 0.25 }}
+							// variants={inViewVariants}
+							// initial="fromDown"
+							// whileInView="visible"
+							// transition={{ duration: 0.4, delay: 1.6 }}
+							// viewport={{ once: true, amount: 0.25 }}
 							key={generateKey()}
 						>
 							<Image
@@ -41,7 +41,7 @@ const Masonry = ({
 								blurDataURL="https://via.placeholder.com/500x500"
 								alt="gallery"
 							/>
-						</motion.div>
+						</div>
 					))}
 				</ReactMasonry>
 			</ResponsiveMasonry>
