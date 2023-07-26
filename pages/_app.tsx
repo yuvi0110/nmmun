@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<AnimatePresence mode="wait">
 			<motion.div
-				className="w-full h-full bg-blue-600 fixed top-0 left-0 z-[1000] flex justify-center items-center"
+				className="w-full h-full bg-white fixed top-0 left-0 z-[1000] flex justify-center items-center"
 				initial={{
 					x: 0,
 				}}
@@ -45,7 +45,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				}}
 				key={pathname}
 			>
-				<Loader variant={LoaderVariants.Bounce} />
+				<Loader variant={LoaderVariants.Logo} />
 			</motion.div>
 
 			<div

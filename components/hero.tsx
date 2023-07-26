@@ -17,110 +17,8 @@ interface Contents {
 	alt: string;
 	className?: string;
 	variant?: boolean;
+	mobileMini?: boolean;
 }
-
-const HeroContents = ({
-	title,
-	showTimer,
-	showContactCTA,
-	showYear,
-	showCTA,
-	desc,
-	src,
-	alt,
-	className,
-}: Contents) => (
-	<>
-		{/* TITLE */}
-		<motion.h1
-			className="title relative z-10 text-center"
-			variants={inViewVariants}
-			initial="fromDown"
-			whileInView="visible"
-			transition={{
-				duration: 0.4,
-				delay: 2.4,
-			}}
-		>
-			{title}
-		</motion.h1>
-
-		<motion.p
-			className="text-center relative z-10 mt-4 px-4"
-			variants={inViewVariants}
-			initial="fromDown"
-			whileInView="visible"
-			transition={{
-				duration: 0.4,
-				delay: 2.6,
-			}}
-		>
-			{desc}
-		</motion.p>
-
-		{/* YEAR */}
-		{showYear && (
-			<motion.span
-				className="text-lg font-medium opacity-80 relative z-10"
-				variants={inViewVariants}
-				initial="fromDown"
-				whileInView="visible"
-				transition={{
-					duration: 0.4,
-					delay: 2.6,
-				}}
-			>
-				2023-24
-			</motion.span>
-		)}
-
-		{/* COUNTDOWN + DATE */}
-		{showTimer && <Timer delay={2.8} />}
-
-		{/* CTA */}
-		{showCTA && (
-			<motion.div
-				className="flex gap-2 md:gap-4 mt-4 md:mt-6 relative z-10"
-				variants={inViewVariants}
-				initial="fromDown"
-				whileInView="visible"
-				transition={{
-					duration: 0.4,
-					delay: 3,
-				}}
-			>
-				<CTA title="Register" href="/register" />
-				<CTA title="Contact Us" href="/contact" secondary />
-			</motion.div>
-		)}
-
-		{/* CONTACT CTA */}
-		{showContactCTA && (
-			<motion.div
-				className="flex gap-2 md:gap-4 mt-4 md:mt-6 relative z-10"
-				variants={inViewVariants}
-				initial="fromDown"
-				whileInView="visible"
-				transition={{
-					duration: 0.4,
-					delay: 3,
-				}}
-			>
-				<CTA
-					title="Instagram"
-					href="https://www.instagram.com/nmmun_23/"
-					icon={<AiFillInstagram className="w-6 h-6" />}
-				/>
-				<CTA
-					title="Email"
-					href="mailto:nmmun2023cs@gmail.com"
-					icon={<MdEmail className="w-6 h-6" />}
-					secondary
-				/>
-			</motion.div>
-		)}
-	</>
-);
 
 const Hero = ({
 	title,
@@ -133,6 +31,7 @@ const Hero = ({
 	src,
 	alt,
 	variant,
+	mobileMini,
 }: Contents) => {
 	return variant ? (
 		<motion.section
@@ -143,7 +42,6 @@ const Hero = ({
 			viewport={{ once: true, amount: 0.25 }}
 			transition={{
 				duration: 0.4,
-				
 			}}
 		>
 			<div className="max-w-7xl w-full flex flex-col justify-center items-center py-28 md:py-20 relative shadow-md rounded-2xl bg-black ">
@@ -155,7 +53,9 @@ const Hero = ({
 				<>
 					{/* TITLE */}
 					<motion.h1
-						className="title relative z-10 text-center"
+						className={`title ${
+							mobileMini && "title-mobile-mini"
+						} relative z-10 text-center`}
 						variants={inViewVariants}
 						initial="fromDown"
 						whileInView="visible"
@@ -258,7 +158,9 @@ const Hero = ({
 				<>
 					{/* TITLE */}
 					<motion.h1
-						className="title relative z-10 text-center"
+						className={`title ${
+							mobileMini && "title-mobile-mini"
+						} relative z-10 text-center`}
 						variants={inViewVariants}
 						initial="fromDown"
 						animate="visible"

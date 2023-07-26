@@ -17,6 +17,7 @@ function Info() {
 				desc="The informations will be added soon, please be patient."
 				showTimer
 				showCTA
+				mobileMini
 			/>
 		</main>
 	);

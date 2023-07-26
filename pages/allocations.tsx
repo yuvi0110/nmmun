@@ -17,6 +17,7 @@ function Allocations() {
 				desc="The allocations will be available soon, please be patient."
 				showTimer
 				showCTA
+				mobileMini
 			/>
 		</main>
 	);
