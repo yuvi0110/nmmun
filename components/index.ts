@@ -17,6 +17,8 @@ import FloatingNav from "./float-nav";
 import Head from "./head";
 import Loader from "./loader";
 import Logo from "./logo";
+import DressCode from "./dress-code";
+import Itinerary from "./itinerary";
 
 export {
 	ContentLink,
@@ -38,4 +40,6 @@ export {
 	Head,
 	Loader,
 	Logo,
+	DressCode,
+	Itinerary
 };

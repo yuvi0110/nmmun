@@ -2,16 +2,15 @@ import React from "react";
 import { v4 as generateKey } from "uuid";
 import { motion } from "framer-motion";
 
-import { Head, Hero, SubHeading } from "@/components";
-import { TwoColumnsLayout } from "@/layouts";
-import { inViewVariants } from "@/constants/animations";
-import DressCode from "@/components/dress-code";
+import { DressCode, Head, Hero, Itinerary} from "@/components";
 
 // Itinerary
 // - Dress code rules
 // - ROP
 // - Delegate handbook??? (Maybe)
 // - Chair hand book
+
+// TODO: table of content
 
 function Info() {
 	return (
@@ -33,8 +32,7 @@ function Info() {
 			/>
 
 			{/* CONTENT */}
-			{/* ITINERARY */}
-
+			<Itinerary />
 			<DressCode />
 
 			{/* RULES OF PROCEDURE */}
