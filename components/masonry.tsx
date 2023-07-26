@@ -18,19 +18,21 @@ const Masonry = ({
 }) => {
 	return (
 		<div className="w-full mt-6">
-			<Heading className="mb-8">{title}</Heading>
+			<Heading className="mb-8" delay={1.6} reverse>
+				{title}
+			</Heading>
 			<ResponsiveMasonry
 				columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 1280: 4 }}
 			>
 				<ReactMasonry gutter="16px">
 					{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((n) => (
-						<div
+						<motion.div
 							className="relative h-64 max-h-64 w-full rounded-lg"
-							// variants={inViewVariants}
-							// initial="fromDown"
-							// whileInView="visible"
-							// transition={{ duration: 0.4, delay: 1.6 }}
-							// viewport={{ once: true, amount: 0.25 }}
+							variants={inViewVariants}
+							initial="fromDown"
+							whileInView="visible"
+							transition={{ duration: 0.4, delay: 1.6 }}
+							viewport={{ once: true, amount: 0.25 }}
 							key={generateKey()}
 						>
 							<Image
@@ -41,7 +43,7 @@ const Masonry = ({
 								blurDataURL="https://via.placeholder.com/500x500"
 								alt="gallery"
 							/>
-						</div>
+						</motion.div>
 					))}
 				</ReactMasonry>
 			</ResponsiveMasonry>
