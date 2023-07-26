@@ -1,7 +1,8 @@
-import { ContentLink, Head, Hero, Profile } from "@/components";
-import { ProfilesContainer, TableOfContent } from "@/layouts";
 import React from "react";
 import { v4 as generateKey } from "uuid";
+
+import { ContentLink, Head, Hero, Profile } from "@/components";
+import { ProfilesContainer, TableOfContent } from "@/layouts";
 
 function Team() {
 	return (
@@ -75,3 +76,11 @@ function Team() {
 }
 
 export default Team;
+
+import { GetStaticProps } from "next";
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+	return {
+		props: {},
+	};
+};

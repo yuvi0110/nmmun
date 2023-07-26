@@ -1,6 +1,7 @@
+import React from "react";
+
 import { Head, Hero, Masonry } from "@/components";
 import { Timeline, TimelineContainer } from "@/layouts";
-import React from "react";
 
 function Gallery() {
 	return (
@@ -42,3 +43,11 @@ function Gallery() {
 }
 
 export default Gallery;
+
+import { GetStaticProps } from "next";
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+	return {
+		props: {},
+	};
+};

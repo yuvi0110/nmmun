@@ -122,3 +122,11 @@ function Councils() {
 }
 
 export default Councils;
+
+import { GetStaticProps } from "next";
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+	return {
+		props: {},
+	};
+};

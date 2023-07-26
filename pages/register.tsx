@@ -85,3 +85,11 @@ function Application() {
 }
 
 export default Application;
+
+import { GetStaticProps } from "next";
+
+export const getStaticProps: GetStaticProps = async () => {
+	return {
+		props: {},
+	};
+};

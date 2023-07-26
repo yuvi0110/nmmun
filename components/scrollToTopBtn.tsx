@@ -11,9 +11,7 @@ const ScrollToTopButton = ({ openSidebar, variant }: { openSidebar: boolean, var
 			if (window.scrollY > 400) setShowBtn(true);
 			else setShowBtn(false);
 
-			console.log(window.document.body.offsetHeight)
-			console.log(window.scrollY)
-			if (window.scrollY > window.document.body.offsetHeight - 1000) setShowBtn(false);
+			if (window.scrollY > window.document.body.offsetHeight - 1400) setShowBtn(false);
 		});
 	}, []);
 

@@ -24,3 +24,11 @@ function Allocations() {
 }
 
 export default Allocations;
+
+import { GetStaticProps } from "next";
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+	return {
+		props: {},
+	};
+};

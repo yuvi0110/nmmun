@@ -1,9 +1,9 @@
-import Hero from '@/components/hero';
-import Head from 'next/head';
-import React from 'react'
+import Hero from "@/components/hero";
+import Head from "next/head";
+import React from "react";
 
 function Contact() {
-  return (
+	return (
 		<main className="main">
 			<Head>
 				<meta
@@ -25,4 +25,12 @@ function Contact() {
 	);
 }
 
-export default Contact
+export default Contact;
+
+import { GetStaticProps } from "next";
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+	return {
+		props: {},
+	};
+};

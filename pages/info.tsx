@@ -54,3 +54,11 @@ function Info() {
 }
 
 export default Info;
+
+import { GetStaticProps } from "next";
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+	return {
+		props: {},
+	};
+};

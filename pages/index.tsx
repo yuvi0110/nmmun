@@ -219,3 +219,12 @@ export default function Home() {
 		</main>
 	);
 }
+
+// MAKING IT STATIC
+import { GetStaticProps } from "next";
+
+export const getStaticProps: GetStaticProps = async () => {
+	return {
+		props: {},
+	};
+};
