@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+
 import { inViewVariants } from "@/constants/animations";
+import { eventDate, eventDateInWords } from "@/constants/details";
 
 const Timer = ({
 	delay,
@@ -20,10 +22,10 @@ const Timer = ({
 	const [seconds, setSeconds] = useState(99);
 
 	useEffect(() => {
-		const t = "2023-7-15 23:59:59".split(/[- : T]/);
+		const t = eventDate.split(/[- : T]/);
 		const targetTime = new Date(
 			parseInt(t[0]),
-			parseInt(t[1]),
+			parseInt(t[1]) - 1,
 			parseInt(t[2]),
 			parseInt(t[3]),
 			parseInt(t[4]),
@@ -173,7 +175,7 @@ const Timer = ({
 					delay,
 				}}
 			>
-				Wednesday, 24th August, 2023
+				{eventDateInWords}
 			</motion.span>
 		</div>
 	);
