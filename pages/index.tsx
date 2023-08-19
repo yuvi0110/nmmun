@@ -16,16 +16,18 @@ export default function Home() {
 
 			{/* HERO */}
 			<Hero
-				src="/dummy.png"
-				alt="some dummy img"
+				src="/hero-home.jpg"
+				alt="NMMUN preview images of NMMUN'22"
 				title="NMMUN"
 				showCTA
 				showTimer
 				showYear
+				carousel
+				images={["/hero-home-1.jpg", "/hero-home-2.jpg", "/hero-home-3.jpg"]}
 			/>
 
 			{/* CONTENT */}
-			<ImageWithDetails className="py-28 bg-red-500" whiteText reverse>
+			<ImageWithDetails className="py-28 bg-color-11" whiteText reverse>
 				<Heading reverse>Title</Heading>
 				<Details reverse>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque
@@ -70,7 +72,7 @@ export default function Home() {
 				</Details>
 			</ImageWithDetails>
 
-			<DetailsOnly className="bg-blue-600" whiteText>
+			<DetailsOnly className="bg-color-7" whiteText>
 				<Heading>Title</Heading>
 				<Details>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quis ex
@@ -171,7 +173,7 @@ export default function Home() {
 				</Details>
 			</DetailsOnly>
 
-			<DetailsOnly>
+			<DetailsOnly className="bg-color-12">
 				<Heading>FAQs</Heading>
 
 				<FAQsContainer>

@@ -1,52 +1,60 @@
 import "@/styles/globals.css";
-
 import type { AppProps } from "next/app";
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-import { AnimatePresence, motion, cubicBezier } from "framer-motion";
 
+// State management
+import { useEffect, useState } from "react";
+
+// Transition Animations & Loaders
+import { usePathname } from "next/navigation";
+import { AnimatePresence } from "framer-motion";
+import NextTopLoader from "nextjs-toploader";
+
+// Components
 import {
 	Footer,
 	Navbar,
+	FloatingScrollToTopButton,
 	ScrollToTopButton,
 	Sidebar,
 	FloatingNav,
-	Loader,
+	TransitionOverlay,
 } from "@/components";
-import { LoaderVariants } from "@/constants/types";
+import { navLinks } from "@/config/links";
 
 export default function App({ Component, pageProps }: AppProps) {
 	const pathname = usePathname();
+
+	const [showScrollToTop, setShowScrollToTop] = useState(false);
 	const [openSidebar, setOpenSidebar] = useState(false);
+
 	useEffect(() => {
+		navLinks.forEach((link) => {
+			if (link.href === pathname) setShowScrollToTop(link.showScrollToTop);
+		});
+	}, []);
+
+	useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		})
 		setOpenSidebar(false);
 	}, [pathname]);
 
 	return (
 		<AnimatePresence mode="wait">
-			<motion.div
-				className="w-full h-full bg-white fixed top-0 left-0 z-[1000] flex justify-center items-center"
-				initial={{
-					x: 0,
-				}}
-				animate={{
-					x: "-100%",
-					transition: {
-						delay: 1,
-						duration: 0.4,
-						ease: cubicBezier(0.77, 0, 0.18, 1),
-					},
-				}}
-				exit={{
-					x: 0,
-				}}
-				transition={{
-					duration: 0.6,
-				}}
-				key={pathname}
-			>
-				<Loader variant={LoaderVariants.Logo} />
-			</motion.div>
+			<TransitionOverlay />
+			<NextTopLoader
+				color="#e2d1ca"
+				initialPosition={0.08}
+				crawlSpeed={200}
+				height={3}
+				crawl={true}
+				showSpinner={false}
+				easing="ease"
+				speed={200}
+				shadow="inset 20px 20px 60px #c0b2ac, inset -20px -20px 60px #fff0e8"
+			/>
 
 			<div
 				className={`relative transition-all duration-300 ${
@@ -62,8 +70,9 @@ export default function App({ Component, pageProps }: AppProps) {
 					openSidebar={openSidebar}
 				/>
 				<Component {...pageProps} />
-				{pathname !== "/contact" && pathname !== "/allocations" && (
-					<ScrollToTopButton variant openSidebar={openSidebar} />
+
+				{showScrollToTop && (
+					<ScrollToTopButton />
 				)}
 				<Footer />
 			</div>
@@ -72,7 +81,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
 			{/* Side Mobile Nav */}
 			<Sidebar openSidebar={openSidebar} />
-			<ScrollToTopButton openSidebar={openSidebar} />
+			<FloatingScrollToTopButton openSidebar={openSidebar} />
 		</AnimatePresence>
 	);
 }

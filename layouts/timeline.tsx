@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import { inViewVariants } from "@/constants/animations";
+import { inViewVariants } from "@/config/animations";
 
 function Timeline({
 	children,

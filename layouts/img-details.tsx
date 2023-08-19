@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { inViewVariants } from "@/constants/animations";
+import { inViewVariants } from "@/config/animations";
 
 function ImageWithDetails({
 	children,
@@ -10,18 +10,25 @@ function ImageWithDetails({
 	bgImg,
 	bgImgAlt,
 	bgOpacity,
+	src, alt, w, h, id
 }: {
 	children: React.ReactNode;
 	reverse?: boolean;
 	whiteText?: boolean;
 	className?: string;
+	src?: string; //todo: make this required
+	alt?: string; 
+	w?: string; // todo: give this options
+	h?: string;
 	bgImg?: string;
 	bgImgAlt?: string;
 	bgOpacity?: string;
+	id?: string;
 }) {
 	return (
 		<section
 			className={`flex justify-center p-h w-full ${className} bg-fixed bg-center bg-no-repeat bg-cover relative`}
+			id={id}
 		>
 			{bgImg ? (
 				<img
@@ -40,11 +47,11 @@ function ImageWithDetails({
 					whiteText ? "text-white" : "text-black"
 				} max-w-7xl w-full relative z-10`}
 			>
-				<div className="md:w-1/2">
+				<div className="md:w-1/2 flex justify-center items-center">
 					<motion.img
-						src="/dummy.png"
-						alt="some alt text"
-						className="rounded-2xl"
+						src={src ? src : "/dummy.png"} // todo: make this requried
+						alt={alt ? alt : "some alt text"}
+						className={`rounded-2xl ${w} ${h}`}
 						variants={inViewVariants}
 						initial={!reverse ? "fromLeft" : "fromRight"}
 						whileInView="visible"

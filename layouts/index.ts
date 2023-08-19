@@ -1,19 +1,8 @@
-import DetailsOnly from "./details-only";
-import FAQsContainer from "./faq-container";
-import ImageWithDetails from "./img-details";
-import ProfilesContainer from "./profiles-container";
-import TableOfContent from "./table-of-content";
-import TimelineContainer from "./timeline-container";
-import Timeline from "./timeline";
-import TwoColumnsLayout from "./2-col";
-
-export {
-	DetailsOnly,
-	FAQsContainer,
-	ImageWithDetails,
-	ProfilesContainer,
-	TableOfContent,
-	TimelineContainer,
-	Timeline,
-	TwoColumnsLayout
-};
+export { default as DetailsOnly } from "./details-only";
+export { default as FAQsContainer } from "./faq-container";
+export { default as ImageWithDetails } from "./img-details";
+export { default as ProfilesContainer } from "./profiles-container";
+export { default as TableOfContent } from "./table-of-content";
+export { default as TimelineContainer } from "./timeline-container";
+export { default as Timeline } from "./timeline";
+export { default as TwoColumnsLayout } from "./2-col";

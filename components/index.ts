@@ -1,45 +1,22 @@
-import ContentLink from "./content-link";
-import CTA from "./cta";
-import Details from "./details";
-import FAQ from "./faq";
-import Footer from "./footer";
-import Heading from "./heading";
-import Hero from "./hero";
-import Masonry from "./masonry";
-import Navbar from "./nav";
-import Profile from "./profile";
-import Quote from "./quote";
-import ScrollToTopButton from "./scrollToTopBtn";
-import Sidebar from "./sidebar";
-import SubHeading from "./sub-heading";
-import Timer from "./timer";
-import FloatingNav from "./float-nav";
-import Head from "./head";
-import Loader from "./loader";
-import Logo from "./logo";
-import DressCode from "./dress-code";
-import Itinerary from "./itinerary";
-
-export {
-	ContentLink,
-	CTA,
-	Details,
-	FAQ,
-	Footer,
-	Heading,
-	Hero,
-	Masonry,
-	Navbar,
-	Profile,
-	Quote,
-	ScrollToTopButton,
-	Sidebar,
-	SubHeading,
-	Timer,
-	FloatingNav,
-	Head,
-	Loader,
-	Logo,
-	DressCode,
-	Itinerary
-};
+export { default as ContentLink } from "./content/content-link";
+export { default as CTA } from "./content/cta";
+export { default as Details } from "./content/details";
+export { default as FAQ } from "./content/faq";
+export { default as Footer } from "./navigation/footer";
+export { default as Heading } from "./content/heading";
+export { default as Hero } from "./content/hero";
+export { default as Masonry } from "./content/masonry";
+export { default as Navbar } from "./navigation/navbar";
+export { default as Profile } from "./content/profile";
+export { default as Quote } from "./content/quote";
+export { default as FloatingScrollToTopButton } from "./navigation/floatingScrollToTopBtn";
+export { default as ScrollToTopButton } from "./navigation/scrollToTopBtn";
+export { default as Sidebar } from "./navigation/sidebar";
+export { default as SubHeading } from "./content/sub-heading";
+export { default as Timer } from "./content/timer";
+export { default as FloatingNav } from "./navigation/floating-navbar";
+export { default as Head } from "./config/head";
+export { default as Logo } from "./navigation/logo";
+export { default as DressCode } from "./content/dress-code";
+export { default as Itinerary } from "./content/itinerary";
+export { default as TransitionOverlay } from "./loading/transition-overlay";

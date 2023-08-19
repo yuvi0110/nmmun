@@ -1,4 +1,4 @@
-import Hero from "@/components/hero";
+import Hero from "@/components/content/hero";
 import Head from "next/head";
 import React from "react";
 

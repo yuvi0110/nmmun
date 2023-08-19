@@ -1,8 +1,8 @@
-import React from "react";
 import { v4 as generateKey } from "uuid";
 
 import { ImageWithDetails, TableOfContent } from "@/layouts";
 import { ContentLink, Details, Head, Heading, Hero } from "@/components";
+import { councils } from "@/config/links";
 
 function Councils() {
 	return (
@@ -19,91 +19,33 @@ function Councils() {
 
 			{/* TABLE OF CONTENT */}
 			<TableOfContent>
-				{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((content, i) => (
+				{councils.map((council, i) => (
 					<ContentLink
-						src="/dummy.png"
-						alt="some dummy image"
-						title="Title"
-						url="#Title"
-						delay={3 + i * 0.2}
+						src={council.src}
+						alt={council.alt}
+						title={council.name}
+						url={`#${council.id}`}
+						delay={2.6 + i * 0.1}
 						key={generateKey()}
 					/>
 				))}
 			</TableOfContent>
 
 			{/* CONTENT */}
-			<ImageWithDetails className="py-12">
-				<Heading>Title</Heading>
-				<Details>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
-					quidem sapiente nihil molestiae voluptates ullam ad consectetur, dolor
-					sunt libero magnam iure magni tenetur, porro, architecto deserunt
-					saepe adipisci vitae?
-				</Details>
-			</ImageWithDetails>
-			<ImageWithDetails className="py-12" reverse>
-				<Heading reverse>Title</Heading>
-				<Details reverse>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
-					quidem sapiente nihil molestiae voluptates ullam ad consectetur, dolor
-					sunt libero magnam iure magni tenetur, porro, architecto deserunt
-					saepe adipisci vitae?
-				</Details>
-			</ImageWithDetails>
-			<ImageWithDetails className="py-12">
-				<Heading>Title</Heading>
-				<Details>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
-					quidem sapiente nihil molestiae voluptates ullam ad consectetur, dolor
-					sunt libero magnam iure magni tenetur, porro, architecto deserunt
-					saepe adipisci vitae?
-				</Details>
-			</ImageWithDetails>
-			<ImageWithDetails className="py-12" reverse>
-				<Heading reverse>Title</Heading>
-				<Details reverse>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
-					quidem sapiente nihil molestiae voluptates ullam ad consectetur, dolor
-					sunt libero magnam iure magni tenetur, porro, architecto deserunt
-					saepe adipisci vitae?
-				</Details>
-			</ImageWithDetails>
-			<ImageWithDetails className="py-12">
-				<Heading>Title</Heading>
-				<Details>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
-					quidem sapiente nihil molestiae voluptates ullam ad consectetur, dolor
-					sunt libero magnam iure magni tenetur, porro, architecto deserunt
-					saepe adipisci vitae?
-				</Details>
-			</ImageWithDetails>
-			<ImageWithDetails className="py-12" reverse>
-				<Heading reverse>Title</Heading>
-				<Details reverse>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
-					quidem sapiente nihil molestiae voluptates ullam ad consectetur, dolor
-					sunt libero magnam iure magni tenetur, porro, architecto deserunt
-					saepe adipisci vitae?
-				</Details>
-			</ImageWithDetails>
-			<ImageWithDetails className="py-12">
-				<Heading>Title</Heading>
-				<Details>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
-					quidem sapiente nihil molestiae voluptates ullam ad consectetur, dolor
-					sunt libero magnam iure magni tenetur, porro, architecto deserunt
-					saepe adipisci vitae?
-				</Details>
-			</ImageWithDetails>
-			<ImageWithDetails className="py-12" reverse>
-				<Heading reverse>Title</Heading>
-				<Details reverse>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
-					quidem sapiente nihil molestiae voluptates ullam ad consectetur, dolor
-					sunt libero magnam iure magni tenetur, porro, architecto deserunt
-					saepe adipisci vitae?
-				</Details>
-			</ImageWithDetails>
+			{councils.map((council, i) => (
+				<ImageWithDetails
+					className={`py-12`}
+					src={council.src}
+					alt={council.alt}
+					reverse={i % 2 === 0 ? true : false}
+					w="w-2/3"
+					h="h-2/3"
+					id={council.id}
+				>
+					<Heading>{council.name}</Heading>
+					<Details>{council.desc}</Details>
+				</ImageWithDetails>
+			))}
 
 			{/* MARGIN BETWEEN */}
 			<div className="my-4" />
