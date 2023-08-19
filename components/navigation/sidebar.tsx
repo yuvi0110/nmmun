@@ -1,15 +1,16 @@
-import React from "react";
-import Link from "next/link";
+// Icons
 import { MdEmail } from "react-icons/md";
 import { AiFillInstagram } from "react-icons/ai";
-import { v4 as generateKey } from "uuid";
 
+// Links
+import { v4 as generateKey } from "uuid";
+import Link from "next/link";
 import { navLinks } from "@/config/links";
 
 function Sidebar({ openSidebar }: { openSidebar: boolean }) {
 	return (
 		<div
-			className={`top-0 transition-all duration-300 fixed bg-blue-800 text-white w-3/4 md:w-1/2 max-h-screen h-full ${
+			className={`top-0 transition-all duration-300 fixed bg-color-5 text-white w-3/4 md:w-1/2 max-h-screen h-full ${
 				openSidebar ? "right-0" : "-right-3/4"
 			} flex flex-col justify-between py-16`}
 		>

@@ -1,6 +1,5 @@
 import Hero from "@/components/content/hero";
 import Head from "next/head";
-import React from "react";
 
 function Contact() {
 	return (
@@ -15,7 +14,7 @@ function Contact() {
 
 			{/* HERO */}
 			<Hero
-				src="/dummy.png"
+				src="/hero-contact-1.jpg"
 				alt="some dummy img"
 				title="CONTACT US"
 				showContactCTA

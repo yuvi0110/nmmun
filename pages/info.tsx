@@ -23,7 +23,7 @@ function Info() {
 			{/* HERO */}
 			<Hero
 				title="INFORMATION"
-				src="/dummy.png"
+				src="/hero-info-1.jpg"
 				alt="some dummy"
 				desc="The informations will be added soon, please be patient."
 				showTimer

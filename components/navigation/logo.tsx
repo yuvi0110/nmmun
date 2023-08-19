@@ -24,7 +24,7 @@ const Logo = ({
 	// 	</svg>
 	// );
 	return (
-		<Image src="/nmmun.png" width={w} height={h} alt="NMMUN logo" className="rounded-full" />
+		<Image src="/logo.png" width={w} height={h} alt="NMMUN logo" className="rounded-full" />
 	);
 };
 

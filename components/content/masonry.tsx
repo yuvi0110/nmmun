@@ -31,8 +31,8 @@ const Masonry = ({
 							variants={inViewVariants}
 							initial="fromDown"
 							whileInView="visible"
-							transition={{ duration: 0.4, delay: 1.6 }}
-							viewport={{ once: true, amount: 0.25 }}
+							transition={{ duration: 0.4 }}
+							viewport={{ once: true }}
 							key={generateKey()}
 						>
 							<Image

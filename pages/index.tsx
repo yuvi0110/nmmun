@@ -16,7 +16,7 @@ export default function Home() {
 
 			{/* HERO */}
 			<Hero
-				src="/hero-home.jpg"
+				src="/hero-home-1.jpg"
 				alt="NMMUN preview images of NMMUN'22"
 				title="NMMUN"
 				showCTA
@@ -27,7 +27,7 @@ export default function Home() {
 			/>
 
 			{/* CONTENT */}
-			<ImageWithDetails className="py-28 bg-color-11" whiteText reverse>
+			<ImageWithDetails className="py-28 bg-color-1" whiteText reverse>
 				<Heading reverse>Title</Heading>
 				<Details reverse>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque

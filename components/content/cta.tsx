@@ -30,7 +30,7 @@ const CTA = ({
 			className={`w-full flex justify-center ${className}`}
 			variants={inViewVariants}
 			initial={!noAnimation && "fromDown"}
-			whileInView={!noAnimation && "visible" || ""}
+			whileInView={(!noAnimation && "visible") || ""}
 			transition={{
 				duration: 0.4,
 				delay,
@@ -56,7 +56,7 @@ const CTA = ({
 							darkMode
 								? "text-white hover:text-white border-2 border-white hover:bg-white"
 								: "text-black hover:text-black border-2 border-black hover:bg-black"
-						} hover:bg-opacity-30 py-2 lg:py-3 px-6 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl lg:px-8 transition-all duration-300 ease-in-out`}
+						} hover:bg-opacity-30 py-2 lg:py-3 px-6 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl focus:scale-100 focus:translate-y-0 lg:px-8 transition-all duration-300 ease-in-out`}
 					>
 						<span className="whitespace-nowrap flex items-center gap-2 flex-nowrap">
 							{icon} {title}

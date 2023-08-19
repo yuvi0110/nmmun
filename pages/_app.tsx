@@ -31,9 +31,6 @@ export default function App({ Component, pageProps }: AppProps) {
 		navLinks.forEach((link) => {
 			if (link.href === pathname) setShowScrollToTop(link.showScrollToTop);
 		});
-	}, []);
-
-	useEffect(() => {
 		window.scrollTo({
 			top: 0,
 			behavior: 'smooth'

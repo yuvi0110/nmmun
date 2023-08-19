@@ -12,7 +12,7 @@ function Councils() {
 			{/* HERO */}
 			<Hero
 				title="COUNCILS"
-				src="/dummy.png"
+				src="/hero-council-5.jpg"
 				alt="some dummy pic"
 				desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quaerat molestias."
 			/>

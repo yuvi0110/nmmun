@@ -15,3 +15,6 @@
 - Need meta and embeds
 - Competoanize at an even deeper level cuz y not 
 - Reorganize data to be available for change and update from a single location
+
+- Give links aria and other labels
+- Give images a good alt tag

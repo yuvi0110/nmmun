@@ -12,7 +12,7 @@ function Allocations() {
 			{/* HERO */}
 			<Hero
 				title="ALLOCATIONS"
-				src="/dummy.png"
+				src="/hero-allocations-2.jpg"
 				alt="some dummy"
 				desc="The allocations will be available soon, please be patient."
 				showTimer

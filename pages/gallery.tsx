@@ -11,7 +11,7 @@ function Gallery() {
 			{/* HERO */}
 			<Hero
 				title="GALLERY"
-				src="/dummy.png"
+				src="/hero-gallery-4.jpg"
 				alt="some dummy pic"
 				desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quaerat molestias."
 			/>

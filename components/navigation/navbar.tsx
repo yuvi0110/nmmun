@@ -11,7 +11,7 @@ import { navLinks } from "@/config/links";
 const Navbar = ({
 	setOpenSidebar,
 	darkMode,
-	openSidebar
+	openSidebar,
 }: {
 	openSidebar: boolean;
 	setOpenSidebar: Dispatch<SetStateAction<boolean>>;
@@ -27,11 +27,12 @@ const Navbar = ({
 			animate="visible"
 			transition={{ duration: 0.4, delay: 1.6 }}
 		>
-			<div className="max-w-7xl flex items-center justify-between w-full">
+			<div className="w-full h-full absolute bg-black top-0 left-0 opacity-20 z-[90]"></div>
+			<div className="max-w-7xl flex items-center justify-between w-full relative z-[99]">
 				{/* LOGO + COUNTDOWN */}
 				<div className="flex gap-4 lg:gap-8 items-center">
 					<Link href="/">
-						<Logo darkMode w={54} h={54} />
+						<Logo darkMode w={64} h={64} />
 					</Link>
 					<Timer delay={0} mini darkMode />
 				</div>

@@ -15,7 +15,7 @@ function Team() {
 			{/* HERO */}
 			<Hero
 				title="OUR TEAM"
-				src="/dummy.png"
+				src="/hero-team-2.jpg"
 				alt="some dummy pic"
 				desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quaerat molestias."
 			/>

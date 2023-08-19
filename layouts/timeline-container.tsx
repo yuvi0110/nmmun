@@ -7,7 +7,7 @@ function TimelineContainer({ children, className }: { children: React.ReactNode,
 	return (
 		<div className={`w-full flex justify-center p-h ${className}`}>
 			<div className="max-w-7xl w-full">
-				<ol className="relative border-l-2 border-gray-400">
+				<ol className="relative border-l-2 border-color-3">
 					<motion.li
 						className="mb-10 ml-4"
 						variants={inViewVariants}
@@ -16,7 +16,7 @@ function TimelineContainer({ children, className }: { children: React.ReactNode,
 						transition={{ duration: 0.4, delay: 1.6 }}
 						viewport={{ once: true }}
 					>
-						<div className="absolute w-4 h-4 bg-gray-400 rounded-full -left-2 border border-white"></div>
+						<div className="absolute w-4 h-4 bg-color-3 rounded-full -left-2 border border-white"></div>
 						<span className="mb-1 text-xl font-medium leading-none text-gray-800">
 							More Coming Soon...
 						</span>

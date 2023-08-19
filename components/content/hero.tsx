@@ -181,7 +181,7 @@ const Hero = (props: Contents) => {
 				<img
 					src={src}
 					alt={alt}
-					className="w-full h-full object-cover opacity-50 absolute top-0 left-0"
+					className="w-full h-full object-cover opacity-40 absolute top-0 left-0"
 				/>
 			) : (
 				<div className="absolute w-full h-full top-0 left-0">
@@ -192,7 +192,7 @@ const Hero = (props: Contents) => {
 								<img
 									src={src}
 									alt={alt}
-									className="min-w-full object-cover opacity-50"
+									className="min-w-full object-cover opacity-40"
 									// style={{ width: 1280 }}
 								/>
 							))
