@@ -26,10 +26,15 @@ export default function App({ Component, pageProps }: AppProps) {
 
 	const [showScrollToTop, setShowScrollToTop] = useState(false);
 	const [openSidebar, setOpenSidebar] = useState(false);
+	const [navbarDarkMode, setNavbarDarkMode] = useState(false);
 
 	useEffect(() => {
 		navLinks.forEach((link) => {
-			if (link.href === pathname) setShowScrollToTop(link.showScrollToTop);
+			if (link.href === pathname) {
+				setShowScrollToTop(link.showScrollToTop);
+				console.log(link)
+				setNavbarDarkMode(link.navDarkMode)
+			}
 		});
 		window.scrollTo({
 			top: 0,
@@ -63,7 +68,7 @@ export default function App({ Component, pageProps }: AppProps) {
 			>
 				<Navbar
 					setOpenSidebar={setOpenSidebar}
-					darkMode
+					darkMode={navbarDarkMode}
 					openSidebar={openSidebar}
 				/>
 				<Component {...pageProps} />

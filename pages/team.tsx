@@ -17,11 +17,14 @@ function Team() {
 				title="OUR TEAM"
 				src="/hero-team-2.jpg"
 				alt="some dummy pic"
-				desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quaerat molestias."
+				desc="Once all the members of the MUN are selected, the teams will be updated. Please be patient."
+				showTimer
+				showCTA
+				mobileMini
 			/>
 
 			{/* TABLE OF CONTENT */}
-			<TableOfContent>
+			{/* <TableOfContent>
 				{[1, 2, 3, 4, 5, 6, 7, 8].map((content, i) => (
 					<ContentLink
 						src="/dummy.png"
@@ -32,10 +35,10 @@ function Team() {
 						key={generateKey()}
 					/>
 				))}
-			</TableOfContent>
+			</TableOfContent> */}
 
 			{/* CONTENT */}
-			<ProfilesContainer title="Organizers">
+			{/* <ProfilesContainer title="Organizers">
 				{[1, 2, 3, 4].map((profile, i) => (
 					<Profile
 						key={generateKey()}
@@ -57,10 +60,10 @@ function Team() {
 						rounded
 					/>
 				))}
-			</ProfilesContainer>
+			</ProfilesContainer> */}
 
 			{/* MARGIN BETWEEN */}
-			<div className="my-12" />
+			{/* <div className="my-12" />
 
 			<Hero
 				src="/dummy.png"
@@ -70,7 +73,7 @@ function Team() {
 				showTimer
 				showYear
 				variant
-			/>
+			/> */}
 		</main>
 	);
 }

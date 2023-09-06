@@ -13,15 +13,16 @@ function Application() {
 
 			{/* HERO */}
 			<Hero
-				src="/dummy.png"
+				src="/hero-home-1.jpg"
 				alt="some dummy img"
+				desc="The registrations will be open soon. Keep an eye out."
 				title="REGISTER"
 				showTimer
 				showYear
 			/>
 
 			{/* APPLICATIONS */}
-			<DetailsOnly className="bg-red-600" whiteText>
+			{/* <DetailsOnly className="bg-red-600" whiteText>
 				<Heading className="mb-8">Delegate Applications</Heading>
 				<SubHeading>SubHeading</SubHeading>
 				<Details>
@@ -79,7 +80,7 @@ function Application() {
 					Voluptate, voluptatibus illum?
 				</Details>
 				<CTA title="Apply For Delegate" href="#" className="mt-12" />
-			</DetailsOnly>
+			</DetailsOnly> */}
 		</main>
 	);
 }

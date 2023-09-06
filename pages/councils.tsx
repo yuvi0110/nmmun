@@ -14,11 +14,14 @@ function Councils() {
 				title="COUNCILS"
 				src="/hero-council-5.jpg"
 				alt="some dummy pic"
-				desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quaerat molestias."
+				desc="Once the councils are finalized the details will be updated. Please be patient."
+				showTimer
+				showCTA
+				mobileMini
 			/>
 
 			{/* TABLE OF CONTENT */}
-			<TableOfContent>
+			{/* <TableOfContent>
 				{councils.map((council, i) => (
 					<ContentLink
 						src={council.src}
@@ -29,10 +32,10 @@ function Councils() {
 						key={generateKey()}
 					/>
 				))}
-			</TableOfContent>
+			</TableOfContent> */}
 
 			{/* CONTENT */}
-			{councils.map((council, i) => (
+			{/* {councils.map((council, i) => (
 				<ImageWithDetails
 					className={`py-12`}
 					src={council.src}
@@ -45,10 +48,10 @@ function Councils() {
 					<Heading>{council.name}</Heading>
 					<Details>{council.desc}</Details>
 				</ImageWithDetails>
-			))}
+			))} */}
 
 			{/* MARGIN BETWEEN */}
-			<div className="my-4" />
+			{/* <div className="my-4" />
 
 			<Hero
 				src="/dummy.png"
@@ -58,7 +61,7 @@ function Councils() {
 				showTimer
 				showYear
 				variant
-			/>
+			/> */}
 		</main>
 	);
 }

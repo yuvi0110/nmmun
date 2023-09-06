@@ -13,10 +13,11 @@ const CTA = ({
 	className,
 	target,
 	darkMode,
-	noAnimation
+	noAnimation,
+	type,
 }: {
 	title: string;
-	href: string;
+	href?: string;
 	delay?: number;
 	secondary?: boolean;
 	icon?: React.ReactNode;
@@ -24,6 +25,7 @@ const CTA = ({
 	target?: string;
 	darkMode?: boolean;
 	noAnimation?: boolean;
+	type?: "button" | "submit";
 }) => {
 	return (
 		<motion.div
@@ -37,33 +39,67 @@ const CTA = ({
 			}}
 			viewport={{ once: true, amount: 0.25 }}
 		>
-			<Link href={href} target={target}>
-				{!secondary ? (
-					<button
-						className={`rounded-lg cursor-pointer ${
-							darkMode
-								? "text-black bg-white border-2 border-white hover:text-blue-600"
-								: "text-white bg-black border-2 border-black hover:text-blue-300"
-						} py-2 lg:py-3 px-6 lg:px-10 hover:-translate-y-1 hover:scale-105 focus:scale-100 focus:translate-y-0 hover:shadow-2xl transition-all duration-300 ease-in-out`}
-					>
-						<span className="flex items-center gap-2 whitespace-nowrap flex-nowrap font-medium">
-							{icon} {title}
-						</span>
-					</button>
-				) : (
-					<button
-						className={`rounded-lg cursor-pointer ${
-							darkMode
-								? "text-white hover:text-white border-2 border-white hover:bg-white"
-								: "text-black hover:text-black border-2 border-black hover:bg-black"
-						} hover:bg-opacity-30 py-2 lg:py-3 px-6 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl focus:scale-100 focus:translate-y-0 lg:px-8 transition-all duration-300 ease-in-out`}
-					>
-						<span className="whitespace-nowrap flex items-center gap-2 flex-nowrap">
-							{icon} {title}
-						</span>
-					</button>
-				)}
-			</Link>
+			{href ? (
+				<Link href={href} target={target}>
+					{!secondary ? (
+						<button
+							type={type}
+							className={`rounded-lg cursor-pointer ${
+								darkMode
+									? "text-black bg-white border-2 border-white hover:text-blue-600"
+									: "text-white bg-black border-2 border-black hover:text-blue-300"
+							} py-2 lg:py-3 px-6 lg:px-10 hover:-translate-y-1 hover:scale-105 focus:scale-100 focus:translate-y-0 hover:shadow-2xl transition-all duration-300 ease-in-out`}
+						>
+							<span className="flex items-center gap-2 whitespace-nowrap flex-nowrap font-medium">
+								{icon} {title}
+							</span>
+						</button>
+					) : (
+						<button
+							type={type}
+							className={`rounded-lg cursor-pointer ${
+								darkMode
+									? "text-white hover:text-white border-2 border-white hover:bg-white"
+									: "text-black hover:text-black border-2 border-black hover:bg-black"
+							} hover:bg-opacity-30 py-2 lg:py-3 px-6 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl focus:scale-100 focus:translate-y-0 lg:px-8 transition-all duration-300 ease-in-out`}
+						>
+							<span className="whitespace-nowrap flex items-center gap-2 flex-nowrap">
+								{icon} {title}
+							</span>
+						</button>
+					)}
+				</Link>
+			) : (
+				<>
+					{!secondary ? (
+						<button
+							type={type}
+							className={`rounded-lg cursor-pointer ${
+								darkMode
+									? "text-black bg-white border-2 border-white hover:text-blue-600"
+									: "text-white bg-black border-2 border-black hover:text-blue-300"
+							} py-2 lg:py-3 px-6 lg:px-10 hover:-translate-y-1 hover:scale-105 focus:scale-100 focus:translate-y-0 hover:shadow-2xl transition-all duration-300 ease-in-out`}
+						>
+							<span className="flex items-center gap-2 whitespace-nowrap flex-nowrap font-medium">
+								{icon} {title}
+							</span>
+						</button>
+					) : (
+						<button
+							type={type}
+							className={`rounded-lg cursor-pointer ${
+								darkMode
+									? "text-white hover:text-white border-2 border-white hover:bg-white"
+									: "text-black hover:text-black border-2 border-black hover:bg-black"
+							} hover:bg-opacity-30 py-2 lg:py-3 px-6 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl focus:scale-100 focus:translate-y-0 lg:px-8 transition-all duration-300 ease-in-out`}
+						>
+							<span className="whitespace-nowrap flex items-center gap-2 flex-nowrap">
+								{icon} {title}
+							</span>
+						</button>
+					)}
+				</>
+			)}
 		</motion.div>
 	);
 };

@@ -23,11 +23,16 @@ export default function Home() {
 				showTimer
 				showYear
 				carousel
-				images={["/hero-home-1.jpg", "/hero-home-2.jpg", "/hero-home-3.jpg"]}
+				images={[
+					"/hero-home-4.jpg",
+					"/hero-home-5.jpg",
+					"/hero-home-1.jpg",
+					"/hero-home-3.jpg",
+				]}
 			/>
 
 			{/* CONTENT */}
-			<ImageWithDetails className="py-28 bg-color-1" whiteText reverse>
+			<ImageWithDetails className="py-28 bg-color-5" whiteText reverse>
 				<Heading reverse>Title</Heading>
 				<Details reverse>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque
@@ -50,7 +55,7 @@ export default function Home() {
 				</Details>
 			</ImageWithDetails>
 
-			<ImageWithDetails
+			{/* <ImageWithDetails
 				whiteText
 				className="py-28 bg-black"
 				bgImg="/dummy.png"
@@ -70,9 +75,9 @@ export default function Home() {
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-			</ImageWithDetails>
+			</ImageWithDetails> */}
 
-			<DetailsOnly className="bg-color-7" whiteText>
+			{/* <DetailsOnly className="bg-color-7" whiteText>
 				<Heading>Title</Heading>
 				<Details>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quis ex
@@ -116,9 +121,9 @@ export default function Home() {
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-			</DetailsOnly>
+			</DetailsOnly> */}
 
-			<DetailsOnly
+			{/* <DetailsOnly
 				bgImg="/dummy.png"
 				whiteText
 				bgOpacity="opacity-50"
@@ -171,7 +176,7 @@ export default function Home() {
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-			</DetailsOnly>
+			</DetailsOnly> */}
 
 			<DetailsOnly className="bg-color-12">
 				<Heading>FAQs</Heading>
