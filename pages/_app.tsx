@@ -34,7 +34,6 @@ export default function App({ Component, pageProps }: AppProps) {
 		navLinks.forEach((link) => {
 			if (link.href === pathname) {
 				setShowScrollToTop(link.showScrollToTop);
-				console.log(link);
 				setNavbarDarkMode(link.navDarkMode);
 			}
 		});

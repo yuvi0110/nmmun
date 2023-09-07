@@ -19,6 +19,7 @@ export default function Home() {
 				src="/hero-home-1.jpg"
 				alt="NMMUN preview images of NMMUN'22"
 				title="NMMUN"
+				// desc="The content in this page will be updated soon"
 				showCTA
 				showTimer
 				showYear
@@ -32,7 +33,7 @@ export default function Home() {
 			/>
 
 			{/* CONTENT */}
-			<ImageWithDetails className="py-28 bg-color-5" whiteText reverse>
+			{/* <ImageWithDetails className="py-28 bg-color-5" whiteText reverse>
 				<Heading reverse>Title</Heading>
 				<Details reverse>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque
@@ -53,7 +54,7 @@ export default function Home() {
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum.
 				</Details>
-			</ImageWithDetails>
+			</ImageWithDetails> */}
 
 			{/* <ImageWithDetails
 				whiteText
@@ -178,7 +179,7 @@ export default function Home() {
 				</Details>
 			</DetailsOnly> */}
 
-			<DetailsOnly className="bg-color-12">
+			{/* <DetailsOnly className="bg-color-12">
 				<Heading>FAQs</Heading>
 
 				<FAQsContainer>
@@ -211,9 +212,9 @@ export default function Home() {
 					reprehenderit ullam? Illum."
 					/>
 				</FAQsContainer>
-			</DetailsOnly>
+			</DetailsOnly> */}
 
-			<Hero
+			{/* <Hero
 				src="/dummy.png"
 				alt="some dummy img"
 				title="NMMUN"
@@ -222,7 +223,7 @@ export default function Home() {
 				showYear
 				variant
 				className=""
-			/>
+			/> */}
 		</main>
 	);
 }
