@@ -13,12 +13,12 @@ export const inViewVariants = {
 	},
 	fromTop: {
 		y: -25,
-		opacity: 0
+		opacity: 0,
 	},
 
-	visible: {
+	visible: (opacity?: number | string) => ({
 		x: 0,
 		y: 0,
-		opacity: 1,
-	},
+		opacity: opacity || 1,
+	}),
 };

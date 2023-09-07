@@ -164,7 +164,7 @@ const Timer = ({
 				</div>
 			</motion.div>
 			<motion.span
-				className="text-white font-medium relative z-10"
+				className="text-white relative z-10"
 				variants={inViewVariants}
 				initial="fromDown"
 				animate={!whileInView ? "visible" : ""}
@@ -175,7 +175,7 @@ const Timer = ({
 					delay,
 				}}
 			>
-				{eventDateInWords}
+				<span className="font-medium">Save the date:</span> {eventDateInWords}
 			</motion.span>
 		</div>
 	);

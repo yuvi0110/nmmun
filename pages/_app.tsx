@@ -46,7 +46,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
 	return (
 		<AnimatePresence mode="wait">
-			<TransitionOverlay />
+			{/* <TransitionOverlay /> */}
 			<NextTopLoader
 				color="#e2d1ca"
 				initialPosition={0.08}

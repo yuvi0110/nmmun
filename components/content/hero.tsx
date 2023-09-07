@@ -58,29 +58,14 @@ const HeroContents = ({
 				{title}
 			</motion.h1>
 
-			<motion.p
-				className="text-center relative z-10 mt-4 px-4 mb-5"
-				variants={inViewVariants}
-				initial="fromDown"
-				animate={(!whileInView && "visible") || ""}
-				whileInView={(whileInView && "visible") || ""}
-				transition={{
-					duration: 0.4,
-					delay: (!whileInView && 2.6) || 0,
-				}}
-				viewport={(whileInView && { once: true, amount: 0.25 }) || undefined}
-			>
-				{desc}
-			</motion.p>
-
 			{/* YEAR */}
 			{showYear && (
 				<motion.span
 					className="text-lg font-medium opacity-80 relative z-10"
 					variants={inViewVariants}
 					initial="fromDown"
-					animate={(!whileInView && "visible") || ""}
-					whileInView={(whileInView && "visible") || ""}
+					animate={(!whileInView && inViewVariants.visible(0.8)) || ""}
+					whileInView={(whileInView && inViewVariants.visible(0.8)) || ""}
 					transition={{
 						duration: 0.4,
 						delay: (!whileInView && 2.6) || 0,
@@ -90,6 +75,21 @@ const HeroContents = ({
 					2023-24
 				</motion.span>
 			)}
+
+			<motion.p
+				className="text-center relative z-10 mt-4 px-4"
+				variants={inViewVariants}
+				initial="fromDown"
+				animate={(!whileInView && inViewVariants.visible(0.9)) || ""}
+				whileInView={(whileInView && inViewVariants.visible(0.9)) || ""}
+				transition={{
+					duration: 0.4,
+					delay: (!whileInView && 2.6) || 0,
+				}}
+				viewport={(whileInView && { once: true, amount: 0.25 }) || undefined}
+			>
+				{desc}
+			</motion.p>
 
 			{/* COUNTDOWN + DATE */}
 			{showTimer && <Timer delay={2.8} whileInView={whileInView} />}
