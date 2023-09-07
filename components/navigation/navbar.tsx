@@ -36,7 +36,7 @@ const Navbar = ({
 					<Link href="/">
 						<Logo darkMode w={64} h={64} />
 					</Link>
-					<Timer delay={0} mini darkMode />
+					<Timer delay={0} mini darkMode={darkMode} />
 				</div>
 
 				{/* LINKS - Desktop */}
@@ -49,7 +49,7 @@ const Navbar = ({
 						{navLinks.map((link) =>
 							link.cta ? (
 								<li key={generateKey()}>
-									<CTA title={link.name} href={link.href} darkMode />
+									<CTA title={link.name} href={link.href} darkMode={darkMode} />
 								</li>
 							) : (
 								<li key={generateKey()}>
