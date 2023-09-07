@@ -1,4 +1,6 @@
 import "@/styles/globals.css";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import type { AppProps } from "next/app";
 
 // State management
@@ -32,14 +34,14 @@ export default function App({ Component, pageProps }: AppProps) {
 		navLinks.forEach((link) => {
 			if (link.href === pathname) {
 				setShowScrollToTop(link.showScrollToTop);
-				console.log(link)
-				setNavbarDarkMode(link.navDarkMode)
+				console.log(link);
+				setNavbarDarkMode(link.navDarkMode);
 			}
 		});
 		window.scrollTo({
 			top: 0,
-			behavior: 'smooth'
-		})
+			behavior: "smooth",
+		});
 		setOpenSidebar(false);
 	}, [pathname]);
 
@@ -73,9 +75,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				/>
 				<Component {...pageProps} />
 
-				{showScrollToTop && (
-					<ScrollToTopButton />
-				)}
+				{showScrollToTop && <ScrollToTopButton />}
 				<Footer />
 			</div>
 
@@ -84,6 +84,9 @@ export default function App({ Component, pageProps }: AppProps) {
 			{/* Side Mobile Nav */}
 			<Sidebar openSidebar={openSidebar} />
 			<FloatingScrollToTopButton openSidebar={openSidebar} />
+			<div className="fixed top-0 left-0">
+				<ToastContainer />
+			</div>
 		</AnimatePresence>
 	);
 }

@@ -13,16 +13,15 @@ function Contact() {
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		// const id = toast.loading("Sending message...", {
-		// 	position: "top-center",
-		// 	autoClose: 5000,
-		// 	hideProgressBar: false,
-		// 	closeOnClick: true,
-		// 	pauseOnHover: true,
-		// 	draggable: true,
-		// 	progress: undefined,
-		// 	theme: "dark",
-		// });
+		const id = toast.loading("Sending message...", {
+			position: "top-center",
+			autoClose: 5000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+		});
 		await fetch("/api/send-email", {
 			method: "POST",
 			headers: {
@@ -30,26 +29,24 @@ function Contact() {
 			},
 			body: JSON.stringify({ name, email, subject, message }),
 		});
-		// toast.update(id, {
-		// 	render: "Message sent 🎉 We'll get back to you as soon as we can!!",
-		// 	isLoading: false,
-		// 	position: "top-center",
-		// 	autoClose: 5000,
-		// 	hideProgressBar: false,
-		// 	closeOnClick: true,
-		// 	pauseOnHover: true,
-		// 	draggable: true,
-		// 	progress: undefined,
-		// 	theme: "dark",
-		// 	type: "success",
-		// });
+		toast.update(id, {
+			render: "Message sent 🎉 We'll get back to you as soon as we can!!",
+			isLoading: false,
+			position: "top-center",
+			autoClose: 5000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+			type: "success",
+		});
 
 		setName("");
 		setEmail("");
 		setSubject("");
 		setMessage("");
 	};
-
 
 	return (
 		<main className="main">
@@ -99,7 +96,7 @@ function Contact() {
 								<input
 									type="text"
 									id="name"
-									className="shadow-sm text-xl focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e3e4e4] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
+									className="shadow-sm text-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e3e4e4] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
 									placeholder="e.g. John Doe"
 									required
 									value={name}
@@ -125,7 +122,7 @@ function Contact() {
 								<input
 									type="email"
 									id="email"
-									className="shadow-sm text-xl focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e3e4e4] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
+									className="shadow-sm text-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e3e4e4] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
 									placeholder="e.g. example@website.com"
 									required
 									value={email}
@@ -151,7 +148,7 @@ function Contact() {
 								<input
 									type="text"
 									id="subject"
-									className="shadow-sm text-xl focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e3e4e4] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
+									className="shadow-sm text-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e3e4e4] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
 									placeholder="Let us know how we can help you"
 									required
 									value={subject}
@@ -178,7 +175,7 @@ function Contact() {
 								<textarea
 									id="message"
 									rows={4}
-									className="shadow-sm text-xl focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e3e4e4] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
+									className="shadow-sm text-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e3e4e4] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
 									placeholder="Leave a message..."
 									required
 									value={message}
@@ -198,36 +195,38 @@ function Contact() {
 						<div className="w-full">
 							<SubHeading className="mb-4">Address: </SubHeading>
 							<Details className="w-full md:w-2/3">
-								Block 321, Road 2124, Building 1913, 2nd Floor, Manama, Bahrain
+								Building 339, Road 3009, Block 330, Zinj, Bahrain
 							</Details>
+
+							<Map />
 						</div>
 						<div className="w-full">
 							<SubHeading className="mb-4">
 								Socials & Contact Information
 							</SubHeading>
 							<div>
-								<ul className="text-xl">
-									<li className="gap-2 flex items-center mt-2">
+								<ul className="text-lg">
+									{/* <li className="gap-2 flex items-center mt-2">
 										<AiFillPhone className="w-6 h-6" />
 										+973 3349 9054
 									</li>
 									<li className="gap-2 flex items-center mt-2">
 										<AiFillPhone className="w-6 h-6" />
 										+973 3313 1730
-									</li>
+									</li> */}
 									<li className="gap-2 flex items-center mt-2">
 										<AiFillMail className="w-6 h-6" />
-										thurmanevents@gmail.com
+										nmmun2023cs@gmail.com
 									</li>
 									<li>
 										<a
-											href=""
+											href="https://www.instagram.com/nmmun_23/"
 											className="hover:text-primary hover:underline transition duration-300 ease-in-out flex gap-2 items-center mt-2"
 											target="_blank"
 											aria-label="Open thurman events instagram"
 										>
 											<AiFillInstagram className="w-6 h-6" />
-											@thurmanevents
+											@nmmun_23
 										</a>
 									</li>
 								</ul>
@@ -244,11 +243,12 @@ export default Contact;
 
 import { GetStaticProps } from "next";
 import { DetailsOnly } from "@/layouts";
-import { CTA, Details, Heading, SubHeading } from "@/components";
+import { CTA, Details, Heading, Map, SubHeading } from "@/components";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { inViewVariants } from "@/config/animations";
 import { AiFillInstagram, AiFillMail, AiFillPhone } from "react-icons/ai";
+import { toast } from "react-toastify";
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
 	return {

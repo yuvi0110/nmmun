@@ -18,3 +18,6 @@
 
 - Give links aria and other labels
 - Give images a good alt tag
+
+
+For mailer - https://myaccount.google.com/apppasswords
