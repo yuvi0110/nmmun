@@ -19,7 +19,7 @@ export default function Home() {
 				src="/hero-home-1.jpg"
 				alt="NMMUN preview images of NMMUN'22"
 				title="NMMUN"
-				// desc="The content in this page will be updated soon"
+				desc="The content in this page will be updated soon"
 				showCTA
 				showTimer
 				showYear

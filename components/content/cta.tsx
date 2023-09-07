@@ -27,7 +27,6 @@ const CTA = ({
 	noAnimation?: boolean;
 	type?: "button" | "submit";
 }) => {
-	console.log(darkMode)
 	return (
 		<motion.div
 			className={`w-full flex justify-center ${className}`}
