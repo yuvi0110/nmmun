@@ -42,7 +42,7 @@ export default function Home() {
 			/>
 
 			{/* CONTENT */}
-			<DetailsOnly className="pb-28 pt-28">
+			{/* <DetailsOnly className="pb-28 pt-28">
 				<Heading className="mb-6">Zeroth Hour: Breaking the Silence</Heading>
 				<Details>
 					Many, if not all of us, are aware of the social ills that plague our
@@ -70,10 +70,10 @@ export default function Home() {
 					Therefore, we must take the initiative to break this silence as we
 					approach the zeroth hour.
 				</Details>
-			</DetailsOnly>
+			</DetailsOnly> */}
 
 			{/* QUOTE */}
-			<DetailsOnly
+			{/* <DetailsOnly
 				className="py-28 bg-black"
 				whiteText
 				bgImg="/hero-home-1.jpg"
@@ -85,8 +85,8 @@ export default function Home() {
 					leaders, and the New Millennium Model United Nations (NMMUN)
 					Conference is where this transformation begins.
 				</Quote>
-			</DetailsOnly>
-
+			</DetailsOnly> */}
+{/* 
 			<ImageWithDetails
 				reverse
 				className="pb-28 pt-28"
@@ -104,7 +104,7 @@ export default function Home() {
 					the shoes of world leaders, debate critical global issues, and draft
 					resolutions to make a real impact.
 				</Details>
-			</ImageWithDetails>
+			</ImageWithDetails> */}
 
 			{/* <ImageWithDetails className="pb-28">
 				<Heading>What Awaits You:</Heading>
@@ -134,13 +134,8 @@ export default function Home() {
 				</ul>
 			</ImageWithDetails> */}
 
-			<ImageWithDetails
-				className="pb-28"
-				src="/join-us.jpeg"
-				alt=""
-				imgOpacity={0.8}
-			>
-				<Heading className="mb-6">Why Join Us:</Heading>
+			{/* <ImageWithDetails className="pb-28" src="/join-us.jpeg" alt="" imgOpacity={0.7}>
+				<Heading className="mb-6">Why Join Us:</Heading> */}
 				{/* <motion.ul
 					className="space-y-3 mt-6"
 					variants={inViewVariants}
@@ -180,7 +175,7 @@ export default function Home() {
 						</span>
 					</li>
 				</motion.ul> */}
-				<motion.ul
+				{/* <motion.ul
 					className="space-y-3 mt-6"
 					variants={inViewVariants}
 					initial="fromRight"
@@ -191,37 +186,37 @@ export default function Home() {
 					viewport={{ once: true, amount: 0.25 }}
 				>
 					<li>
-						<span className="font-semibold">Educational Experience:</span>{" "}
+						<span className="font-semibold">🧠 Educational Experience:</span>{" "}
 						<span className="opacity-80">
 							Gain an in-depth understanding of global affairs and the art of
 							international diplomacy.
 						</span>
 					</li>
 					<li>
-						<span className="font-semibold">Personal Growth:</span>{" "}
+						<span className="font-semibold">🤝 Personal Growth:</span>{" "}
 						<span className="opacity-80">
 							Develop leadership, teamwork, and problem-solving skills essential
 							for your future.
 						</span>
 					</li>
 					<li>
-						<span className="font-semibold">Global Network:</span>{" "}
+						<span className="font-semibold">🌐 Global Network:</span>{" "}
 						<span className="opacity-80">
 							Connect with like-minded peers who share your passion for global
 							change.
 						</span>
 					</li>
 					<li>
-						<span className="font-semibold">Fun and Fulfillment:</span>{" "}
+						<span className="font-semibold">😄 Fun and Fulfillment:</span>{" "}
 						<span className="opacity-80">
 							Enjoy an intellectually stimulating, fun-filled day leaving you
 							with a sense of accomplishment.
 						</span>
 					</li>
 				</motion.ul>
-			</ImageWithDetails>
+			</ImageWithDetails> */}
 
-			<DetailsOnly className="pb-28">
+			{/* <DetailsOnly className="pb-28">
 				<Heading>FAQs</Heading>
 
 				<FAQsContainer>
@@ -284,7 +279,7 @@ export default function Home() {
 				variant
 				className=""
 				bgImgOpacity="opacity-100"
-			/>
+			/> */}
 		</main>
 	);
 }
