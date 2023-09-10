@@ -13,7 +13,8 @@ function Gallery() {
 				title="GALLERY"
 				src="/hero-gallery-4.jpg"
 				alt="some dummy pic"
-				desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quaerat molestias."
+				className="pb-16"
+				// desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quaerat molestias."
 			/>
 
 			{/* CONTENT */}
@@ -21,7 +22,7 @@ function Gallery() {
 				<Timeline date="October, 2022">
 					<Masonry
 						title="NMMUN 2022"
-						dir="/21-22"
+						dir="21-22"
 						href="https://drive.google.com/drive/folders/1zcQiauT-H2_NVyGsMeabcbmCWRI6QTg4?usp=sharing"
 					/>
 				</Timeline>
@@ -29,9 +30,10 @@ function Gallery() {
 
 			{/* MARGIN BETWEEN */}
 			<Hero
-				src="/dummy.png"
-				alt="some dummy img"
+				src="/hero-variant-4.jpeg"
+				alt="blurred nmmun logo with a gradient bg"
 				title="NMMUN"
+				desc="Ready to Start Your Diplomatic Journey?"
 				showCTA
 				showTimer
 				showYear

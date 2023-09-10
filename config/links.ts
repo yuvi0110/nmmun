@@ -3,7 +3,7 @@ export const navLinks = [
 		name: "Home",
 		href: "/",
 		cta: false,
-		showScrollToTop: false,
+		showScrollToTop: true,
 		navDarkMode: true,
 	},
 	{

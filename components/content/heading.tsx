@@ -15,7 +15,7 @@ const Heading = ({
 }) => {
 	return (
 		<motion.h1
-			className={`text-6xl font-semibold capitalize ${className}`}
+			className={`text-6xl font-display font-semibold capitalize ${className}`}
 			variants={inViewVariants}
 			initial={reverse ? "fromLeft" : "fromRight"}
 			whileInView="visible"

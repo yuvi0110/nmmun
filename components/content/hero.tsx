@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 // Icons
 import { AiFillInstagram } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
@@ -10,14 +12,15 @@ import { inViewVariants } from "@/config/animations";
 // Components
 import { CTA, Timer } from "..";
 import Carousel from "./carousel";
+import { eventDateInWords } from "@/config/details";
 
 interface Contents {
-	title: string;
+	title: string | React.ReactNode;
 	showTimer?: boolean;
 	showContactCTA?: boolean;
 	showCTA?: boolean;
 	showYear?: boolean;
-	desc?: string;
+	desc?: string | React.ReactNode;
 	src: string;
 	alt: string;
 	className?: string;
@@ -26,6 +29,15 @@ interface Contents {
 	whileInView?: boolean;
 	carousel?: boolean;
 	images?: string[];
+	bgImgOpacity?:
+		| "opacity-100"
+		| "opacity-40"
+		| "opacity-80"
+		| "opacity-90"
+		| "opacity-60"
+		| "opacity-75";
+	blackText?: boolean;
+	showDate?: boolean;
 }
 
 const HeroContents = ({
@@ -37,6 +49,9 @@ const HeroContents = ({
 	desc,
 	mobileMini,
 	whileInView,
+	bgImgOpacity,
+	blackText,
+	showDate,
 }: Contents) => {
 	return (
 		<>
@@ -44,7 +59,7 @@ const HeroContents = ({
 			<motion.h1
 				className={`title ${
 					mobileMini && "title-mobile-mini"
-				} relative z-10 text-center tracking-wider`}
+				} relative z-10 text-center ${blackText && "text-black"} mb-4 md:mb-0`}
 				variants={inViewVariants}
 				initial="fromDown"
 				animate={(!whileInView && "visible") || ""}
@@ -61,7 +76,9 @@ const HeroContents = ({
 			{/* YEAR */}
 			{showYear && (
 				<motion.span
-					className="text-lg font-medium opacity-80 relative z-10"
+					className={`text-lg font-medium opacity-80 relative z-10 ${
+						blackText && "text-black"
+					}`}
 					variants={inViewVariants}
 					initial="fromDown"
 					animate={(!whileInView && inViewVariants.visible(0.8)) || ""}
@@ -77,7 +94,9 @@ const HeroContents = ({
 			)}
 
 			<motion.p
-				className="text-center relative z-10 mt-4 px-4"
+				className={`text-center relative z-10 mt-4 px-4 ${
+					blackText && "text-black"
+				} md:text-lg mb-4 md:mb-0`}
 				variants={inViewVariants}
 				initial="fromDown"
 				animate={(!whileInView && inViewVariants.visible(0.9)) || ""}
@@ -91,13 +110,33 @@ const HeroContents = ({
 				{desc}
 			</motion.p>
 
-			{/* COUNTDOWN + DATE */}
+			{/* COUNTDOWN */}
 			{showTimer && <Timer delay={2.8} whileInView={whileInView} />}
+
+			{/* DATE */}
+			{showDate && (
+				<motion.span
+					className="text-white relative z-10 md:mt-2 mb-6 md:text-lg"
+					variants={inViewVariants}
+					initial="fromDown"
+					animate={!whileInView ? inViewVariants.visible(0.9) : ""}
+					whileInView={whileInView ? inViewVariants.visible(0.9) : ""}
+					viewport={{ once: true, amount: 0.25 }}
+					transition={{
+						duration: 0.6,
+						delay: (!whileInView && 2.8) || 0,
+					}}
+				>
+					Save the date: {eventDateInWords}
+				</motion.span>
+			)}
 
 			{/* CTA */}
 			{showCTA && (
 				<motion.div
-					className="flex gap-2 md:gap-4 mt-4 md:mt-6 relative z-10"
+					className={`flex gap-2 md:gap-4 mt-4 md:mt-6 relative z-10 ${
+						blackText && "text-black"
+					}`}
 					variants={inViewVariants}
 					initial="fromDown"
 					animate={(!whileInView && "visible") || ""}
@@ -149,7 +188,8 @@ const HeroContents = ({
 };
 
 const Hero = (props: Contents) => {
-	const { className, src, alt, variant, images, carousel } = props;
+	const { className, src, alt, variant, images, carousel, bgImgOpacity } =
+		props;
 
 	return variant ? (
 		// BOX HERO
@@ -163,13 +203,27 @@ const Hero = (props: Contents) => {
 				duration: 0.4,
 			}}
 		>
-			<div className="max-w-7xl w-full flex flex-col justify-center items-center py-28 md:py-20 relative shadow-md rounded-2xl bg-black ">
+			<div className="max-w-7xl w-full py-28 md:py-20 relative rounded-2xl overflow-hidden bg-black">
+				{/* <Image
+					src={src}
+					alt={alt}
+					fill
+					className={`w-full h-full object-cover ${
+						bgImgOpacity ? bgImgOpacity : "opacity-40"
+					} absolute top-24 left-0`}
+				/> */}
+				{/* <div className="w-full h-full absolute top-0 left-0 z-10"></div> */}
 				<img
 					src={src}
 					alt={alt}
-					className="w-full h-full absolute top-0 left-0 object-cover opacity-50 rounded-2xl"
+					className={`w-full h-full absolute object-cover top-0 left-0 ${
+						bgImgOpacity ? bgImgOpacity : "opacity-40"
+					}`}
 				/>
-				<HeroContents {...props} />
+
+				<div className="relative z-50 flex flex-col justify-center items-center">
+					<HeroContents {...props} />
+				</div>
 			</div>
 		</motion.section>
 	) : (
@@ -177,10 +231,16 @@ const Hero = (props: Contents) => {
 		<section
 			className={`text-white w-full flex justify-center p-h bg-black ${className} relative pt-24`}
 		>
-			{!carousel ? (
-				<img
+			{/* <img
 					src={src}
 					alt={alt}
+					className="w-full h-full object-cover opacity-40 absolute top-0 left-0"
+				/> */}
+			{!carousel ? (
+				<Image
+					src={src}
+					alt={alt}
+					fill
 					className="w-full h-full object-cover opacity-40 absolute top-0 left-0"
 				/>
 			) : (

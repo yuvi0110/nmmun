@@ -10,20 +10,26 @@ function ImageWithDetails({
 	bgImg,
 	bgImgAlt,
 	bgOpacity,
-	src, alt, w, h, id
+	src,
+	alt,
+	w,
+	h,
+	id,
+	imgOpacity,
 }: {
 	children: React.ReactNode;
 	reverse?: boolean;
 	whiteText?: boolean;
 	className?: string;
 	src?: string; //todo: make this required
-	alt?: string; 
+	alt?: string;
 	w?: string; // todo: give this options
 	h?: string;
 	bgImg?: string;
 	bgImgAlt?: string;
 	bgOpacity?: string;
 	id?: string;
+	imgOpacity?: string | number;
 }) {
 	return (
 		<section
@@ -47,20 +53,23 @@ function ImageWithDetails({
 					whiteText ? "text-white" : "text-black"
 				} max-w-7xl w-full relative z-10`}
 			>
-				<div className="md:w-1/2 flex justify-center items-center">
-					<motion.img
+				<motion.div
+					className="md:w-1/2 flex justify-center items-center bg-black rounded-2xl"
+					variants={inViewVariants}
+					initial={!reverse ? "fromLeft" : "fromRight"}
+					whileInView={inViewVariants.visible(1)}
+					transition={{
+						duration: 0.4,
+					}}
+					viewport={{ once: true, amount: 0.25 }}
+				>
+					<img
 						src={src ? src : "/dummy.png"} // todo: make this requried
 						alt={alt ? alt : "some alt text"}
 						className={`rounded-2xl ${w} ${h}`}
-						variants={inViewVariants}
-						initial={!reverse ? "fromLeft" : "fromRight"}
-						whileInView="visible"
-						transition={{
-							duration: 0.4,
-						}}
-						viewport={{ once: true, amount: 0.25 }}
+						style={{ opacity: imgOpacity }}
 					/>
-				</div>
+				</motion.div>
 				<div className="md:w-1/2">{children}</div>
 			</div>
 		</section>

@@ -163,20 +163,6 @@ const Timer = ({
 					<span className="detail-span">sec</span>
 				</div>
 			</motion.div>
-			<motion.span
-				className="text-white relative z-10"
-				variants={inViewVariants}
-				initial="fromDown"
-				animate={!whileInView ? "visible" : ""}
-				whileInView={whileInView ? "visible" : ""}
-				viewport={{ once: true, amount: 0.25 }}
-				transition={{
-					duration: 0.6,
-					delay,
-				}}
-			>
-				<span className="font-medium">Save the date:</span> {eventDateInWords}
-			</motion.span>
 		</div>
 	);
 };

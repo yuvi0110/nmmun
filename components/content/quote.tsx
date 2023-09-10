@@ -1,34 +1,37 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { inViewVariants } from '@/config/animations'
+import React from "react";
+import { motion } from "framer-motion";
+import { inViewVariants } from "@/config/animations";
 
 const Quote = ({
 	children,
 	reverse,
 	delay,
-  author
+	author,
 }: {
 	children: React.ReactNode;
 	reverse?: boolean;
 	delay?: number;
-  author?: string
+	author?: string;
 }) => {
 	return (
-		<motion.q
-			className="text-lg leading-tight mt-4 py-2 italic"
-			variants={inViewVariants}
-			initial={reverse ? "fromLeft" : "fromRight"}
-			whileInView="visible"
-			transition={{
-				duration: 0.4,
-				delay,
-			}}
-			viewport={{ once: true, amount: 0.25 }}
-		>
-			{children}
-      <span>{`--${author}`}</span>
-		</motion.q>
+		<div className="flex items-start gap-4 w-full md:w-4/5 mx-auto">
+			<span className="text-7xl md:text-9xl font-bold font-display">‟</span>
+			<motion.q
+				className="text-xl md:text-3xl leading-tight py-2 font-display"
+				variants={inViewVariants}
+				initial={reverse ? "fromLeft" : "fromRight"}
+				whileInView="visible"
+				transition={{
+					duration: 0.4,
+					delay,
+				}}
+				viewport={{ once: true, amount: 0.25 }}
+			>
+				{children}
+				{author && <span>{`--${author}`}</span>}
+			</motion.q>
+		</div>
 	);
 };
 
-export default Quote
+export default Quote;

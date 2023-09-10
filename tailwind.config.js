@@ -11,6 +11,8 @@ module.exports = {
 			fontFamily: {
 				sans: ["Poppins", "sans-serif"],
 				mono: ["IBM Plex Mono", "monospace"],
+				serif: ["Petrona", "serif"],
+				display: ["Playfair Display", "serif"],
 			},
 			colors: {
 				"color-1": "#bdac86",
