@@ -15,7 +15,7 @@ const SubHeading = ({
 }) => {
 	return (
 		<motion.h2
-			className={`text-3xl font-semibold opacity-80 mt-4 ${className}`}
+			className={`text-3xl font-semibold font-display opacity-80 mt-4 ${className}`}
 			variants={inViewVariants}
 			initial={reverse ? "fromLeft" : "fromRight"}
 			whileInView="visible"

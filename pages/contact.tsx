@@ -67,7 +67,7 @@ function Contact() {
 				showTimer
 			/> */}
 
-			<DetailsOnly className="mt-16">
+			<DetailsOnly className="mt-28 pb-28 pt-16">
 				<Heading>Contact Us</Heading>
 				<Details>
 					Have any questions you want to ask? Send us a message and let us know
