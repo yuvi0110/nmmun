@@ -17,7 +17,7 @@ function Team() {
 				title="OUR TEAM"
 				src="/hero-team-2.jpg"
 				alt="some dummy pic"
-				desc="Once all the members of the MUN are selected, the teams will be updated. Please be patient."
+				desc="Meet the dedicated individuals who drive the success of our Model United Nations team. Get to know our passionate students, advisors, and leaders who are shaping future diplomats and global change-makers."
 				showTimer
 				showCTA
 				mobileMini

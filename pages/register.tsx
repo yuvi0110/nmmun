@@ -13,13 +13,14 @@ function Application() {
 
 			{/* HERO */}
 			<Hero
-				src="/hero-home-1.jpg"
+				src="/gallery/21-22/(29).jpeg"
 				alt="some dummy img"
 				desc="The registrations will be open soon. Keep an eye out."
 				title="REGISTER"
 				showTimer
 				showYear
-			/>
+				bgImgOpacity={0.6}
+/>
 
 			{/* APPLICATIONS */}
 			{/* <DetailsOnly className="bg-red-600" whiteText>

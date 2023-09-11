@@ -19,17 +19,18 @@ const Navbar = ({
 }) => {
 	return (
 		<motion.nav
-			className={`border-b ${
-				darkMode ? "border-gray-500" : "border-gray-300"
-			} p-h py-2 md:py-1 w-full flex justify-center absolute top-0 left-0 z-[100] backdrop-blur-lg`}
+			// className={`border-b ${
+			// 	darkMode ? "border-gray-500" : "border-gray-300"
+			// } p-h py-2 md:py-1 w-full flex justify-center absolute top-0 left-0 z-[100] backdrop-blur-lg`}
+			className={`p-h py-2 md:py-1 w-full flex justify-center absolute top-0 left-0 z-[100]`}
 			variants={inViewVariants}
 			initial="fromTop"
 			animate="visible"
 			transition={{ duration: 0.4, delay: 1.6 }}
 		>
-			{darkMode && (
+			{/* {darkMode && (
 				<div className="w-full h-full absolute bg-black top-0 left-0 opacity-20 z-[90]"></div>
-			)}
+			)} */}
 			<div className="max-w-7xl flex items-center justify-between w-full relative z-[99]">
 				{/* LOGO + COUNTDOWN */}
 				<div className="flex gap-4 lg:gap-8 items-center">

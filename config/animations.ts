@@ -15,6 +15,9 @@ export const inViewVariants = {
 		y: -25,
 		opacity: 0,
 	},
+	fromNothing: {
+		opacity: 0
+	},
 
 	visible: (opacity?: number | string) => ({
 		x: 0,

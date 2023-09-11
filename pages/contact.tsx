@@ -1,5 +1,4 @@
 import Hero from "@/components/content/hero";
-import Head from "next/head";
 
 import { motion } from "framer-motion";
 
@@ -50,13 +49,10 @@ function Contact() {
 
 	return (
 		<main className="main">
-			<Head>
-				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-				/>
-				<title>NMMUN</title>
-			</Head>
+			<Head
+				title="NMMUN: Contact Us"
+				desc="Reach out and connect with us through our Model United Nations contact page. Whether you have questions, want to collaborate, or seek information, we're here to assist. Get in touch and let's engage in meaningful dialogue."
+			/>
 
 			{/* HERO */}
 			{/* <Hero
@@ -243,7 +239,7 @@ export default Contact;
 
 import { GetStaticProps } from "next";
 import { DetailsOnly } from "@/layouts";
-import { CTA, Details, Heading, Map, SubHeading } from "@/components";
+import { CTA, Details, Head, Heading, Map, SubHeading } from "@/components";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { inViewVariants } from "@/config/animations";

@@ -25,7 +25,7 @@ function Info() {
 				title="INFORMATION"
 				src="/hero-info-2.jpg"
 				alt="some dummy"
-				desc="Itinerary, dress code, ROP will be added soon, please be patient."
+				desc="Discover the essentials for your Model United Nations experience. Access our comprehensive information page for key details on itinerary, dress code, Rules of Procedure, and more. Prepare to make your mark on the global stage."
 				showTimer
 				showCTA
 				mobileMini

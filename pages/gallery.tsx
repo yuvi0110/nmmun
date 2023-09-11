@@ -6,7 +6,10 @@ import { Timeline, TimelineContainer } from "@/layouts";
 function Gallery() {
 	return (
 		<main className="main">
-			<Head title="NMMUN: Gallery" desc="The gallery page of the NMMUN" />
+			<Head
+				title="NMMUN: Gallery"
+				desc="Journey through the captivating moments and memories of our Model United Nations conferences. Explore our gallery for a visual narrative of diplomacy, debate, and camaraderie that defines our MUN experience."
+			/>
 
 			{/* HERO */}
 			<Hero
@@ -39,6 +42,7 @@ function Gallery() {
 				showYear
 				variant
 				className=""
+				bgImgOpacity={0.8}
 			/>
 		</main>
 	);

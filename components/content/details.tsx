@@ -6,19 +6,21 @@ const Details = ({
 	children,
 	reverse,
 	delay,
-	className
+	className,
+	opacity,
 }: {
 	children: React.ReactNode;
 	reverse?: boolean;
 	delay?: number;
 	className?: string;
+	opacity?: number;
 }) => {
 	return (
 		<motion.p
 			className={`text-base opacity-75 leading-tight mt-4 ${className}`}
 			variants={inViewVariants}
 			initial={reverse ? "fromLeft" : "fromRight"}
-			whileInView="visible"
+			whileInView={inViewVariants.visible(opacity || 1)}
 			transition={{
 				duration: 0.4,
 				delay,

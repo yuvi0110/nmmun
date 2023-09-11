@@ -1,4 +1,5 @@
-import React from "react";
+import { inViewVariants } from "@/config/animations";
+import { inView, motion } from "framer-motion";
 
 function DetailsOnly({
 	children,
@@ -7,41 +8,58 @@ function DetailsOnly({
 	bgImg,
 	bgImgAlt,
 	bgOpacity,
+	bgBlur,
+	bgImgTransition,
 }: {
 	children: React.ReactNode;
 	whiteText?: boolean;
 	className?: string;
 	bgImg?: string;
 	bgImgAlt?: string;
-	bgOpacity?:
-		| "opacity-100"
-		| "opacity-90"
-		| "opacity-80"
-		| "opacity-75"
-		| "opacity-60"
-		| "opacity-50"
-		| "opacity-40";
+	bgOpacity?: number;
+	bgBlur?: boolean;
+	bgImgTransition?: boolean;
 }) {
 	return (
-		<div
-			className={`${
-				whiteText ? "text-white" : "text-black"
-			} ${className} relative p-h w-full flex justify-center`}
-		>
-			{bgImg ? (
-				<img
-					src={bgImg}
-					alt={bgImgAlt}
-					className={`w-full h-full absolute top-0 left-0 object-cover opacity-40 ${bgOpacity}`}
-				/>
-			) : (
-				""
-			)}
+		<>
+			<div
+				className={`${
+					whiteText ? "text-white" : "text-black"
+				} ${className} relative p-h w-full flex justify-center ${
+					bgImg && "bg-black"
+				} overflow-hidden`}
+			>
+				{bgImg? (
+					<>
+						<div
+							className="absolute w-full h-full top-0 left-0 backdrop-blur-sm z-10"
+							hidden={!bgBlur}
+						></div>
+						<motion.img
+							src={bgImg}
+							alt={bgImgAlt}
+							className={`w-full h-full top-0 left-0 absolute object-cover`}
+							style={{ opacity: bgOpacity }}
+							variants={inViewVariants}
+							initial={bgImgTransition ? "fromNothing" : ""}
+							whileInView={
+								bgImgTransition ? inViewVariants.visible(bgOpacity || 1) : ""
+							}
+							transition={{
+								duration: 0.4,
+							}}
+							viewport={{ once: true, amount: 0.25 }}
+						/>
+					</>
+				) : (
+					""
+				)}
 
-			<div className="flex flex-col relative z-10 max-w-7xl w-full">
-				{children}
+				<div className="flex flex-col relative z-50 max-w-7xl w-full">
+					{children}
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 
