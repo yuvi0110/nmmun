@@ -46,7 +46,7 @@ function ImageWithDetails({
 				""
 			)}
 
-			<div className="md:w-1/2 bg-black absolute top-0 left-0 h-full overflow-y-hidden">
+			<div className="hidden md:block md:w-1/2 bg-black absolute top-0 left-0 h-full overflow-y-hidden">
 				<img
 					src={src ? src : "/dummy.png"} // todo: make this requried
 					alt={alt ? alt : "some alt text"}
@@ -55,9 +55,20 @@ function ImageWithDetails({
 				/>
 			</div>
 
+			<div className="w-full md:hidden bg-black absolute top-0 left-0 h-full overflow-y-hidden">
+				<img
+					src={src ? src : "/dummy.png"} // todo: make this requried
+					alt={alt ? alt : "some alt text"}
+					className={`w-full object-cover h-full`}
+					style={{ opacity: 0.4 }}
+				/>
+			</div>
+
 			<div
 				className={`flex flex-col ${
-					reverse ? "md:flex-row-reverse" : "md:flex-row md:justify-end md:items-center"
+					reverse
+						? "md:flex-row-reverse"
+						: "md:flex-row md:justify-end md:items-center"
 				} md:items-center gap-8 ${
 					whiteText ? "text-white" : "text-black"
 				} max-w-7xl w-full relative z-10`}
@@ -79,7 +90,7 @@ function ImageWithDetails({
 						style={{ opacity: imgOpacity }}
 					/>
 				</motion.div> */}
-				<div className="md:w-1/2 md:pl-6">{children}</div>
+				<div className="w-full md:w-1/2 md:pl-6">{children}</div>
 			</div>
 		</section>
 	);

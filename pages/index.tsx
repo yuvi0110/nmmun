@@ -47,8 +47,8 @@ export default function Home() {
 			/>
 
 			{/* CONTENT */}
-			{/* <DetailsOnly className="pb-28 pt-28" bgImg="/theme-bg.jpg" bgOpacity={0.4} whiteText bgImgTransition bgBlur> */}
-			<DetailsOnly className="pb-28 pt-28 bg-color-5" whiteText>
+			{/* <DetailsOnly className="pb-36 pt-36" bgImg="/theme-bg.jpg" bgOpacity={0.4} whiteText bgImgTransition bgBlur> */}
+			<DetailsOnly className="pb-36 pt-36 bg-[#a07a65]" whiteText>
 				<Heading className="mb-6">Zeroth Hour: Breaking the Silence</Heading>
 				<Details opacity={0.8}>
 					Many, if not all of us, are aware of the social ills that plague our
@@ -80,7 +80,7 @@ export default function Home() {
 
 			{/* QUOTE */}
 			<DetailsOnly
-				className="py-28 bg-black"
+				className="py-36 bg-black"
 				whiteText
 				bgImg="/hero-home-1.jpg"
 				bgImgAlt=""
@@ -95,7 +95,7 @@ export default function Home() {
 
 			<ImageWithDetails
 				reverse
-				className="mt-28 mb-28"
+				className="pt-36 pb-36 bg-[#e7dacd]"
 				src="/diplomacy.png"
 				alt=""
 				w="w-full"
@@ -113,7 +113,7 @@ export default function Home() {
 			</ImageWithDetails>
 
 			<ImageWithDetails2
-				className="py-28 bg-color-7"
+				className="py-36 bg-[#885b43]"
 				src="/join-us.jpeg"
 				alt=""
 				imgOpacity={0.7}
@@ -162,7 +162,7 @@ export default function Home() {
 				</motion.ul>
 			</ImageWithDetails2>
 
-			<DetailsOnly className="pt-28 pb-28">
+			<DetailsOnly className="pt-36 pb-36">
 				<Heading>FAQs</Heading>
 
 				<FAQsContainer>
@@ -197,7 +197,7 @@ export default function Home() {
 				</FAQsContainer>
 			</DetailsOnly>
 
-			{/* <DetailsOnly className="pb-28" childClass="flex justify-center items-center"> */}
+			{/* <DetailsOnly className="pb-36" childClass="flex justify-center items-center"> */}
 				{/* <Details>
 					The NMMUN Conference is open to all students, whether you're a
 					seasoned debater or just starting your journey into international
