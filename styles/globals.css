@@ -25,8 +25,8 @@
 	.title {
 		@apply text-7xl md:text-[160px] font-display font-semibold tracking-tight;
 	}
-	.title {
-		@apply text-5xl md:text-9xl font-display font-semibold tracking-tight;
+	.smaller-title {
+		@apply text-5xl md:text-8xl font-display font-semibold tracking-tight;
 	}
 	.title-mobile-mini {
 		@apply title text-5xl md:text-8xl;

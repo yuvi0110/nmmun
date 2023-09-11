@@ -10,6 +10,7 @@ function DetailsOnly({
 	bgOpacity,
 	bgBlur,
 	bgImgTransition,
+	childClass
 }: {
 	children: React.ReactNode;
 	whiteText?: boolean;
@@ -19,6 +20,7 @@ function DetailsOnly({
 	bgOpacity?: number;
 	bgBlur?: boolean;
 	bgImgTransition?: boolean;
+	childClass?: string;
 }) {
 	return (
 		<>
@@ -55,7 +57,7 @@ function DetailsOnly({
 					""
 				)}
 
-				<div className="flex flex-col relative z-50 max-w-7xl w-full">
+				<div className={`flex flex-col relative z-50 max-w-7xl w-full ${childClass}`}>
 					{children}
 				</div>
 			</div>

@@ -9,7 +9,7 @@ function Team() {
 		<main className="main">
 			<Head
 				title="NMMUN: Team"
-				desc="The team responsible for making this years NMMUN possible"
+				desc="Meet the dedicated individuals who drive the success of our Model United Nations team. Get to know our passionate students, advisors, and leaders who are shaping future diplomats and global change-makers."
 			/>
 
 			{/* HERO */}
@@ -17,7 +17,7 @@ function Team() {
 				title="OUR TEAM"
 				src="/hero-team-2.jpg"
 				alt="some dummy pic"
-				desc="Meet the dedicated individuals who drive the success of our Model United Nations team. Get to know our passionate students, advisors, and leaders who are shaping future diplomats and global change-makers."
+				desc="Once all the members of the MUN are selected, the teams will be updated. Please be patient."
 				showTimer
 				showCTA
 				mobileMini

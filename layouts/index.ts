@@ -6,3 +6,4 @@ export { default as TableOfContent } from "./table-of-content";
 export { default as TimelineContainer } from "./timeline-container";
 export { default as Timeline } from "./timeline";
 export { default as TwoColumnsLayout } from "./2-col";
+export { default as ImageWithDetails2 } from "./img-details-2";
