@@ -214,7 +214,7 @@ export default function Home() {
 			</DetailsOnly> */}
 
 			<Hero
-				src="/hero-variant-4.jpg"
+				src="/hero-variant-5.jpeg"
 				// src="/hero-variant-4.jpeg"
 				alt="blurred nmmun logo with a gradient bg"
 				title="SECURE YOUR SPOT"
