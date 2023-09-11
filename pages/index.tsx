@@ -162,7 +162,7 @@ export default function Home() {
 				</motion.ul>
 			</ImageWithDetails2>
 
-			<DetailsOnly className="pt-36 pb-36">
+			{/* <DetailsOnly className="pt-36 pb-36">
 				<Heading>FAQs</Heading>
 
 				<FAQsContainer>
@@ -195,7 +195,7 @@ export default function Home() {
 					reprehenderit ullam? Illum."
 					/>
 				</FAQsContainer>
-			</DetailsOnly>
+			</DetailsOnly> */}
 
 			{/* <DetailsOnly className="pb-36" childClass="flex justify-center items-center"> */}
 				{/* <Details>
