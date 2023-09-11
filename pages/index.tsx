@@ -113,7 +113,7 @@ export default function Home() {
 			</ImageWithDetails>
 
 			<ImageWithDetails2
-				className="py-36 bg-[#885b43]"
+				className="py-36 bg-[#885b43] mb-36"
 				src="/join-us.jpeg"
 				alt=""
 				imgOpacity={0.7}
@@ -198,7 +198,7 @@ export default function Home() {
 			</DetailsOnly> */}
 
 			{/* <DetailsOnly className="pb-36" childClass="flex justify-center items-center"> */}
-				{/* <Details>
+			{/* <Details>
 					The NMMUN Conference is open to all students, whether you're a
 					seasoned debater or just starting your journey into international
 					relations.
@@ -208,13 +208,14 @@ export default function Home() {
 					of a global community dedicated to finding solutions to the world's
 					most complex problems.
 				</Details> */}
-				{/* <Heading className="">
+			{/* <Heading className="">
 					Secure your spot
 				</Heading>
 			</DetailsOnly> */}
 
 			<Hero
-				src="/hero-variant-4.jpeg"
+				src="/hero-variant-4.jpg"
+				// src="/hero-variant-4.jpeg"
 				alt="blurred nmmun logo with a gradient bg"
 				title="SECURE YOUR SPOT"
 				desc="Ready to Start Your Diplomatic Journey?"
