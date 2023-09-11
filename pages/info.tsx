@@ -17,7 +17,7 @@ function Info() {
 		<main className="main">
 			<Head
 				title="NMMUN: Information"
-				desc="Get information for all the council members and so on"
+				desc="Discover the essentials for your Model United Nations experience. Access our comprehensive information page for key details on itinerary, dress code, Rules of Procedure, and more. Prepare to make your mark on the global stage."
 			/>
 
 			{/* HERO */}
@@ -25,7 +25,7 @@ function Info() {
 				title="INFORMATION"
 				src="/hero-info-2.jpg"
 				alt="some dummy"
-				desc="Discover the essentials for your Model United Nations experience. Access our comprehensive information page for key details on itinerary, dress code, Rules of Procedure, and more. Prepare to make your mark on the global stage."
+				desc="Itinerary, dress code, ROP will be added soon, please be patient."
 				showTimer
 				showCTA
 				mobileMini
