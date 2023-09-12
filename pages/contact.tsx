@@ -92,7 +92,7 @@ function Contact() {
 								<input
 									type="text"
 									id="name"
-									className="shadow-sm text-base focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e3e4e4] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
+									className="shadow-sm text-base focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e4d8ca] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
 									placeholder="e.g. John Doe"
 									required
 									value={name}
@@ -118,7 +118,7 @@ function Contact() {
 								<input
 									type="email"
 									id="email"
-									className="shadow-sm text-base focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e3e4e4] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
+									className="shadow-sm text-base focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e4d8ca] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
 									placeholder="e.g. example@website.com"
 									required
 									value={email}
@@ -144,7 +144,7 @@ function Contact() {
 								<input
 									type="text"
 									id="subject"
-									className="shadow-sm text-base focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e3e4e4] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
+									className="shadow-sm text-base focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e4d8ca] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
 									placeholder="Let us know how we can help you"
 									required
 									value={subject}
@@ -171,7 +171,7 @@ function Contact() {
 								<textarea
 									id="message"
 									rows={4}
-									className="shadow-sm text-base focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e3e4e4] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
+									className="shadow-sm text-base focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-[#e4d8ca] border-gray-500 border-b placeholder-gray-500 text-black focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
 									placeholder="Leave a message..."
 									required
 									value={message}

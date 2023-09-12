@@ -17,7 +17,7 @@ function Gallery() {
 				src="/hero-gallery-4.jpg"
 				alt="some dummy pic"
 				className="pb-16"
-				// desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quaerat molestias."
+				desc="Get a glimpse of our MUN experience through pictures."
 			/>
 
 			{/* CONTENT */}
@@ -33,15 +33,17 @@ function Gallery() {
 
 			{/* MARGIN BETWEEN */}
 			<Hero
-				src="/hero-variant-4.jpeg"
+				src="/hero-variant-5.jpeg"
+				// src="/hero-variant-4.jpeg"
 				alt="blurred nmmun logo with a gradient bg"
-				title="NMMUN"
+				title="SECURE YOUR SPOT"
 				desc="Ready to Start Your Diplomatic Journey?"
 				showCTA
 				showTimer
-				showYear
+				// showYear
 				variant
 				className=""
+				smallerTitle
 				bgImgOpacity={0.8}
 			/>
 		</main>

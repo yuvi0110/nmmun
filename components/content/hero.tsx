@@ -227,7 +227,7 @@ const Hero = (props: Contents) => {
 	) : (
 		// FULL HERO
 		<section
-			className={`text-white w-full flex justify-center p-h bg-black ${className} relative pt-24`}
+			className={`text-white w-full min-h-[100vh] flex justify-center items-center p-h bg-black ${className} relative pt-24`}
 		>
 			{/* <img
 					src={src}

@@ -47,6 +47,21 @@ export default function Home() {
 			/>
 
 			{/* CONTENT */}
+			{/* QUOTE */}
+			<DetailsOnly
+				className="py-36 bg-black"
+				whiteText
+				bgImg="/hero-home-1.jpg"
+				bgImgAlt=""
+				bgOpacity={0.4}
+			>
+				<Quote>
+					At New Millennium School, Bahrain, we believe in shaping future
+					leaders, and the New Millennium Model United Nations (NMMUN)
+					Conference is where this transformation begins.
+				</Quote>
+			</DetailsOnly>
+
 			{/* <DetailsOnly className="pb-36 pt-36" bgImg="/theme-bg.jpg" bgOpacity={0.4} whiteText bgImgTransition bgBlur> */}
 			<DetailsOnly className="pb-36 pt-36 bg-[#a07a65]" whiteText>
 				<Heading className="mb-6">Zeroth Hour: Breaking the Silence</Heading>
@@ -78,21 +93,6 @@ export default function Home() {
 				</Details>
 			</DetailsOnly>
 
-			{/* QUOTE */}
-			<DetailsOnly
-				className="py-36 bg-black"
-				whiteText
-				bgImg="/hero-home-1.jpg"
-				bgImgAlt=""
-				bgOpacity={0.4}
-			>
-				<Quote>
-					At New Millennium School, Bahrain, we believe in shaping future
-					leaders, and the New Millennium Model United Nations (NMMUN)
-					Conference is where this transformation begins.
-				</Quote>
-			</DetailsOnly>
-
 			<ImageWithDetails
 				reverse
 				className="pt-36 pb-36 bg-[#e7dacd]"
@@ -113,7 +113,8 @@ export default function Home() {
 			</ImageWithDetails>
 
 			<ImageWithDetails2
-				className="py-36 bg-[#885b43] mb-36"
+				// className="py-36 bg-[#885b43] mb-36"
+				className="py-36 bg-[#a07a65] mb-36"
 				src="/join-us.jpeg"
 				alt=""
 				imgOpacity={0.7}
