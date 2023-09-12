@@ -75,27 +75,27 @@ export default function Home() {
 				{/* <DetailsOnly className="pb-36 pt-36 bg-[#a07a65]" whiteText> */}
 				<div className="w-full md:w-2/3">
 					<Heading className="mb-6">Zeroth Hour: Breaking the Silence</Heading>
-					<Details>
+					<Details className="font-medium">
 						Many, if not all of us, are aware of the social ills that plague our
 						society. These issues are detrimental to the overall quality of life
 						of many people around the world. There's much we can do to work
 						towards solving these ills, but the international community (and us,
 						as individuals) tend to find ways to delay progress.
 					</Details>
-					<Details>
+					<Details className="font-medium">
 						For example, the pandemic is often used as a scapegoat by many
 						governments for not appropriately meeting the 2030 SDG Agenda even
 						though they were already not enacting sufficient changes before the
 						pandemic.
 					</Details>
-					<Details>
+					<Details className="font-medium">
 						As a double entendre, it refers to the literal zeroth hour- we have
 						many issues to solve in a limited timeframe and to the military
 						“zero-hour” term, which refers to the time a planned exercise is
 						about to begin. It is a metaphor for all the concerns that have been
 						put on wait and are gradually creating irreparable harm.
 					</Details>
-					<Details>
+					<Details className="font-medium">
 						As humans, we are in a predicament where we have a very limited
 						amount of time until such difficulties outweigh our ability to
 						address them. Therefore, we must take the initiative to break this
