@@ -54,7 +54,7 @@ function ImageWithDetails({
 				} max-w-7xl w-full relative z-10`}
 			>
 				<motion.div
-					className="md:w-1/2 flex justify-center items-center bg-black rounded-2xl"
+					className="md:w-1/2 flex justify-center items-center bg-black rounded-3xl"
 					variants={inViewVariants}
 					initial={!reverse ? "fromLeft" : "fromRight"}
 					whileInView={inViewVariants.visible(1)}
