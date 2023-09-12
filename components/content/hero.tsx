@@ -35,6 +35,7 @@ interface Contents {
 	uniqueDesign?: boolean;
 	ctaMargin?: string;
 	smallerTitle?: boolean;
+	bottomGradient?: React.ReactNode;
 }
 
 const HeroContents = ({
@@ -50,7 +51,8 @@ const HeroContents = ({
 	blackText,
 	showDate,
 	ctaMargin,
-	smallerTitle
+	smallerTitle,
+	bottomGradient,
 }: Contents) => {
 	return (
 		<>
@@ -187,7 +189,7 @@ const HeroContents = ({
 };
 
 const Hero = (props: Contents) => {
-	const { className, src, alt, variant, images, carousel, bgImgOpacity } =
+	const { className, src, alt, variant, images, carousel, bgImgOpacity, bottomGradient } =
 		props;
 
 	return variant ? (
@@ -202,7 +204,7 @@ const Hero = (props: Contents) => {
 				duration: 0.4,
 			}}
 		>
-			<div className="max-w-7xl w-full py-28 md:py-20 relative rounded-2xl overflow-hidden bg-black">
+			<div className="max-w-7xl w-full py-28 md:py-20 relative rounded-2xl overflow-hidden bg-black shadow-xl">
 				{/* <Image
 					src={src}
 					alt={alt}
@@ -259,6 +261,8 @@ const Hero = (props: Contents) => {
 					</Carousel>
 				</div>
 			)}
+
+			{bottomGradient}
 
 			<div className="max-w-7xl w-full flex flex-col justify-center items-center py-28 md:py-20 relative ">
 				<HeroContents {...props} />

@@ -14,7 +14,7 @@ function Gallery() {
 			{/* HERO */}
 			<Hero
 				title="GALLERY"
-				src="/hero-gallery-4.jpg"
+				src="/hero-gallery-2.jpeg"
 				alt="some dummy pic"
 				className="pb-16"
 				desc="Get a glimpse of our MUN experience through pictures."

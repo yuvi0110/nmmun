@@ -17,7 +17,7 @@ const Quote = ({
 		<div className="flex items-start gap-4 w-full md:w-4/5 mx-auto">
 			{/* <span className="text-7xl md:text-9xl font-bold font-display">‟</span> */}
 			<motion.q
-				className="text-xl md:text-3xl leading-tight py-2 font-display text-center"
+				className="text-xl md:text-3xl leading-tight py-2 font-display text-center italic"
 				variants={inViewVariants}
 				initial={reverse ? "fromLeft" : "fromRight"}
 				whileInView="visible"

@@ -44,16 +44,19 @@ export default function Home() {
 					"/gallery/21-22/(5).jpeg",
 				]}
 				className="pt-32 pb-16"
+				// bottomGradient={
+				// 	<div className="w-full h-1/4 bottom-0 absolute bg-gradient-to-t from-[#885b43] to-[rgba(0,0,0,0)]"></div>
+				// }
 			/>
 
 			{/* CONTENT */}
 			{/* QUOTE */}
 			<DetailsOnly
-				className="py-36 bg-black"
-				whiteText
-				bgImg="/hero-home-1.jpg"
-				bgImgAlt=""
-				bgOpacity={0.4}
+				className="py-36 bg-[#e7dacd]"
+				// whiteText
+				// bgImg="/hero-home-1.jpg"
+				// bgImgAlt=""
+				// bgOpacity={0.4}
 			>
 				<Quote>
 					At New Millennium School, Bahrain, we believe in shaping future
@@ -62,35 +65,43 @@ export default function Home() {
 				</Quote>
 			</DetailsOnly>
 
-			{/* <DetailsOnly className="pb-36 pt-36" bgImg="/theme-bg.jpg" bgOpacity={0.4} whiteText bgImgTransition bgBlur> */}
-			<DetailsOnly className="pb-36 pt-36 bg-[#a07a65]" whiteText>
-				<Heading className="mb-6">Zeroth Hour: Breaking the Silence</Heading>
-				<Details opacity={0.8}>
-					Many, if not all of us, are aware of the social ills that plague our
-					society. These issues are detrimental to the overall quality of life
-					of many people around the world. There's much we can do to work
-					towards solving these ills, but the international community (and us,
-					as individuals) tend to find ways to delay progress.
-				</Details>
-				<Details opacity={0.8}>
-					For example, the pandemic is often used as a scapegoat by many
-					governments for not appropriately meeting the 2030 SDG Agenda even
-					though they were already not enacting sufficient changes before the
-					pandemic.
-				</Details>
-				<Details opacity={0.8}>
-					As a double entendre, it refers to the literal zeroth hour- we have
-					many issues to solve in a limited timeframe and to the military
-					“zero-hour” term, which refers to the time a planned exercise is about
-					to begin. It is a metaphor for all the concerns that have been put on
-					wait and are gradually creating irreparable harm.
-				</Details>
-				<Details opacity={0.8}>
-					As humans, we are in a predicament where we have a very limited amount
-					of time until such difficulties outweigh our ability to address them.
-					Therefore, we must take the initiative to break this silence as we
-					approach the zeroth hour.
-				</Details>
+			<DetailsOnly
+				className="pb-36 pt-36"
+				bgImg="/theme-bg-5.jpeg"
+				bgOpacity={0.9}
+				// whiteText
+				bgImgTransition
+			>
+				{/* <DetailsOnly className="pb-36 pt-36 bg-[#a07a65]" whiteText> */}
+				<div className="w-full md:w-2/3">
+					<Heading className="mb-6">Zeroth Hour: Breaking the Silence</Heading>
+					<Details>
+						Many, if not all of us, are aware of the social ills that plague our
+						society. These issues are detrimental to the overall quality of life
+						of many people around the world. There's much we can do to work
+						towards solving these ills, but the international community (and us,
+						as individuals) tend to find ways to delay progress.
+					</Details>
+					<Details>
+						For example, the pandemic is often used as a scapegoat by many
+						governments for not appropriately meeting the 2030 SDG Agenda even
+						though they were already not enacting sufficient changes before the
+						pandemic.
+					</Details>
+					<Details>
+						As a double entendre, it refers to the literal zeroth hour- we have
+						many issues to solve in a limited timeframe and to the military
+						“zero-hour” term, which refers to the time a planned exercise is
+						about to begin. It is a metaphor for all the concerns that have been
+						put on wait and are gradually creating irreparable harm.
+					</Details>
+					<Details>
+						As humans, we are in a predicament where we have a very limited
+						amount of time until such difficulties outweigh our ability to
+						address them. Therefore, we must take the initiative to break this
+						silence as we approach the zeroth hour.
+					</Details>
+				</div>
 			</DetailsOnly>
 
 			<ImageWithDetails
@@ -114,7 +125,7 @@ export default function Home() {
 
 			<ImageWithDetails2
 				// className="py-36 bg-[#885b43] mb-36"
-				className="py-36 bg-[#a07a65] mb-36"
+				className="py-36 bg-[#a07a65]"
 				src="/join-us.jpeg"
 				alt=""
 				imgOpacity={0.7}
@@ -163,56 +174,31 @@ export default function Home() {
 				</motion.ul>
 			</ImageWithDetails2>
 
-			{/* <DetailsOnly className="pt-36 pb-36">
+			<DetailsOnly className="pt-36 pb-36">
 				<Heading>FAQs</Heading>
 
 				<FAQsContainer>
 					<FAQ
-						title="Title"
-						info="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
-					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
-					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
-					reprehenderit ullam? Illum."
+						title="Is there a registration fee"
+						info="Yes, there is a registration fee of 20BHD for all delegates and chairs."
 					/>
 					<FAQ
-						title="Title"
-						info="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
-					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
-					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
-					reprehenderit ullam? Illum."
+						title="Will food be provided on the day of the conference"
+						info="We will provide breakfast, lunch, and snacks on the days of the conference."
 					/>
 					<FAQ
+						title="Can I sign up if I know nothing about MUNs"
+						info="Yes you can! We will provide all delegates with training sessions and our team will always be available to assist you."
+					/>
+					{/* <FAQ
 						title="Title"
 						info="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
 					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
 					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
 					reprehenderit ullam? Illum."
-					/>
-					<FAQ
-						title="Title"
-						info="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
-					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
-					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
-					reprehenderit ullam? Illum."
-					/>
+					/> */}
 				</FAQsContainer>
-			</DetailsOnly> */}
-
-			{/* <DetailsOnly className="pb-36" childClass="flex justify-center items-center"> */}
-			{/* <Details>
-					The NMMUN Conference is open to all students, whether you're a
-					seasoned debater or just starting your journey into international
-					relations.
-				</Details>
-				<Details>
-					Join us for a day of diplomacy, debate, and discovery, and become part
-					of a global community dedicated to finding solutions to the world's
-					most complex problems.
-				</Details> */}
-			{/* <Heading className="">
-					Secure your spot
-				</Heading>
-			</DetailsOnly> */}
+			</DetailsOnly>
 
 			<Hero
 				src="/hero-variant-5.jpeg"

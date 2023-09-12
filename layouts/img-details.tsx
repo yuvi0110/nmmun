@@ -16,6 +16,7 @@ function ImageWithDetails({
 	h,
 	id,
 	imgOpacity,
+	noBlackBg,
 }: {
 	children: React.ReactNode;
 	reverse?: boolean;
@@ -30,6 +31,7 @@ function ImageWithDetails({
 	bgOpacity?: string;
 	id?: string;
 	imgOpacity?: string | number;
+	noBlackBg?: boolean;
 }) {
 	return (
 		<section
@@ -54,7 +56,9 @@ function ImageWithDetails({
 				} max-w-7xl w-full relative z-10`}
 			>
 				<motion.div
-					className="md:w-1/2 flex justify-center items-center bg-black rounded-3xl"
+					className={`md:w-1/2 flex justify-center items-center ${
+						!noBlackBg && "bg-black"
+					} rounded-3xl`}
 					variants={inViewVariants}
 					initial={!reverse ? "fromLeft" : "fromRight"}
 					whileInView={inViewVariants.visible(1)}

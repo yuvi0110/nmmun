@@ -191,7 +191,8 @@ function Contact() {
 						<div className="w-full">
 							<SubHeading className="mb-4">Address: </SubHeading>
 							<Details className="w-full md:w-2/3">
-								Building 339, Road 3009, Block 330, Zinj, Bahrain
+								New Millennium School, Building 399, Road 3009, Block 330,
+								Bu-Ghazal, Zinj, Bahrain
 							</Details>
 
 							<Map />
