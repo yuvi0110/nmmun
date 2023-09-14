@@ -16,7 +16,7 @@ function Timeline({
 				variants={inViewVariants}
 				initial="fromDown"
 				whileInView="visible"
-				transition={{ duration: 0.4, delay: 1.6 }}
+				transition={{ duration: 0.4 }}
 				viewport={{ once: true, amount: 0.25 }}
 			>
 				<div className="absolute w-4 h-4 bg-color-3 rounded-full mt-1 -left-2 border border-white"></div>

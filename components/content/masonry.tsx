@@ -18,7 +18,7 @@ const Masonry = ({
 }) => {
 	return (
 		<div className="w-full mt-6">
-			<Heading className="mb-8" delay={1.6} reverse>
+			<Heading className="mb-8" reverse>
 				{title}
 			</Heading>
 

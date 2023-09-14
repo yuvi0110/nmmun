@@ -13,7 +13,7 @@ function TimelineContainer({ children, className }: { children: React.ReactNode,
 						variants={inViewVariants}
 						initial="fromDown"
 						whileInView="visible"
-						transition={{ duration: 0.4, delay: 1.6 }}
+						transition={{ duration: 0.4 }}
 						viewport={{ once: true }}
 					>
 						<div className="absolute w-4 h-4 bg-color-3 rounded-full -left-2 border border-white"></div>

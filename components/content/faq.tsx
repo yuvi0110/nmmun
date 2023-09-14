@@ -40,11 +40,9 @@ const FAQ = ({
 				</AccordionItemPanel> */}
 			{/* </AccordionItem> */}
 			<div className="space-y-4 mb-4">
-				<details
-					className="group [&_summary::-webkit-details-marker]:hidden"
-				>
-					<summary className="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-black border-b border-gray-400">
-						<h2 className="font-semibold">{title}</h2>
+				<details className="group [&_summary::-webkit-details-marker]:hidden">
+					<summary className="flex cursor-pointer items-center justify-between gap-2 p-4 text-black border-b-2 border-[#a6baad]">
+						<h2 className="font-semibold text-lg">{title}</h2>
 
 						<svg
 							className="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180"
@@ -62,7 +60,9 @@ const FAQ = ({
 						</svg>
 					</summary>
 
-					<p className="mt-4 px-4 leading-relaxed text-gray-700">{info}</p>
+					<p className="mt-4 px-4 leading-relaxed text-black opacity-80 text-lg">
+						{info}
+					</p>
 				</details>
 			</div>
 		</motion.div>

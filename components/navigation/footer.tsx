@@ -8,7 +8,7 @@ import { Logo } from "..";
 
 function Footer({ className }: { className?: string }) {
 	return (
-		<footer className={`bg-gray-950 py-12 md:py-18 w-full p-h ${className}`}>
+		<footer className={`bg-[#160900] py-12 md:py-18 w-full p-h ${className}`}>
 			<div className="w-full max-w-screen-xl mx-auto">
 				<div className="sm:flex sm:items-center sm:justify-between">
 					<Link href="/" className="flex items-center mb-4 sm:mb-0">

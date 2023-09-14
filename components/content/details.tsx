@@ -17,7 +17,7 @@ const Details = ({
 }) => {
 	return (
 		<motion.p
-			className={`text-base opacity-75 leading-tight mt-4 ${className}`}
+			className={`text-lg leading-tight mt-4 font-medium ${className}`}
 			variants={inViewVariants}
 			initial={reverse ? "fromLeft" : "fromRight"}
 			whileInView={inViewVariants.visible(opacity || 1)}

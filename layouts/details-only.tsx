@@ -29,7 +29,7 @@ function DetailsOnly({
 					whiteText ? "text-white" : "text-black"
 				} ${className} relative p-h w-full flex justify-center ${
 					bgImg && "bg-black"
-				} overflow-hidden`}
+				} overflow-hidden snap-center`}
 			>
 				{bgImg? (
 					<>

@@ -52,54 +52,55 @@ export default function Home() {
 			{/* CONTENT */}
 			{/* QUOTE */}
 			<DetailsOnly
-				className="py-36 bg-[#e7dacd]"
-				// whiteText
-				// bgImg="/hero-home-1.jpg"
-				// bgImgAlt=""
-				// bgOpacity={0.4}
+				className="py-36 border-t border-b border-black"
+				whiteText
+				bgImg="/hero-home-1.jpg"
+				bgImgAlt=""
+				bgOpacity={0.4}
 			>
-				<Quote>
-					At New Millennium School, Bahrain, we believe in shaping future
-					leaders, and the New Millennium Model United Nations (NMMUN)
-					Conference is where this transformation begins.
-				</Quote>
+				<div className="w-full h-full flex justify-center items-center">
+					<Quote>
+						At New Millennium School, Bahrain, we believe in shaping future
+						leaders, and the New Millennium Model United Nations (NMMUN)
+						Conference is where this transformation begins.
+					</Quote>
+				</div>
 			</DetailsOnly>
 
 			<DetailsOnly
 				className="pb-36 pt-36"
-				bgImg="/theme-bg-5.jpeg"
-				bgOpacity={0.9}
-				// whiteText
+				bgImg="/theme-bg-7.jpeg"
+				bgOpacity={1}
 				bgImgTransition
 			>
 				{/* <DetailsOnly className="pb-36 pt-36 bg-[#a07a65]" whiteText> */}
 				<div className="w-full md:w-2/3">
-					<Heading className="mb-6">Zeroth Hour: Breaking the Silence</Heading>
-					<Details className="font-medium">
-						Many, if not all of us, are aware of the social ills that plague our
-						society. These issues are detrimental to the overall quality of life
-						of many people around the world. There's much we can do to work
-						towards solving these ills, but the international community (and us,
-						as individuals) tend to find ways to delay progress.
+					<Heading className="mb-6 xl:w-3/4">Zeroth Hour: Breaking the Silence</Heading>
+					<Details opacity={0.9}>
+						Many of us are acutely aware of the social challenges that afflict
+						our society, significantly impacting the quality of life for people
+						worldwide. These issues demand our attention, and while there's much
+						we can do to address them, both as a global community and as
+						individuals, progress often seems to be postponed.
 					</Details>
-					<Details className="font-medium">
-						For example, the pandemic is often used as a scapegoat by many
-						governments for not appropriately meeting the 2030 SDG Agenda even
-						though they were already not enacting sufficient changes before the
-						pandemic.
+					<Details opacity={0.9}>
+						For instance, the pandemic has frequently been used as a convenient
+						excuse by numerous governments to justify their failure to
+						effectively pursue the 2030 Sustainable Development Goals (SDGs),
+						even though inadequacies in addressing these issues existed long
+						before the pandemic emerged.
 					</Details>
-					<Details className="font-medium">
-						As a double entendre, it refers to the literal zeroth hour- we have
-						many issues to solve in a limited timeframe and to the military
-						“zero-hour” term, which refers to the time a planned exercise is
-						about to begin. It is a metaphor for all the concerns that have been
-						put on wait and are gradually creating irreparable harm.
-					</Details>
-					<Details className="font-medium">
-						As humans, we are in a predicament where we have a very limited
-						amount of time until such difficulties outweigh our ability to
-						address them. Therefore, we must take the initiative to break this
-						silence as we approach the zeroth hour.
+					<Details opacity={0.9}>
+						This situation is symbolically referred to as "Zeroth Hour,"
+						carrying a dual meaning. It signifies the pressing nature of the
+						problems we face, emphasizing the limited time available to find
+						solutions. Additionally, it alludes to the military term
+						"zero-hour," denoting the moment when a planned operation commences.
+						This metaphor underscores that delaying action on these critical
+						concerns only compounds the irreversible damage they cause. We, as
+						humans, find ourselves in a precarious position where time is
+						running out, and it's imperative that we break this cycle of
+						inaction as we approach our own "zeroth hour."
 					</Details>
 				</div>
 			</DetailsOnly>
@@ -112,7 +113,7 @@ export default function Home() {
 				w="w-full"
 				h="h-full"
 			>
-				<Heading reverse className="">
+				<Heading reverse className="mb-8">
 					Discover Diplomacy Embrace Change
 				</Heading>
 				<Details reverse opacity={0.8}>
