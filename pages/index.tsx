@@ -8,7 +8,12 @@ import {
 	SubHeading,
 } from "@/components";
 import { inViewVariants } from "@/config/animations";
-import { DetailsOnly, FAQsContainer, ImageWithDetails, ImageWithDetails2 } from "@/layouts";
+import {
+	DetailsOnly,
+	FAQsContainer,
+	ImageWithDetails,
+	ImageWithDetails2,
+} from "@/layouts";
 import { motion } from "framer-motion"; //todo: need a seperate motion wrapper
 
 export default function Home() {
@@ -32,7 +37,7 @@ export default function Home() {
 				}
 				showCTA
 				// showTimer
-				ctaMargin="mt-8"
+				ctaMargin=" mt-4 md:mt-8"
 				showYear
 				showDate
 				carousel
@@ -75,13 +80,20 @@ export default function Home() {
 			>
 				{/* <DetailsOnly className="pb-36 pt-36 bg-[#a07a65]" whiteText> */}
 				<div className="w-full md:w-2/3">
-					<Heading className="mb-6 xl:w-3/4">Zeroth Hour: Breaking the Silence</Heading>
+					<Heading className="mb-6 xl:w-3/4">
+						Zeroth Hour: Breaking the Silence
+					</Heading>
 					<Details opacity={0.9}>
 						Many of us are acutely aware of the social challenges that afflict
 						our society, significantly impacting the quality of life for people
-						worldwide. These issues demand our attention, and while there's much
-						we can do to address them, both as a global community and as
-						individuals, progress often seems to be postponed.
+						worldwide.{" "}
+						<span className="md:hidden">
+							<br />
+							<br />
+						</span>{" "}
+						These issues demand our attention, and while there's much we can do
+						to address them, both as a global community and as individuals,
+						progress often seems to be postponed.
 					</Details>
 					<Details opacity={0.9}>
 						For instance, the pandemic has frequently been used as a convenient
@@ -94,11 +106,24 @@ export default function Home() {
 						This situation is symbolically referred to as "Zeroth Hour,"
 						carrying a dual meaning. It signifies the pressing nature of the
 						problems we face, emphasizing the limited time available to find
-						solutions. Additionally, it alludes to the military term
-						"zero-hour," denoting the moment when a planned operation commences.
+						solutions.{" "}
+						<span className="md:hidden">
+							<br />
+							<br />
+						</span>{" "}
+						Additionally, it alludes to the military term "zero-hour," denoting
+						the moment when a planned operation commences.{" "}
+						<span className="md:hidden">
+							<br />
+							<br />
+						</span>{" "}
 						This metaphor underscores that delaying action on these critical
-						concerns only compounds the irreversible damage they cause. We, as
-						humans, find ourselves in a precarious position where time is
+						concerns only compounds the irreversible damage they cause.{" "}
+						<span className="md:hidden">
+							<br />
+							<br />
+						</span>{" "}
+						We, as humans, find ourselves in a precarious position where time is
 						running out, and it's imperative that we break this cycle of
 						inaction as we approach our own "zeroth hour."
 					</Details>
@@ -112,6 +137,7 @@ export default function Home() {
 				alt=""
 				w="w-full"
 				h="h-full"
+				noBlackBg
 			>
 				<Heading reverse className="mb-8">
 					Discover Diplomacy Embrace Change
@@ -175,7 +201,7 @@ export default function Home() {
 				</motion.ul>
 			</ImageWithDetails2>
 
-			<DetailsOnly className="pt-36 pb-36">
+			<DetailsOnly className="pt-36 pb-28">
 				<Heading>FAQs</Heading>
 
 				<FAQsContainer>
