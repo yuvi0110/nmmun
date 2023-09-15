@@ -9,6 +9,7 @@ function Gallery() {
 			<Head
 				title="NMMUN: Gallery"
 				desc="Journey through the captivating moments and memories of our Model United Nations conferences. Explore our gallery for a visual narrative of diplomacy, debate, and camaraderie that defines our MUN experience."
+				img="/hero-gallery-2.jpeg"
 			/>
 
 			{/* HERO */}

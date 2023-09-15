@@ -18,6 +18,7 @@ function Info() {
 			<Head
 				title="NMMUN: Information"
 				desc="Discover the essentials for your Model United Nations experience. Access our comprehensive information page for key details on itinerary, dress code, Rules of Procedure, and more. Prepare to make your mark on the global stage."
+				img="/join-us.jpeg"
 			/>
 
 			{/* HERO */}

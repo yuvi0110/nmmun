@@ -52,6 +52,7 @@ function Contact() {
 			<Head
 				title="NMMUN: Contact Us"
 				desc="Reach out and connect with us through our Model United Nations contact page. Whether you have questions, want to collaborate, or seek information, we're here to assist. Get in touch and let's engage in meaningful dialogue."
+				img="/join-us.jpeg"
 			/>
 
 			{/* HERO */}

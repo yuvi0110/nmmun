@@ -9,6 +9,7 @@ function Application() {
 			<Head
 				title="NMMUN: Register"
 				desc="Join our Model United Nations (MUN) conference as a chair, delegate, runner, or security personnel. Apply now through our easy-to-use Google Forms registration page. Secure your role in shaping global dialogues and fostering diplomacy."
+				img="/join-us.jpeg"
 			/>
 
 			{/* HERO */}

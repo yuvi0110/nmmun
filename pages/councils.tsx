@@ -10,6 +10,7 @@ function Councils() {
 			<Head
 				title="NMMUN: Councils"
 				desc="Explore the diverse world of diplomacy through our Model United Nations councils. Discover a range of unique councils, each with its own purpose and challenges. Get insights into these dynamic forums for global discourse, complete with descriptions and visuals."
+				img="/join-us.jpeg"
 			/>
 
 			{/* HERO */}

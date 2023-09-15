@@ -21,8 +21,9 @@ export default function Home() {
 	return (
 		<main className="main">
 			<Head
-				title="NMMUN"
+				title="NMMUN - Empowering Tomorrow's Global Leaders"
 				desc="Explore the world of diplomacy and global affairs with the New Millennium Model United Nations Conference. Engage in debates, draft resolutions, and broaden your horizons. Join us for an educational journey that shapes future leaders."
+				img="/join-us.jpeg"
 			/>
 
 			{/* HERO */}

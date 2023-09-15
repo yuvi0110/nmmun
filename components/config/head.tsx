@@ -1,7 +1,15 @@
 import React from "react";
 import NextHead from "next/head";
 
-const Head = ({ title, desc }: { title: string, desc: string }) => {
+const Head = ({
+	title,
+	desc,
+	img,
+}: {
+	title: string;
+	desc: string;
+	img?: string;
+}) => {
 	return (
 		<NextHead>
 			<meta
@@ -10,16 +18,15 @@ const Head = ({ title, desc }: { title: string, desc: string }) => {
 			/>
 			<meta http-equiv="content-language" content="en" />
 			<meta charSet="UTF-8" />
-			<meta name="keywords" content="website, blog, foo, bar" />
-			<meta name="author" content="Clupai8o0" />
-			<meta name="publisher" content="Clupai8o0" />
-			<meta name="copyright" content="NMMUN" />
 			<meta
-				name="description"
-				content={desc}
+				name="keywords"
+				content="website, MUN, details, New Millennium School, Bahrain, Outstanding, professional"
 			/>
+			<meta name="author" content="NMMUN" />
+			<meta name="publisher" content="NMMUN" />
+			<meta name="copyright" content="NMMUN" />
+			<meta name="description" content={desc} />
 			<meta name="page-topic" content="MUN" />
-			<meta name="page-type" content="Landing Page" />
 			<meta name="audience" content="Everyone" />
 			<meta name="robots" content="index, follow" />
 
@@ -42,6 +49,18 @@ const Head = ({ title, desc }: { title: string, desc: string }) => {
 				href="/images/favicon-16x16.png"
 			/>
 			<title>{title}</title>
+
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content="https://nmmun.org" />
+			<meta property="og:title" content={title} />
+			<meta property="og:description" content={desc} />
+			<meta property="og:image" content={img} />
+
+			<meta property="twitter:card" content="summary_large_image" />
+			<meta property="twitter:url" content="https://nmmun.org" />
+			<meta property="twitter:title" content={title} />
+			<meta property="twitter:description" content={desc} />
+			<meta property="twitter:image" content={img} />
 		</NextHead>
 	);
 };

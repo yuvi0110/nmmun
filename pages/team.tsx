@@ -10,6 +10,7 @@ function Team() {
 			<Head
 				title="NMMUN: Team"
 				desc="Meet the dedicated individuals who drive the success of our Model United Nations team. Get to know our passionate students, advisors, and leaders who are shaping future diplomats and global change-makers."
+				img="/join-us.jpeg"
 			/>
 
 			{/* HERO */}
