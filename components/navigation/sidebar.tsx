@@ -11,7 +11,10 @@ import { Logo } from "..";
 function Sidebar({ openSidebar }: { openSidebar: boolean }) {
 	return (
 		<div
-			className={`top-0 transition-all duration-300 fixed bg-[#160900] text-white w-3/4 md:w-1/2 max-h-screen h-full ${
+			// className={`top-0 transition-all duration-300 fixed bg-[#160900] text-white w-3/4 md:w-1/2 max-h-screen h-full ${
+			// 	openSidebar ? "right-0" : "-right-3/4"
+			// } flex flex-col justify-between py-16`}
+			className={`top-0 transition-all duration-300 fixed bg-[#060606] text-white w-3/4 md:w-1/2 max-h-screen h-full ${
 				openSidebar ? "right-0" : "-right-3/4"
 			} flex flex-col justify-between py-16`}
 		>

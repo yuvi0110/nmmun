@@ -4,6 +4,7 @@ import {
 	Head,
 	Heading,
 	Hero,
+	List,
 	Quote,
 	SubHeading,
 } from "@/components";
@@ -160,7 +161,7 @@ export default function Home() {
 			>
 				<Heading className="mb-6">Why Join Us:</Heading>
 
-				<motion.ul
+				{/* <motion.ul
 					className="space-y-3 mt-6"
 					variants={inViewVariants}
 					initial="fromRight"
@@ -198,7 +199,16 @@ export default function Home() {
 							with a sense of accomplishment.
 						</span>
 					</li>
-				</motion.ul>
+				</motion.ul> */}
+				<List
+					content={[
+						<><span className='font-semibold underline'>Educational Experience:</span> <span className="opacity-80">Gain an in-depth understanding of global affairs and the art of international diplomacy.</span></>,
+						<><span className='font-semibold underline'>Personal Growth:</span> <span className="opacity-80">Develop leadership, teamwork, and problem-solving skills essential for your future.</span></>,
+						<><span className='font-semibold underline'>Global Network:</span> <span className="opacity-80">Connect with like-minded peers who share your passion for global change.</span></>,
+						<><span className='font-semibold underline'>Fun and Fulfillment:</span> <span className="opacity-80">Enjoy an intellectually stimulating, fun-filled day leaving you with a sense of accomplishment.</span></>,
+					]}
+					noBullet
+				/>
 			</ImageWithDetails2>
 
 			<DetailsOnly className="pt-36 pb-28">
