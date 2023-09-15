@@ -6,12 +6,14 @@
 		"dev": "next dev -p 3001",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"postbuild": "next-sitemap"
 	},
 	"dependencies": {
 		"framer-motion": "^10.13.0",
 		"mapbox-gl": "^2.15.0",
 		"next": "13.4.12",
+		"next-sitemap": "^4.2.3",
 		"nextjs-toploader": "^1.4.2",
 		"nodemailer": "^6.9.5",
 		"prop-types": "^15.8.1",
