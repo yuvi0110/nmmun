@@ -24,7 +24,7 @@ function Councils() {
 			/>
 
 			{/* TABLE OF CONTENT */}
-			{/* <TableOfContent>
+			<TableOfContent>
 				{councils.map((council, i) => (
 					<ContentLink
 						src={council.src}
@@ -35,10 +35,10 @@ function Councils() {
 						key={generateKey()}
 					/>
 				))}
-			</TableOfContent> */}
+			</TableOfContent>
 
 			{/* CONTENT */}
-			{/* {councils.map((council, i) => (
+			{councils.map((council, i) => (
 				<ImageWithDetails
 					className={`py-12`}
 					src={council.src}
@@ -47,24 +47,30 @@ function Councils() {
 					w="w-2/3"
 					h="h-2/3"
 					id={council.id}
+					noBlackBg
 				>
 					<Heading>{council.name}</Heading>
 					<Details>{council.desc}</Details>
 				</ImageWithDetails>
-			))} */}
+			))}
 
 			{/* MARGIN BETWEEN */}
-			{/* <div className="my-4" />
+			<div className="my-4" />
 
 			<Hero
-				src="/dummy.png"
-				alt="some dummy img"
-				title="NMMUN"
+				src="/hero-variant-5.jpeg"
+				// src="/hero-variant-4.jpeg"
+				alt="blurred nmmun logo with a gradient bg"
+				title="SECURE YOUR SPOT"
+				desc="Ready to Start Your Diplomatic Journey?"
 				showCTA
 				showTimer
-				showYear
+				// showYear
 				variant
-			/> */}
+				className=""
+				smallerTitle
+				bgImgOpacity={0.8}
+			/>
 		</main>
 	);
 }

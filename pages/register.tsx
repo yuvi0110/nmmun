@@ -23,7 +23,7 @@ function Application() {
 			/>
 
 			{/* APPLICATIONS */}
-			<DetailsOnly className="py-24 bg-color-2">
+			<DetailsOnly className="py-24 bg-color-6">
 				<Heading className="mb-4">Chair Applications</Heading>
 				<Details opacity={0.8}>
 					Passionate about diplomacy, leadership, and international relations?
@@ -61,7 +61,7 @@ function Application() {
 				</Details>
 				<CTA
 					title="Apply For Chair"
-					href="https://docs.google.com/forms/d/e/1FAIpQLSdDr0c2tHOTvJ-AeEpxf1AG0gimk-9ff9hMPTFaeUkxzRdJJQ/viewform"
+					href="https://forms.gle/Ay87fK7jNz3kQa1u5"
 					className="mt-12"
 					target="_blank"
 				/>
@@ -88,23 +88,28 @@ function Application() {
 					leaders. Together, we'll contribute to a more informed, compassionate,
 					and interconnected world.
 				</Details>
-				{/* <SubHeading>Instructions</SubHeading>
+				<SubHeading>Instructions</SubHeading>
 				<List
 					content={[
-						"The application is only open to students of Grades X-XII",
-						"Interviews will be held in person at New Millennium School",
-						"Applicants are requested to check their emails regularly for further updates",
-						"Please note that the minimum requirements to apply for the position of chairperson is 1-3 prior delegate experiences",
-						"NMS applicants are only required to pay in person",
+						"The application is only open to students of Grades VII-XII.",
+						"Applicants are requested to check their emails regularly for updates.",
+						"Payment will be accepted through bank transfer; details are provided below for Non-NMS applicants.",
+						"Registration will only be confirmed once payment is received.",
+						"In the last question where proof of payment is asked, please add the transaction receipt.",
+						"NMS applicants are required to pay in person.",
+						"Allocations will be out by 1st November, 2023.",
 					]}
 					opacity={0.8}
-				/> */}
+				/>
+				<Details>
+					<span className="underline font-bold">Last Date for applicants</span>{" "}
+					- 20th October, 2023
+				</Details>
 				<CTA
-					title="Apply For Chair"
-					// href="https://docs.google.com/forms/d/e/1FAIpQLSdDr0c2tHOTvJ-AeEpxf1AG0gimk-9ff9hMPTFaeUkxzRdJJQ/viewform"
+					title="Apply For Delegate"
+					href="https://forms.gle/U89v8mHjhTgddzc87"
 					className="mt-12"
 					target="_blank"
-					disabled
 				/>
 			</DetailsOnly>
 
