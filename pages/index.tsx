@@ -202,10 +202,38 @@ export default function Home() {
 				</motion.ul> */}
 				<List
 					content={[
-						<><span className='font-semibold underline'>Educational Experience:</span> <span className="opacity-80">Gain an in-depth understanding of global affairs and the art of international diplomacy.</span></>,
-						<><span className='font-semibold underline'>Personal Growth:</span> <span className="opacity-80">Develop leadership, teamwork, and problem-solving skills essential for your future.</span></>,
-						<><span className='font-semibold underline'>Global Network:</span> <span className="opacity-80">Connect with like-minded peers who share your passion for global change.</span></>,
-						<><span className='font-semibold underline'>Fun and Fulfillment:</span> <span className="opacity-80">Enjoy an intellectually stimulating, fun-filled day leaving you with a sense of accomplishment.</span></>,
+						<>
+							<span className="font-semibold underline">
+								Educational Experience:
+							</span>{" "}
+							<span className="opacity-80">
+								Gain an in-depth understanding of global affairs and the art of
+								international diplomacy.
+							</span>
+						</>,
+						<>
+							<span className="font-semibold underline">Personal Growth:</span>{" "}
+							<span className="opacity-80">
+								Develop leadership, teamwork, and problem-solving skills
+								essential for your future.
+							</span>
+						</>,
+						<>
+							<span className="font-semibold underline">Global Network:</span>{" "}
+							<span className="opacity-80">
+								Connect with like-minded peers who share your passion for global
+								change.
+							</span>
+						</>,
+						<>
+							<span className="font-semibold underline">
+								Fun and Fulfillment:
+							</span>{" "}
+							<span className="opacity-80">
+								Enjoy an intellectually stimulating, fun-filled day leaving you
+								with a sense of accomplishment.
+							</span>
+						</>,
 					]}
 					noBullet
 				/>
@@ -216,24 +244,21 @@ export default function Home() {
 
 				<FAQsContainer>
 					<FAQ
-						title="Is there a registration fee"
+						title="Is there a registration fee?"
 						info="Yes, there is a registration fee of 20BHD for all delegates and chairs."
 					/>
 					<FAQ
-						title="Will food be provided on the day of the conference"
+						title="Will food be provided on the day of the conference?"
 						info="We will provide breakfast, lunch, and snacks on the days of the conference."
 					/>
 					<FAQ
-						title="Can I sign up if I know nothing about MUNs"
+						title="Can I sign up if I know nothing about MUNs?"
 						info="Yes you can! We will provide all delegates with training sessions and our team will always be available to assist you."
 					/>
-					{/* <FAQ
-						title="Title"
-						info="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nobis
-					quae amet, eos voluptatum nihil, repellat exercitationem quod veniam
-					vitae sed, quo repellendus maiores doloremque perspiciatis adipisci
-					reprehenderit ullam? Illum."
-					/> */}
+					<FAQ
+						title="How do I submit the fees?"
+						info="NMS students can pay fees to HRT via printed Google Forms or by providing name and class details. Other school students must use bank transfer for payments."
+					/>
 				</FAQsContainer>
 			</DetailsOnly>
 
