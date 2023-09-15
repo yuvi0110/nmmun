@@ -24,7 +24,7 @@ function Councils() {
 			/>
 
 			{/* TABLE OF CONTENT */}
-			<TableOfContent>
+			{/* <TableOfContent>
 				{councils.map((council, i) => (
 					<ContentLink
 						src={council.src}
@@ -35,10 +35,10 @@ function Councils() {
 						key={generateKey()}
 					/>
 				))}
-			</TableOfContent>
+			</TableOfContent> */}
 
 			{/* CONTENT */}
-			{councils.map((council, i) => (
+			{/* {councils.map((council, i) => (
 				<ImageWithDetails
 					className={`py-12`}
 					src={council.src}
@@ -52,10 +52,10 @@ function Councils() {
 					<Heading>{council.name}</Heading>
 					<Details>{council.desc}</Details>
 				</ImageWithDetails>
-			))}
+			))} */}
 
 			{/* MARGIN BETWEEN */}
-			<div className="my-4" />
+			{/* <div className="my-4" />
 
 			<Hero
 				src="/hero-variant-5.jpeg"
@@ -70,7 +70,7 @@ function Councils() {
 				className=""
 				smallerTitle
 				bgImgOpacity={0.8}
-			/>
+			/> */}
 		</main>
 	);
 }
