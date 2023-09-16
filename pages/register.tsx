@@ -114,89 +114,53 @@ function Application() {
 				/>
 			</DetailsOnly>
 
-			<DetailsOnly className="py-24 bg-color-4" whiteText>
-				<Heading className="mb-4">Runner Applications</Heading>
-				<Details opacity={0.8}>
-					Be a vital part of the Model United Nations (MUN) experience as a
-					Runner. Your role ensures the seamless flow of information between
-					committees, assists with document distribution, and provides essential
-					support to delegates and chairs, making you indispensable to the
-					success of our conference.
-				</Details>
-				<Details opacity={0.8}>
-					As a Runner, you'll engage in a dynamic, fast-paced role, responsible
-					for delivering messages and documents between committees, assisting
-					with technical issues, and supporting delegates' access to essential
-					resources. Your adaptability and organization under pressure are
-					critical assets that contribute directly to our conference's overall
-					success.
-				</Details>
-				<Details opacity={0.8}>
-					Join our passionate MUN community as a Runner, gaining valuable
-					hands-on experience in event logistics and coordination. Your role as
-					a Runner is integral to the smooth functioning of our conference, and
-					your contributions are deeply appreciated. If you're ready to be a
-					vital part of the MUN experience, apply for the Runner position and
-					embark on a rewarding journey into the world of diplomacy.
-				</Details>
-				{/* <SubHeading>Instructions</SubHeading>
-				<List
-					content={[
-						"The application is only open to students of Grades X-XII",
-						"Interviews will be held in person at New Millennium School",
-						"Applicants are requested to check their emails regularly for further updates",
-						"Please note that the minimum requirements to apply for the position of chairperson is 1-3 prior delegate experiences",
-						"NMS applicants are only required to pay in person",
-					]}
-					opacity={0.8}
-				/> */}
-				<CTA
-					title="Apply For Runner"
-					// href="https://docs.google.com/forms/d/e/1FAIpQLSdDr0c2tHOTvJ-AeEpxf1AG0gimk-9ff9hMPTFaeUkxzRdJJQ/viewform"
-					className="mt-12"
-					target="_blank"
-					disabled
-				/>
-			</DetailsOnly>
-
 			<DetailsOnly className="py-24">
-				<Heading className="mb-4">Security Applications</Heading>
+				<Heading className="mb-4">Security & Runner Applications</Heading>
 				<Details opacity={0.8}>
-					At our MUN conference, security is paramount. As a Security team
-					member, you'll ensure a safe environment for all. Your
-					responsibilities include access control, monitoring conference areas,
-					and addressing security issues promptly.
+					Join our MUN team in one of two crucial roles: Security or Runner. In
+					the Security position, your top priority is ensuring a secure
+					environment for all conference attendees. You'll oversee access
+					control, monitor conference areas, and promptly address security
+					concerns.
 				</Details>
 				<Details opacity={0.8}>
-					The Security team requires attention to detail, communication skills,
-					and a proactive approach. You'll collaborate with organizers,
-					authorities, and venue staff to implement security protocols. Your
-					presence reassures participants, allowing them to focus on diplomacy.
+					This role requires attention to detail, effective communication, and a
+					proactive approach. Your collaboration with organizers, authorities,
+					and venue staff to implement security protocols is key. Your presence
+					reassures participants, allowing them to focus on diplomacy. Join our
+					Security team to gain valuable event security experience and
+					contribute to a secure and welcoming conference environment.
 				</Details>
 				<Details opacity={0.8}>
-					Join our Security team to gain event security experience and
-					contribute to a secure conference. Your dedication and responsibility
-					are vital in ensuring a safe and welcoming environment for all. Apply
-					for the Security position and be a crucial part of our conference's
-					success.
+					Alternatively, consider the Runner role, where you become an
+					indispensable part of our MUN experience. As a Runner, you facilitate
+					the seamless flow of information between committees, assist with
+					document distribution, and provide essential support to delegates and
+					chairs.
 				</Details>
-				{/* <SubHeading>Instructions</SubHeading>
+				<Details opacity={0.8}>
+					In this dynamic, fast-paced role, you'll deliver messages and
+					documents between committees, troubleshoot technical issues, and
+					ensure delegates have access to vital resources. Your adaptability and
+					organization under pressure directly contribute to our conference's
+					overall success. Join our passionate MUN community as a Runner,
+					gaining valuable hands-on experience in event logistics and
+					coordination.
+				</Details>
+				<SubHeading>Instructions</SubHeading>
 				<List
 					content={[
-						"The application is only open to students of Grades X-XII",
-						"Interviews will be held in person at New Millennium School",
-						"Applicants are requested to check their emails regularly for further updates",
-						"Please note that the minimum requirements to apply for the position of chairperson is 1-3 prior delegate experiences",
-						"NMS applicants are only required to pay in person",
+						"The application is only open to students of Grades X-XII.",
+						"Interviews will be held in person at New Millennium School or online via Google Meets.",
+						"Applicants are requested to check their emails regularly for further updates.",
 					]}
 					opacity={0.8}
-				/> */}
+				/>
 				<CTA
-					title="Apply For Security"
-					// href="https://docs.google.com/forms/d/e/1FAIpQLSdDr0c2tHOTvJ-AeEpxf1AG0gimk-9ff9hMPTFaeUkxzRdJJQ/viewform"
+					title="Apply For Security & Runner"
+					href="https://forms.gle/3Jc3ZANZPAEBmtVDA"
 					className="mt-12"
 					target="_blank"
-					disabled
 				/>
 			</DetailsOnly>
 		</main>
