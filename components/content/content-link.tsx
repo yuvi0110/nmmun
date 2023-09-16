@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -20,7 +19,7 @@ const ContentLink = ({
 	return (
 		<Link href={url}>
 			<motion.div
-				className="flex items-center gap-4 rounded-xl hover:bg-gray-200 p-2 md:flex-col md:p-12 md:hidden"
+				className="flex items-center gap-4 rounded-xl hover:bg-[#f7eadd] p-2 md:flex-col md:p-12 md:hidden"
 				variants={inViewVariants}
 				initial="fromLeft"
 				animate="visible"
@@ -28,30 +27,32 @@ const ContentLink = ({
 					duration: 0.4,
 					delay,
 				}}
+				viewport={{ once: true, amount: 0.25 }}
 			>
 				<img
 					src={src}
 					alt={alt}
-					className="rounded-full w-8 h-8 md:w-20 md:h-20"
+					className="w-8 h-8 md:w-20 md:h-20 object-contain"
 				/>
 				<p className="font-semibold md:text-xl">{title}</p>
 			</motion.div>
 			<motion.div
-				className="hidden md:flex items-center gap-4 rounded-xl hover:bg-gray-200 p-2 md:flex-col md:p-12"
+				className="hidden md:flex items-center gap-4 rounded-xl hover:bg-[#f7eadd] p-2 md:flex-col md:p-12 transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105"
 				variants={inViewVariants}
 				initial="fromDown"
-				animate="visible"
+				whileInView="visible"
 				transition={{
 					duration: 0.4,
 					delay,
 				}}
+				viewport={{ once: true, amount: 0.25 }}
 			>
 				<img
 					src={src}
 					alt={alt}
-					className="rounded-full w-8 h-8 md:w-20 md:h-20"
+					className="w-16 h-16 md:w-20 md:h-20 object-contain"
 				/>
-				<p className="font-semibold md:text-xl">{title}</p>
+				<p className="font-semibold md:text-xl text-center">{title}</p>
 			</motion.div>
 		</Link>
 	);

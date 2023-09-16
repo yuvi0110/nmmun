@@ -1,6 +1,6 @@
 import { v4 as generateKey } from "uuid";
 
-import { ImageWithDetails, TableOfContent } from "@/layouts";
+import { ImageWithDetails, ImageWithDetails3, TableOfContent } from "@/layouts";
 import { ContentLink, Details, Head, Heading, Hero } from "@/components";
 import { councils } from "@/config/links";
 
@@ -21,42 +21,49 @@ function Councils() {
 				desc="Once the councils are finalized the details will be updated. Please be patient."
 				showTimer
 				showCTA
-				mobileMini
 			/>
 
 			{/* TABLE OF CONTENT */}
-			{/* <TableOfContent>
+			<TableOfContent title="Councils">
 				{councils.map((council, i) => (
 					<ContentLink
 						src={council.src}
 						alt={council.alt}
 						title={council.name}
 						url={`#${council.id}`}
-						delay={2.6 + i * 0.1}
 						key={generateKey()}
 					/>
 				))}
-			</TableOfContent> */}
+			</TableOfContent>
 
 			{/* CONTENT */}
-			{/* {councils.map((council, i) => (
-				<ImageWithDetails
-					className={`py-12`}
+			{councils.map((council, i) => (
+				<ImageWithDetails3
+					className={`py-16`}
 					src={council.src}
 					alt={council.alt}
+					w="w-full"
 					reverse={i % 2 === 0 ? true : false}
-					w="w-2/3"
-					h="h-2/3"
 					id={council.id}
 					noBlackBg
 				>
-					<Heading>{council.name}</Heading>
-					<Details>{council.desc}</Details>
-				</ImageWithDetails>
-			))} */}
+					<Heading className="mb-6">{council.name}</Heading>
+					<Details opacity={0.8}>
+						{typeof council.desc === "string"
+							? council.desc
+							: council.desc.map((d) => (
+									<>
+										{d}
+										<br />
+										<br />
+									</>
+							  ))}
+					</Details>
+				</ImageWithDetails3>
+			))}
 
 			{/* MARGIN BETWEEN */}
-			{/* <div className="my-4" />
+			<div className="my-4" />
 
 			<Hero
 				src="/hero-variant-5.jpeg"
@@ -71,7 +78,7 @@ function Councils() {
 				className=""
 				smallerTitle
 				bgImgOpacity={0.8}
-			/> */}
+			/>
 		</main>
 	);
 }
