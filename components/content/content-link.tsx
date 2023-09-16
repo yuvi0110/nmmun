@@ -37,7 +37,7 @@ const ContentLink = ({
 				<p className="font-semibold md:text-xl">{title}</p>
 			</motion.div>
 			<motion.div
-				className="hidden md:flex items-center gap-4 rounded-xl hover:bg-[#f7eadd] p-2 md:flex-col md:p-12 transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105"
+				className="hidden md:flex items-center gap-4 rounded-xl hover:bg-[#f7eadd] p-2 md:flex-col md:p-12 transition-all duration-300 ease-in-out hover:shadow-xl"
 				variants={inViewVariants}
 				initial="fromDown"
 				whileInView="visible"
