@@ -18,7 +18,7 @@ function Councils() {
 				title="COUNCILS"
 				src="/hero-council-5.jpg"
 				alt="some dummy pic"
-				desc="Once the councils are finalized the details will be updated. Please be patient."
+				desc="Unveiling Our Councils: Where Global Issues Find Resolution."
 				showTimer
 				showCTA
 			/>
