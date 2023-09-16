@@ -156,6 +156,10 @@ function Application() {
 					]}
 					opacity={0.8}
 				/>
+				<Details>
+					<span className="underline font-bold">Last Date for applicants</span>{" "}
+					- 5th October, 2023
+				</Details>
 				<CTA
 					title="Apply For Security & Runner"
 					href="https://forms.gle/3Jc3ZANZPAEBmtVDA"
