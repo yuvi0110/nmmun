@@ -10,7 +10,8 @@ function DetailsOnly({
 	bgOpacity,
 	bgBlur,
 	bgImgTransition,
-	childClass
+	childClass,
+	bgImgMobileBlur,
 }: {
 	children: React.ReactNode;
 	whiteText?: boolean;
@@ -21,6 +22,7 @@ function DetailsOnly({
 	bgBlur?: boolean;
 	bgImgTransition?: boolean;
 	childClass?: string;
+	bgImgMobileBlur?: boolean;
 }) {
 	return (
 		<>
@@ -31,10 +33,18 @@ function DetailsOnly({
 					bgImg && "bg-black"
 				} overflow-hidden snap-center`}
 			>
-				{bgImg? (
+				{bgImg ? (
 					<>
 						<div
-							className="absolute w-full h-full top-0 left-0 backdrop-blur-sm z-10"
+							className={`absolute w-full h-full top-0 left-0 backdrop-blur-sm z-10 ${
+								bgImgMobileBlur && "backdrop-blur-md md:backdrop-blur-0"
+							}`}
+							hidden={!bgImgMobileBlur}
+						></div>
+						<div
+							className={`absolute w-full h-full top-0 left-0 backdrop-blur-sm z-10 ${
+								bgImgMobileBlur && "backdrop-blur-3xl md:backdrop-blur-0"
+							}`}
 							hidden={!bgBlur}
 						></div>
 						<motion.img
@@ -57,7 +67,9 @@ function DetailsOnly({
 					""
 				)}
 
-				<div className={`flex flex-col relative z-50 max-w-7xl w-full ${childClass}`}>
+				<div
+					className={`flex flex-col relative z-50 max-w-7xl w-full ${childClass}`}
+				>
 					{children}
 				</div>
 			</div>

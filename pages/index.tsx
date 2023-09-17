@@ -79,6 +79,7 @@ export default function Home() {
 				bgImg="/theme-bg-8.png"
 				bgOpacity={1}
 				bgImgTransition
+				bgImgMobileBlur
 			>
 				{/* <DetailsOnly className="pb-36 pt-36 bg-[#a07a65]" whiteText> */}
 				<div className="w-full md:w-2/3">
