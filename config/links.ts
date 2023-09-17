@@ -185,7 +185,7 @@ export const councils = [
 		id: "Fictional-Crisis-Committee",
 		desc: "The Fictional Crisis Committee (FCC) offers a Model United Nations experience unlike any other. Delegates are challenged with fast-paced decision-making to solve complex, fictional crises, encouraging intense and heated discussions. This Specialised Committee of NMMUN’23 addresses topics that remain incredibly relevant to today’s world, and specifically, to the theme for this year’s NMMUN, “Zeroth Hour.” This is an Advanced Level Council.",
 		href: "#",
-		src: "/councils/un.svg",
-		alt: "United Nations Council Logo",
+		src: "/councils/fcc.png",
+		alt: "fictional crisis committee Logo",
 	},
 ];
