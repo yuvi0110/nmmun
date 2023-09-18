@@ -16,6 +16,7 @@ const CTA = ({
 	noAnimation,
 	type,
 	disabled,
+	notCenter
 }: {
 	title: string;
 	href?: string;
@@ -28,10 +29,11 @@ const CTA = ({
 	noAnimation?: boolean;
 	type?: "button" | "submit";
 	disabled?: boolean;
+	notCenter?: boolean;
 }) => {
 	return (
 		<motion.div
-			className={`w-full flex justify-center ${className}`}
+			className={`w-full flex ${!notCenter && "justify-center"} ${className}`}
 			variants={inViewVariants}
 			initial={!noAnimation && "fromDown"}
 			whileInView={(!noAnimation && "visible") || ""}
