@@ -193,6 +193,7 @@ function Application() {
 					href="https://drive.google.com/file/d/1PGiSj_jH86DUrttfOQTucsJfcVZYUYV5/view"
 					className="mt-6 mb-12 justify-start"
 					notCenter
+					target="_blank"
 				/>
 
 				<SubHeading>Non-NMS Applicants</SubHeading>

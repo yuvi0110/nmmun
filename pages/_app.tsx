@@ -37,10 +37,10 @@ export default function App({ Component, pageProps }: AppProps) {
 				setNavbarDarkMode(link.navDarkMode);
 			}
 		});
-		// window.scrollTo({
-		// 	top: 0,
-		// 	behavior: "smooth",
-		// });
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
 		setOpenSidebar(false);
 	}, [pathname]);
 

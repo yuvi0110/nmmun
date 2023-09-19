@@ -44,11 +44,11 @@ export default function Home() {
 				showDate
 				carousel
 				images={[
-					"/gallery/21-22/(1).jpeg",
+					"/hero-home-5.jpg",
 					"/hero-home-4.jpg",
-					"/gallery/21-22/(18).jpeg",
-					"/gallery/21-22/(4).jpeg",
-					"/gallery/21-22/(5).jpeg",
+					"/join-us.jpeg",
+					// "/hero-home-1.jpg",
+					"/hero-home-2.jpg",
 				]}
 				className="pt-32 pb-16"
 				// bottomGradient={

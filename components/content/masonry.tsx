@@ -29,11 +29,11 @@ const Masonry = ({
 				<ReactMasonry gutter="8px">
 					{[
 						1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-						20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+						20,
 					].map((n) => (
 						<motion.img
 							className="relative h-auto w-full rounded-lg object-cover"
-							src={`/gallery/${dir}/(${n}).jpeg`}
+							src={`/gallery/${dir}/${n}.png`}
 							alt="gallery pic"
 							variants={inViewVariants}
 							initial="fromDown"
@@ -48,7 +48,7 @@ const Masonry = ({
 
 			<div className="hidden md:flex gap-x-2">
 				<div className="flex flex-col gap-y-2 w-1/3">
-					{[1, 2, 3, 4, 5, 6, 7, 8, 24].map((i) => (
+					{[1, 2, 3, 4, 5, 6, 7].map((i) => (
 						<motion.img
 							variants={inViewVariants}
 							initial="fromDown"
@@ -56,7 +56,7 @@ const Masonry = ({
 							transition={{ duration: 0.4 }}
 							viewport={{ once: true }}
 							className="h-auto w-full rounded-lg"
-							src={`/gallery/${dir}/(${i}).jpeg`}
+							src={`/gallery/${dir}/${i}.png`}
 							alt="gallery picture"
 							key={generateKey()}
 						/>
@@ -64,7 +64,7 @@ const Masonry = ({
 				</div>
 
 				<div className="flex flex-col gap-y-2 w-1/3">
-					{[9, 10, 11, 12, 13, 14, 15, 23, 26].map((i) => (
+					{[8, 9, 10, 11, 12, 13, 14].map((i) => (
 						<motion.img
 							variants={inViewVariants}
 							initial="fromDown"
@@ -72,7 +72,7 @@ const Masonry = ({
 							transition={{ duration: 0.4 }}
 							viewport={{ once: true }}
 							className="h-auto w-full rounded-lg"
-							src={`/gallery/${dir}/(${i}).jpeg`}
+							src={`/gallery/${dir}/${i}.png`}
 							alt="gallery picture"
 							key={generateKey()}
 						/>
@@ -80,7 +80,7 @@ const Masonry = ({
 				</div>
 
 				<div className="flex flex-col gap-y-2 w-1/3">
-					{[17, 18, 19, 20, 21, 22, 16, 25].map((i) => (
+					{[15, 16, 17, 18, 19, 20].map((i) => (
 						<motion.img
 							variants={inViewVariants}
 							initial="fromDown"
@@ -88,7 +88,7 @@ const Masonry = ({
 							transition={{ duration: 0.4 }}
 							viewport={{ once: true }}
 							className="h-auto w-full rounded-lg"
-							src={`/gallery/${dir}/(${i}).jpeg`}
+							src={`/gallery/${dir}/${i}.png`}
 							alt="gallery picture"
 							key={generateKey()}
 						/>
