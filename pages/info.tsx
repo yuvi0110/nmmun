@@ -26,7 +26,7 @@ function Info() {
 				title="INFORMATION"
 				src="/hero-info-2.jpg"
 				alt="some dummy"
-				desc="Itinerary, dress code, ROP will be added soon, please be patient."
+				desc="Explore Essential Details: Itinerary, Dress Code, and Rules of Procedure."
 				showTimer
 				showCTA
 				mobileMini
