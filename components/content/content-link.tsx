@@ -52,7 +52,7 @@ const ContentLink = ({
 					alt={alt}
 					className="w-16 h-16 md:w-20 md:h-20 object-contain"
 				/>
-				<p className="font-semibold md:text-xl text-center">{title}</p>
+				<p className="font-medium opacity-80 md:text-xl text-center">{title}</p>
 			</motion.div>
 		</Link>
 	);

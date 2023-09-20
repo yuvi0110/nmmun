@@ -23,7 +23,7 @@ function Application() {
 
 			{/* HERO */}
 			<Hero
-				src="/gallery/21-22/(29).jpeg"
+				src="/hero-register-1.jpeg"
 				alt="some dummy img"
 				desc="Ready to embark on a diplomatic journey? Begin your MUN adventure by registering today"
 				title="REGISTER"

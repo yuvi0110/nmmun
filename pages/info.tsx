@@ -34,23 +34,27 @@ function Info() {
 
 			{/* CONTENT */}
 			{/* <UpdatedSoon /> */}
-			{/* <Itinerary />
-			<DressCode /> */}
+			{/* <Itinerary /> */}
+			<DressCode />
 
 			{/* RULES OF PROCEDURE */}
 			{/* DELEGATE HANDBOOK */}
 			{/* CHAIR HAND BOOK */}
 
-			{/* <Hero
-				src="/dummy.png"
-				alt="some dummy img"
-				title="NMMUN"
+			<Hero
+				src="/hero-variant-5.jpeg"
+				// src="/hero-variant-4.jpeg"
+				alt="blurred nmmun logo with a gradient bg"
+				title="SECURE YOUR SPOT"
+				desc="Ready to Start Your Diplomatic Journey?"
 				showCTA
 				showTimer
-				showYear
+				// showYear
 				variant
 				className=""
-			/> */}
+				smallerTitle
+				bgImgOpacity={0.8}
+			/>
 		</main>
 	);
 }
