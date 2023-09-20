@@ -259,7 +259,7 @@ export default function Home() {
 					/>
 					<FAQ
 						title="How do I submit the fees?"
-						info="NMS students can pay fees to HRT via printed Google Forms or by providing name and class details. Other school students must use bank transfer for payments."
+						info="Information regarding registering and submitting the fees is given in detail in the register page"
 					/>
 				</FAQsContainer>
 			</DetailsOnly>
