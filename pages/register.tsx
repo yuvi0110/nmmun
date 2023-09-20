@@ -1,7 +1,8 @@
-import React from "react";
+import { v4 as generateKey } from "uuid";
 
 import {
 	CTA,
+	ContentLink,
 	Details,
 	Head,
 	Heading,
@@ -9,7 +10,7 @@ import {
 	List,
 	SubHeading,
 } from "@/components";
-import { DetailsOnly } from "@/layouts";
+import { DetailsOnly, TableOfContent } from "@/layouts";
 
 function Application() {
 	return (
@@ -31,8 +32,99 @@ function Application() {
 				bgImgOpacity={0.6}
 			/>
 
+			<TableOfContent>
+				{[
+					{
+						name: "Payment Guide",
+						id: "payment",
+						src: "/payment.png",
+						alt: "wallet",
+					},
+					{
+						name: "Chair Applications",
+						id: "chair",
+						src: "/chair.png",
+						alt: "illustration of a man on the speech pedestal",
+					},
+					{
+						name: "Delegate Application",
+						id: "delegate",
+						src: "/delegate.png",
+						alt: "illustration of delegates holding their hands around a globe",
+					},
+					{
+						name: "Security & Runner",
+						id: "sec-run",
+						src: "/runner-security.png",
+						alt: "illustrations of 3 people together",
+					},
+				].map((council, i) => (
+					<ContentLink
+						src={council.src}
+						alt={council.alt}
+						title={council.name}
+						url={`#${council.id}`}
+						key={generateKey()}
+					/>
+				))}
+			</TableOfContent>
+
 			{/* APPLICATIONS */}
-			<DetailsOnly className="py-24 bg-color-6">
+			<DetailsOnly className="py-24 bg-color-5" id="payment">
+				<Heading className="mb-6">Payment Guide</Heading>
+
+				<SubHeading>NMS Applicants</SubHeading>
+				<Details opacity={0.8} className="w-full md:w-2/3">
+					NMS applicants are kindly requested to complete their application
+					process by filling out the Google Form. Additionally, it is essential
+					to print the provided consent form, carefully fill it with the
+					required information, and subsequently submit the signed consent form,
+					accompanied by a payment of 20 BHD, to their respective HRT. Your
+					adherence to this procedure ensures a seamless application process.
+				</Details>
+				<CTA
+					title="Download Consent Form"
+					href="https://drive.google.com/file/d/1PGiSj_jH86DUrttfOQTucsJfcVZYUYV5/view"
+					className="mt-6 mb-12 justify-start"
+					notCenter
+					target="_blank"
+				/>
+
+				<SubHeading>Non-NMS Applicants</SubHeading>
+				<Details className="w-full md:w-2/3" opacity={0.8}>
+					Non-NMS applicants are kindly urged to complete their application
+					process by thoroughly filling out the designated Google Form. Payment
+					for the application should be executed through a bank transfer,
+					utilizing the provided banking details below for your convenience.
+				</Details>
+				<List
+					content={[
+						"Ahli United Bank",
+						"IBAN: BH12AUBB00012793052001",
+						"A/C Name: New Millennium School",
+						"Required Amount: 20BD",
+					]}
+					noBullet
+					opacity={0.8}
+				/>
+				<Details className="w-full md:w-2/3" opacity={0.8}>
+					Upon successful completion of the payment, kindly include the
+					transaction receipt as supporting documentation in response to the
+					'Proof of Payment' query. Furthermore, please ensure the prompt
+					submission of this receipt to nmmun2023logistics@gmail.com. When
+					sending the email, kindly include your full name, class, and school
+					details for reference, and attach your transaction receipt as an
+					integral component of the correspondence.
+				</Details>
+				<Details className="w-full md:w-2/3" opacity={0.8}>
+					<span className="font-semibold underline">Note:</span> Kindly ensure
+					that you grant viewing access of the proof of payment to the
+					designated email address, nmmun2023logistics@gmail.com, to facilitate
+					the verification process.
+				</Details>
+			</DetailsOnly>
+
+			<DetailsOnly className="py-24 bg-color-6" id="chair">
 				<Heading className="mb-4">Chair Applications</Heading>
 				<Details opacity={0.8}>
 					Passionate about diplomacy, leadership, and international relations?
@@ -76,7 +168,7 @@ function Application() {
 				/>
 			</DetailsOnly>
 
-			<DetailsOnly className="py-24 bg-color-3" whiteText>
+			<DetailsOnly className="py-24 bg-color-3" whiteText id="delegate">
 				<Heading className="mb-4">Delegate Applications</Heading>
 				<Details opacity={0.8}>
 					Step into the shoes of a diplomat and make your voice heard on the
@@ -122,7 +214,7 @@ function Application() {
 				/>
 			</DetailsOnly>
 
-			<DetailsOnly className="py-24 bg-color-4" whiteText>
+			<DetailsOnly className="py-24" id="sec-run">
 				<Heading className="mb-4">Security & Runner Applications</Heading>
 				<Details opacity={0.8}>
 					Join our MUN team in one of two crucial roles: Security or Runner. In
@@ -174,60 +266,6 @@ function Application() {
 					className="mt-12"
 					target="_blank"
 				/>
-			</DetailsOnly>
-
-			<DetailsOnly className="py-24">
-				<Heading className="mb-6">Payment</Heading>
-
-				<SubHeading>NMS Applicants</SubHeading>
-				<Details opacity={0.8} className="w-full md:w-2/3">
-					NMS applicants are kindly requested to complete their application
-					process by filling out the Google Form. Additionally, it is essential
-					to print the provided consent form, carefully fill it with the
-					required information, and subsequently submit the signed consent form,
-					accompanied by a payment of 20 BHD, to their respective HRT. Your
-					adherence to this procedure ensures a seamless application process.
-				</Details>
-				<CTA
-					title="Download Consent Form"
-					href="https://drive.google.com/file/d/1PGiSj_jH86DUrttfOQTucsJfcVZYUYV5/view"
-					className="mt-6 mb-12 justify-start"
-					notCenter
-					target="_blank"
-				/>
-
-				<SubHeading>Non-NMS Applicants</SubHeading>
-				<Details className="w-full md:w-2/3" opacity={0.8}>
-					Non-NMS applicants are kindly urged to complete their application
-					process by thoroughly filling out the designated Google Form. Payment
-					for the application should be executed through a bank transfer,
-					utilizing the provided banking details below for your convenience.
-				</Details>
-				<List
-					content={[
-						"Ahli United Bank",
-						"IBAN: BH12AUBB00012793052001",
-						"A/C Name: New Millennium School",
-						"Required Amount: 20BD",
-					]}
-					noBullet
-					opacity={0.8}
-				/>
-				<Details className="w-full md:w-2/3" opacity={0.8}>
-					Upon successful completion of the payment, kindly include the
-					transaction receipt as supporting documentation in response to the
-					'Proof of Payment' query. Furthermore, please ensure the prompt
-					submission of this receipt to nmmun2023logistics@gmail.com. When
-					sending the email, kindly include your full name, class, and school
-					details for reference, and attach your transaction receipt as an
-					integral component of the correspondence.
-				</Details>
-				<Details className="w-full md:w-2/3" opacity={0.8}>
-					<span className="font-semibold underline">Note:</span> Kindly ensure
-					that you grant viewing access of the proof of payment to the
-					designated email address, nmmun2023logistics@gmail.com, to facilitate
-					the verification process.
-				</Details>
 			</DetailsOnly>
 		</main>
 	);

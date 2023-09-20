@@ -12,6 +12,7 @@ function DetailsOnly({
 	bgImgTransition,
 	childClass,
 	bgImgMobileBlur,
+	id,
 }: {
 	children: React.ReactNode;
 	whiteText?: boolean;
@@ -23,6 +24,7 @@ function DetailsOnly({
 	bgImgTransition?: boolean;
 	childClass?: string;
 	bgImgMobileBlur?: boolean;
+	id?: string;
 }) {
 	return (
 		<>
@@ -32,6 +34,7 @@ function DetailsOnly({
 				} ${className} relative p-h w-full flex justify-center ${
 					bgImg && "bg-black"
 				} overflow-hidden snap-center`}
+				id={id}
 			>
 				{bgImg ? (
 					<>
