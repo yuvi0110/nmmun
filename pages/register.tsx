@@ -161,10 +161,11 @@ function Application() {
 					- 21st September, 2023
 				</Details>
 				<CTA
-					title="Apply For Chair"
+					title="Application Closed"
 					href="https://forms.gle/Ay87fK7jNz3kQa1u5"
 					className="mt-12"
 					target="_blank"
+					disabled
 				/>
 			</DetailsOnly>
 
